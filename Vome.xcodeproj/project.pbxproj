@@ -34,6 +34,16 @@
 		9BD1B7971F65351200B3A641 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */; };
 		9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7981F65354700B3A641 /* AppUser.swift */; };
 		9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */; };
+		9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C12E1F653F2E0092DB80 /* PaymentPlanViewController.swift */; };
+		9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1301F653FCA0092DB80 /* StringConstant.swift */; };
+		9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1331F6541180092DB80 /* TextWithIconTableViewCell.swift */; };
+		9BF9C1361F6541180092DB80 /* TextWithIconTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9C1341F6541180092DB80 /* TextWithIconTableViewCell.xib */; };
+		9BF9C1381F6542830092DB80 /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1371F6542830092DB80 /* UIColor+HexColor.swift */; };
+		9BF9C13A1F6550200092DB80 /* PaymentPlanSectionHearder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1391F6550200092DB80 /* PaymentPlanSectionHearder.swift */; };
+		9BF9C13C1F6550B50092DB80 /* PaymentPlanSectionHearder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9C13B1F6550B50092DB80 /* PaymentPlanSectionHearder.xib */; };
+		9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C13D1F655B020092DB80 /* OutlineButtonTableViewCell.swift */; };
+		9BF9C1401F655B020092DB80 /* OutlineButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF9C13E1F655B020092DB80 /* OutlineButtonTableViewCell.xib */; };
+		9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1411F655F0E0092DB80 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +77,16 @@
 		9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9BD1B7981F65354700B3A641 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
+		9BF9C12E1F653F2E0092DB80 /* PaymentPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPlanViewController.swift; sourceTree = "<group>"; };
+		9BF9C1301F653FCA0092DB80 /* StringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
+		9BF9C1331F6541180092DB80 /* TextWithIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWithIconTableViewCell.swift; sourceTree = "<group>"; };
+		9BF9C1341F6541180092DB80 /* TextWithIconTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextWithIconTableViewCell.xib; sourceTree = "<group>"; };
+		9BF9C1371F6542830092DB80 /* UIColor+HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
+		9BF9C1391F6550200092DB80 /* PaymentPlanSectionHearder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPlanSectionHearder.swift; sourceTree = "<group>"; };
+		9BF9C13B1F6550B50092DB80 /* PaymentPlanSectionHearder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentPlanSectionHearder.xib; sourceTree = "<group>"; };
+		9BF9C13D1F655B020092DB80 /* OutlineButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineButtonTableViewCell.swift; sourceTree = "<group>"; };
+		9BF9C13E1F655B020092DB80 /* OutlineButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutlineButtonTableViewCell.xib; sourceTree = "<group>"; };
+		9BF9C1411F655F0E0092DB80 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD1B7621F6533B500B3A641 /* LoginSignup */,
+				9BF9C12D1F653EAE0092DB80 /* Payment */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD1B7731F65346A00B3A641 /* EnumConstant.swift */,
+				9BF9C1301F653FCA0092DB80 /* StringConstant.swift */,
 			);
 			path = Defines;
 			sourceTree = "<group>";
@@ -196,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */,
+				9BF9C1371F6542830092DB80 /* UIColor+HexColor.swift */,
+				9BF9C1411F655F0E0092DB80 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -259,6 +283,28 @@
 				9BD1B7871F6534D800B3A641 /* readme.txt */,
 			);
 			path = Open_Sans;
+			sourceTree = "<group>";
+		};
+		9BF9C12D1F653EAE0092DB80 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				9BF9C1321F6540B40092DB80 /* Cells */,
+				9BF9C12E1F653F2E0092DB80 /* PaymentPlanViewController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		9BF9C1321F6540B40092DB80 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9BF9C1331F6541180092DB80 /* TextWithIconTableViewCell.swift */,
+				9BF9C1341F6541180092DB80 /* TextWithIconTableViewCell.xib */,
+				9BF9C1391F6550200092DB80 /* PaymentPlanSectionHearder.swift */,
+				9BF9C13B1F6550B50092DB80 /* PaymentPlanSectionHearder.xib */,
+				9BF9C13D1F655B020092DB80 /* OutlineButtonTableViewCell.swift */,
+				9BF9C13E1F655B020092DB80 /* OutlineButtonTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +372,7 @@
 				9BD1B7901F6534D800B3A641 /* OpenSans-Light.ttf in Resources */,
 				9BD1B78C1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf in Resources */,
 				9BD1B7911F6534D800B3A641 /* OpenSans-LightItalic.ttf in Resources */,
+				9BF9C13C1F6550B50092DB80 /* PaymentPlanSectionHearder.xib in Resources */,
 				9BD1B7891F6534D800B3A641 /* OpenSans-BoldItalic.ttf in Resources */,
 				9BD1B7931F6534D800B3A641 /* OpenSans-Semibold.ttf in Resources */,
 				9BD1B7941F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -335,10 +382,12 @@
 				9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */,
 				9BD1B76F1F6533F900B3A641 /* Assets.xcassets in Resources */,
 				9BD1B78A1F6534D800B3A641 /* OpenSans-CondBold.ttf in Resources */,
+				9BF9C1361F6541180092DB80 /* TextWithIconTableViewCell.xib in Resources */,
 				9BD1B7881F6534D800B3A641 /* OpenSans-Bold.ttf in Resources */,
 				9BD1B7921F6534D800B3A641 /* OpenSans-Regular.ttf in Resources */,
 				9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */,
 				9BD1B78F1F6534D800B3A641 /* OpenSans-Italic.ttf in Resources */,
+				9BF9C1401F655B020092DB80 /* OutlineButtonTableViewCell.xib in Resources */,
 				9BD1B78E1F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				9BD1B78D1F6534D800B3A641 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
@@ -400,11 +449,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */,
+				9BF9C1381F6542830092DB80 /* UIColor+HexColor.swift in Sources */,
+				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
+				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
+				9BF9C13A1F6550200092DB80 /* PaymentPlanSectionHearder.swift in Sources */,
 				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
+				9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */,
 				9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */,
 				9BD1B7971F65351200B3A641 /* UIColor+Extension.swift in Sources */,
+				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
+				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
 				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
 			);
@@ -532,7 +588,7 @@
 			baseConfigurationReference = 8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Vome/Info.plist;
+				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vidheya.Vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,7 +601,7 @@
 			baseConfigurationReference = 7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Vome/Info.plist;
+				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vidheya.Vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -572,6 +628,7 @@
 				9BD1B75B1F65335100B3A641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

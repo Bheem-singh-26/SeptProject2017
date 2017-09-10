@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="TextWithIconTableViewCell" id="KGk-i7-Jjw" customClass="TextWithIconTableViewCell" customModule="Vome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="40.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="WFO-Ap-ji8">
+                        <rect key="frame" x="15" y="7.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="FJu-ou-oCL"/>
+                            <constraint firstAttribute="height" constant="25" id="OwN-w0-TbL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter to Search Optimization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-Bd-YLv">
+                        <rect key="frame" x="54" y="10" width="212.5" height="21"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bNj-Bd-YLv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="K5Q-8K-xtH"/>
+                    <constraint firstItem="bNj-Bd-YLv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MoD-fm-JlV"/>
+                    <constraint firstItem="WFO-Ap-ji8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="QuF-33-eU2"/>
+                    <constraint firstAttribute="bottom" secondItem="bNj-Bd-YLv" secondAttribute="bottom" constant="10" id="g9U-Et-Mze"/>
+                    <constraint firstItem="WFO-Ap-ji8" firstAttribute="centerY" secondItem="bNj-Bd-YLv" secondAttribute="centerY" id="nHd-MW-UuA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="cellTextLabel" destination="bNj-Bd-YLv" id="pGw-KO-7yZ"/>
+                <outlet property="imageIcon" destination="WFO-Ap-ji8" id="Lc8-ju-XO1"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Checkmark" width="50" height="50"/>
+    </resources>
+</document>

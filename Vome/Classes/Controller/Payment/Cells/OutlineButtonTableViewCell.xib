@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-ExtraBold.ttf">
+            <string>OpenSans-Extrabold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutlineButtonTableViewCell" rowHeight="78" id="KGk-i7-Jjw" customClass="OutlineButtonTableViewCell" customModule="Vome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9o-jh-aRa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDS-J3-bG1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT THE PLAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbe-VE-SBA">
+                                        <rect key="frame" x="86.5" y="9" width="148" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.94901960784313721" green="0.34901960784313724" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Hbe-VE-SBA" firstAttribute="centerY" secondItem="CDS-J3-bG1" secondAttribute="centerY" id="FhQ-Fc-Ib1"/>
+                                    <constraint firstAttribute="height" constant="40" id="vyN-49-2D7"/>
+                                    <constraint firstItem="Hbe-VE-SBA" firstAttribute="centerX" secondItem="CDS-J3-bG1" secondAttribute="centerX" id="zfr-Qe-SOK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CDS-J3-bG1" secondAttribute="trailing" id="4DM-gV-28z"/>
+                            <constraint firstAttribute="height" constant="60" id="Ko8-v8-gyX"/>
+                            <constraint firstItem="CDS-J3-bG1" firstAttribute="leading" secondItem="L9o-jh-aRa" secondAttribute="leading" id="M0A-nR-9La"/>
+                            <constraint firstItem="CDS-J3-bG1" firstAttribute="top" secondItem="L9o-jh-aRa" secondAttribute="top" id="YdU-gt-1KE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L9o-jh-aRa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4Z9-xD-JaA"/>
+                    <constraint firstAttribute="bottom" secondItem="L9o-jh-aRa" secondAttribute="bottom" id="Qts-B4-i2B"/>
+                    <constraint firstAttribute="trailing" secondItem="L9o-jh-aRa" secondAttribute="trailing" id="rYk-rv-wZ2"/>
+                    <constraint firstItem="L9o-jh-aRa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xki-jU-bsT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="cellTitle" destination="Hbe-VE-SBA" id="b4d-MV-kn6"/>
+                <outlet property="childView" destination="CDS-J3-bG1" id="HVn-GW-xw6"/>
+                <outlet property="parentView" destination="L9o-jh-aRa" id="HyH-a6-s6I"/>
+                <outlet property="parentViewHeight" destination="Ko8-v8-gyX" id="XIx-jq-XFu"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="100"/>
+        </tableViewCell>
+    </objects>
+</document>
