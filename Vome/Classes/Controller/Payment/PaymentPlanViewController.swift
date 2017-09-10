@@ -15,7 +15,7 @@ class PaymentPlanViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let dataSource = ["Access to Opportunity Board","Filter to Search Optimization","Search Bar","Data Tracking","Vome Transcript"]
-    let headerData = ["STANDART", "VERIFIED"]
+    let headerData = ["STANDARD", "VERIFIED"]
     let btnTitles = ["SELECT THE PLAN", "TRY IT FREE"]
     
     //MARK: ------------------------ Default Mehtods -----------------------
