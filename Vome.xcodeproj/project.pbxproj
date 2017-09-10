@@ -7,21 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BD1B74B1F65335100B3A641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B74A1F65335100B3A641 /* AppDelegate.swift */; };
-		9BD1B74D1F65335100B3A641 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B74C1F65335100B3A641 /* ViewController.swift */; };
 		9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B74E1F65335100B3A641 /* Main.storyboard */; };
-		9BD1B7521F65335100B3A641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7511F65335100B3A641 /* Assets.xcassets */; };
 		9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */; };
+		9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B75E1F6533B500B3A641 /* AppDelegate.swift */; };
+		9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7601F6533B500B3A641 /* BaseViewController.swift */; };
+		9BD1B76F1F6533F900B3A641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B76D1F6533F900B3A641 /* Assets.xcassets */; };
+		9BD1B7701F6533F900B3A641 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B76E1F6533F900B3A641 /* Info.plist */; };
+		9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7711F65344300B3A641 /* LoginViewController.swift */; };
+		9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7731F65346A00B3A641 /* EnumConstant.swift */; };
+		9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7751F6534AC00B3A641 /* NetworkManager.swift */; };
+		9BD1B7881F6534D800B3A641 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B77A1F6534D800B3A641 /* OpenSans-Bold.ttf */; };
+		9BD1B7891F6534D800B3A641 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B77B1F6534D800B3A641 /* OpenSans-BoldItalic.ttf */; };
+		9BD1B78A1F6534D800B3A641 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B77C1F6534D800B3A641 /* OpenSans-CondBold.ttf */; };
+		9BD1B78B1F6534D800B3A641 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B77D1F6534D800B3A641 /* OpenSans-CondLight.ttf */; };
+		9BD1B78C1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B77E1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf */; };
+		9BD1B78D1F6534D800B3A641 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B77F1F6534D800B3A641 /* OpenSans-ExtraBold.ttf */; };
+		9BD1B78E1F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7801F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf */; };
+		9BD1B78F1F6534D800B3A641 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7811F6534D800B3A641 /* OpenSans-Italic.ttf */; };
+		9BD1B7901F6534D800B3A641 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7821F6534D800B3A641 /* OpenSans-Light.ttf */; };
+		9BD1B7911F6534D800B3A641 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7831F6534D800B3A641 /* OpenSans-LightItalic.ttf */; };
+		9BD1B7921F6534D800B3A641 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7841F6534D800B3A641 /* OpenSans-Regular.ttf */; };
+		9BD1B7931F6534D800B3A641 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7851F6534D800B3A641 /* OpenSans-Semibold.ttf */; };
+		9BD1B7941F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7861F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf */; };
+		9BD1B7951F6534D800B3A641 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7871F6534D800B3A641 /* readme.txt */; };
+		9BD1B7971F65351200B3A641 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */; };
+		9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7981F65354700B3A641 /* AppUser.swift */; };
+		9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9BD1B7471F65335100B3A641 /* Vome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vome.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BD1B74A1F65335100B3A641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BD1B74C1F65335100B3A641 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9BD1B74F1F65335100B3A641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9BD1B7511F65335100B3A641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BD1B7541F65335100B3A641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9BD1B7561F65335100B3A641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD1B75E1F6533B500B3A641 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BD1B7601F6533B500B3A641 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9BD1B76D1F6533F900B3A641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BD1B76E1F6533F900B3A641 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD1B7711F65344300B3A641 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9BD1B7731F65346A00B3A641 /* EnumConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumConstant.swift; sourceTree = "<group>"; };
+		9BD1B7751F6534AC00B3A641 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9BD1B77A1F6534D800B3A641 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		9BD1B77B1F6534D800B3A641 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9BD1B77C1F6534D800B3A641 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
+		9BD1B77D1F6534D800B3A641 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
+		9BD1B77E1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLightItalic.ttf"; sourceTree = "<group>"; };
+		9BD1B77F1F6534D800B3A641 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9BD1B7801F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9BD1B7811F6534D800B3A641 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		9BD1B7821F6534D800B3A641 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		9BD1B7831F6534D800B3A641 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		9BD1B7841F6534D800B3A641 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		9BD1B7851F6534D800B3A641 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		9BD1B7861F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		9BD1B7871F6534D800B3A641 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9BD1B7981F65354700B3A641 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +95,146 @@
 		9BD1B7491F65335100B3A641 /* Vome */ = {
 			isa = PBXGroup;
 			children = (
-				9BD1B74A1F65335100B3A641 /* AppDelegate.swift */,
-				9BD1B74C1F65335100B3A641 /* ViewController.swift */,
+				9BD1B75C1F6533B500B3A641 /* Classes */,
+				9BD1B7681F6533B500B3A641 /* Font */,
+				9BD1B7691F6533B500B3A641 /* Resources */,
+				9BD1B76A1F6533B500B3A641 /* Storyboard */,
 				9BD1B74E1F65335100B3A641 /* Main.storyboard */,
-				9BD1B7511F65335100B3A641 /* Assets.xcassets */,
 				9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */,
-				9BD1B7561F65335100B3A641 /* Info.plist */,
 			);
 			path = Vome;
+			sourceTree = "<group>";
+		};
+		9BD1B75C1F6533B500B3A641 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B75D1F6533B500B3A641 /* AppDelegate */,
+				9BD1B75F1F6533B500B3A641 /* BaseClasses */,
+				9BD1B7611F6533B500B3A641 /* Controller */,
+				9BD1B7631F6533B500B3A641 /* Database */,
+				9BD1B7641F6533B500B3A641 /* Defines */,
+				9BD1B7651F6533B500B3A641 /* Extension */,
+				9BD1B7661F6533B500B3A641 /* Models */,
+				9BD1B7671F6533B500B3A641 /* Network */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9BD1B75D1F6533B500B3A641 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B75E1F6533B500B3A641 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9BD1B75F1F6533B500B3A641 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7601F6533B500B3A641 /* BaseViewController.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		9BD1B7611F6533B500B3A641 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7621F6533B500B3A641 /* LoginSignup */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9BD1B7621F6533B500B3A641 /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7711F65344300B3A641 /* LoginViewController.swift */,
+			);
+			path = LoginSignup;
+			sourceTree = "<group>";
+		};
+		9BD1B7631F6533B500B3A641 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		9BD1B7641F6533B500B3A641 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7731F65346A00B3A641 /* EnumConstant.swift */,
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
+		9BD1B7651F6533B500B3A641 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9BD1B7661F6533B500B3A641 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7981F65354700B3A641 /* AppUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BD1B7671F6533B500B3A641 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7751F6534AC00B3A641 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9BD1B7681F6533B500B3A641 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B7791F6534D800B3A641 /* Open_Sans */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9BD1B7691F6533B500B3A641 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B76D1F6533F900B3A641 /* Assets.xcassets */,
+				9BD1B76E1F6533F900B3A641 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9BD1B76A1F6533B500B3A641 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9BD1B7791F6534D800B3A641 /* Open_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				9BD1B77A1F6534D800B3A641 /* OpenSans-Bold.ttf */,
+				9BD1B77B1F6534D800B3A641 /* OpenSans-BoldItalic.ttf */,
+				9BD1B77C1F6534D800B3A641 /* OpenSans-CondBold.ttf */,
+				9BD1B77D1F6534D800B3A641 /* OpenSans-CondLight.ttf */,
+				9BD1B77E1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf */,
+				9BD1B77F1F6534D800B3A641 /* OpenSans-ExtraBold.ttf */,
+				9BD1B7801F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf */,
+				9BD1B7811F6534D800B3A641 /* OpenSans-Italic.ttf */,
+				9BD1B7821F6534D800B3A641 /* OpenSans-Light.ttf */,
+				9BD1B7831F6534D800B3A641 /* OpenSans-LightItalic.ttf */,
+				9BD1B7841F6534D800B3A641 /* OpenSans-Regular.ttf */,
+				9BD1B7851F6534D800B3A641 /* OpenSans-Semibold.ttf */,
+				9BD1B7861F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf */,
+				9BD1B7871F6534D800B3A641 /* readme.txt */,
+			);
+			path = Open_Sans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +296,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD1B7901F6534D800B3A641 /* OpenSans-Light.ttf in Resources */,
+				9BD1B78C1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf in Resources */,
+				9BD1B7911F6534D800B3A641 /* OpenSans-LightItalic.ttf in Resources */,
+				9BD1B7891F6534D800B3A641 /* OpenSans-BoldItalic.ttf in Resources */,
+				9BD1B7931F6534D800B3A641 /* OpenSans-Semibold.ttf in Resources */,
+				9BD1B7941F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				9BD1B7951F6534D800B3A641 /* readme.txt in Resources */,
+				9BD1B7701F6533F900B3A641 /* Info.plist in Resources */,
+				9BD1B78B1F6534D800B3A641 /* OpenSans-CondLight.ttf in Resources */,
 				9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */,
-				9BD1B7521F65335100B3A641 /* Assets.xcassets in Resources */,
+				9BD1B76F1F6533F900B3A641 /* Assets.xcassets in Resources */,
+				9BD1B78A1F6534D800B3A641 /* OpenSans-CondBold.ttf in Resources */,
+				9BD1B7881F6534D800B3A641 /* OpenSans-Bold.ttf in Resources */,
+				9BD1B7921F6534D800B3A641 /* OpenSans-Regular.ttf in Resources */,
 				9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */,
+				9BD1B78F1F6534D800B3A641 /* OpenSans-Italic.ttf in Resources */,
+				9BD1B78E1F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				9BD1B78D1F6534D800B3A641 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD1B74D1F65335100B3A641 /* ViewController.swift in Sources */,
-				9BD1B74B1F65335100B3A641 /* AppDelegate.swift in Sources */,
+				9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */,
+				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
+				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,
+				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
+				9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */,
+				9BD1B7971F65351200B3A641 /* UIColor+Extension.swift in Sources */,
+				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
+				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
