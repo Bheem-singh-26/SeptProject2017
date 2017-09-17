@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
+		9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */; };
+		9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */; };
+		9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */; };
+		9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */; };
+		9B383AB71F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */; };
 		9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B74E1F65335100B3A641 /* Main.storyboard */; };
 		9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */; };
 		9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B75E1F6533B500B3A641 /* AppDelegate.swift */; };
@@ -50,6 +55,11 @@
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
+		9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardIdentifier.swift; sourceTree = "<group>"; };
+		9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardViewController.swift; sourceTree = "<group>"; };
+		9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardTableViewCell.swift; sourceTree = "<group>"; };
+		9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpportunityBoardTableViewCell.xib; sourceTree = "<group>"; };
 		9BD1B7471F65335100B3A641 /* Vome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD1B74F1F65335100B3A641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BD1B7541F65335100B3A641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +128,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9B383AAB1F6D4D3D00C7FAA6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		9B383AB01F6D50F000C7FAA6 /* OpportunityBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9B383AB11F6D50F000C7FAA6 /* Cells */,
+				9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */,
+			);
+			path = OpportunityBoard;
+			sourceTree = "<group>";
+		};
+		9B383AB11F6D50F000C7FAA6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */,
+				9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9BD1B73E1F65335100B3A641 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +196,7 @@
 				9BD1B7651F6533B500B3A641 /* Extension */,
 				9BD1B7661F6533B500B3A641 /* Models */,
 				9BD1B7671F6533B500B3A641 /* Network */,
+				9B383AAB1F6D4D3D00C7FAA6 /* General */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -185,6 +222,7 @@
 			children = (
 				9BD1B7621F6533B500B3A641 /* LoginSignup */,
 				9BF9C12D1F653EAE0092DB80 /* Payment */,
+				9B383AB01F6D50F000C7FAA6 /* OpportunityBoard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +246,7 @@
 		9BD1B7641F6533B500B3A641 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
+				9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */,
 				9BD1B7731F65346A00B3A641 /* EnumConstant.swift */,
 				9BF9C1301F653FCA0092DB80 /* StringConstant.swift */,
 			);
@@ -377,6 +416,7 @@
 				9BD1B7931F6534D800B3A641 /* OpenSans-Semibold.ttf in Resources */,
 				9BD1B7941F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				9BD1B7951F6534D800B3A641 /* readme.txt in Resources */,
+				9B383AB71F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib in Resources */,
 				9BD1B7701F6533F900B3A641 /* Info.plist in Resources */,
 				9BD1B78B1F6534D800B3A641 /* OpenSans-CondLight.ttf in Resources */,
 				9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */,
@@ -455,6 +495,8 @@
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
 				9BF9C13A1F6550200092DB80 /* PaymentPlanSectionHearder.swift in Sources */,
 				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,
+				9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */,
+				9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */,
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
 				9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */,
 				9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */,
@@ -462,7 +504,9 @@
 				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
 				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
+				9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */,
 				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
+				9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaymentPlanViewController: UIViewController {
+class PaymentPlanViewController: BaseViewController {
     
     //MARK: ------------------------ IBOutlets and Variables ---------------------
 
@@ -84,6 +84,10 @@ extension PaymentPlanViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        pushToOpportunityBoard()
     }
     
 }
