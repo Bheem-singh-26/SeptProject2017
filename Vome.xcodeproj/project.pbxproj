@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1714A72B1F6E257B00C9BB17 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A7291F6E257B00C9BB17 /* Login.storyboard */; };
+		1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */; };
+		1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */; };
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
 		9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */; };
 		9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1714A72A1F6E257B00C9BB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 				9BD1B7691F6533B500B3A641 /* Resources */,
 				9BD1B76A1F6533B500B3A641 /* Storyboard */,
 				9BD1B74E1F65335100B3A641 /* Main.storyboard */,
+				1714A7291F6E257B00C9BB17 /* Login.storyboard */,
 				9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */,
 			);
 			path = Vome;
@@ -231,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				9BD1B7711F65344300B3A641 /* LoginViewController.swift */,
+				1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */,
+				1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */,
 			);
 			path = LoginSignup;
 			sourceTree = "<group>";
@@ -429,6 +438,7 @@
 				9BD1B78F1F6534D800B3A641 /* OpenSans-Italic.ttf in Resources */,
 				9BF9C1401F655B020092DB80 /* OutlineButtonTableViewCell.xib in Resources */,
 				9BD1B78E1F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				1714A72B1F6E257B00C9BB17 /* Login.storyboard in Resources */,
 				9BD1B78D1F6534D800B3A641 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +488,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -498,7 +508,9 @@
 				9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */,
 				9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */,
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
+				1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */,
 				9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */,
+				1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */,
 				9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */,
 				9BD1B7971F65351200B3A641 /* UIColor+Extension.swift in Sources */,
 				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
@@ -513,6 +525,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1714A7291F6E257B00C9BB17 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1714A72A1F6E257B00C9BB17 /* Base */,
+			);
+			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
 		9BD1B74E1F65335100B3A641 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -633,6 +653,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vidheya.Vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -646,6 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vidheya.Vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";

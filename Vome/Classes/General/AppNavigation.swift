@@ -25,6 +25,7 @@ extension UIViewController{
     
     func pushToPaymentPlan() {
         let payPlanVC = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.paymentPlan.rawValue) as! PaymentPlanViewController
+        removeNavigationBackButtonTitle()
         self.navigationController?.pushViewController(payPlanVC, animated: true)
     }
     
@@ -34,5 +35,5 @@ extension UIViewController{
         self.navigationController?.pushViewController(payPlanVC, animated: true)
     }
 
-
+    
 }

@@ -1,21 +1,19 @@
 //
-//  LoginViewController.swift
+//  LoginSignUpViewController.swift
 //  Vome
 //
-//  Created by Bheem Singh on 10/09/17.
+//  Created by Puneet JR on 17/09/17.
 //  Copyright © 2017 Bheem Singh. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginSignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        self.title = StringConstant.LOGIN
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,10 +21,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginButtonClicked(_ sender: UIButton) {
-        
-        pushToOpportunityBoard()
-    }
+    
+    
 
     /*
     // MARK: - Navigation

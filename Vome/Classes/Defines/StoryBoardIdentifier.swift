@@ -16,7 +16,7 @@ import UIKit
 enum StoryboardNames: String {
     
     case main = "Main"
-    case login = "LoginStoryboard"
+    case login = "Login"
 
 }
 
@@ -30,6 +30,8 @@ enum StoryboardVCIdentifier: String {
     case opportunityBoard = "OpportunityBoardViewController"
     case login = "LoginViewController"
     case home = "HomeViewController"
+    case register = "RegisterViewController"
+    case loginSignup = "LoginSignUpViewController"
     
 }
 
