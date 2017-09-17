@@ -185,9 +185,6 @@
 				9BD1B7681F6533B500B3A641 /* Font */,
 				9BD1B7691F6533B500B3A641 /* Resources */,
 				9BD1B76A1F6533B500B3A641 /* Storyboard */,
-				9BD1B74E1F65335100B3A641 /* Main.storyboard */,
-				1714A7291F6E257B00C9BB17 /* Login.storyboard */,
-				9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */,
 			);
 			path = Vome;
 			sourceTree = "<group>";
@@ -308,6 +305,9 @@
 		9BD1B76A1F6533B500B3A641 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				1714A7291F6E257B00C9BB17 /* Login.storyboard */,
+				9BD1B74E1F65335100B3A641 /* Main.storyboard */,
+				9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -531,6 +531,7 @@
 				1714A72A1F6E257B00C9BB17 /* Base */,
 			);
 			name = Login.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9BD1B74E1F65335100B3A641 /* Main.storyboard */ = {
@@ -539,6 +540,7 @@
 				9BD1B74F1F65335100B3A641 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */ = {
@@ -547,6 +549,7 @@
 				9BD1B7541F65335100B3A641 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
