@@ -11,5 +11,6 @@ import Foundation
 class StringConstant {
     
     static let PAYMENT_PLAN = "Payment Plan"
+    static let OPPORTUNITY_BOARD = "Opportunity Board"
     
 }

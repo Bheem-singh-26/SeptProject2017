@@ -23,7 +23,7 @@ class OpportunityBoardViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = StringConstant.PAYMENT_PLAN
+        self.title = StringConstant.OPPORTUNITY_BOARD
         tableView.register(UINib(nibName: OpportunityBoardTableViewCell.reuseIdentifier(),bundle: nil), forCellReuseIdentifier: OpportunityBoardTableViewCell.reuseIdentifier())
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 130
