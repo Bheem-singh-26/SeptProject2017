@@ -23,10 +23,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OpportunityBoardTableViewCell" rowHeight="131" id="KGk-i7-Jjw" customClass="OpportunityBoardTableViewCell" customModule="Vome" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="130.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-1A-R9d">
@@ -36,31 +36,31 @@
                             <constraint firstAttribute="height" constant="60" id="QlW-hS-9He"/>
                         </constraints>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-ru-O38">
-                        <rect key="frame" x="80" y="15" width="190" height="46"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-ru-O38">
+                        <rect key="frame" x="80" y="15" width="195" height="44.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FUNDRAISER EVENT SET-UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIq-b4-xNX">
-                                <rect key="frame" x="0.0" y="0.0" width="133.5" height="14"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montreal, Canada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpl-Eh-Y7G">
-                                <rect key="frame" x="0.0" y="19" width="43.5" height="11"/>
-                                <fontDescription key="fontDescription" name="OpenSans-CondensedLightItalic" family="Open Sans" pointSize="8"/>
+                                <rect key="frame" x="0.0" y="16.5" width="54.5" height="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans-CondensedLightItalic" family="Open Sans" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming date:  16 july 2017 4:00 PM - 6:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-Ry-sg0">
-                                <rect key="frame" x="0.0" y="35" width="176.5" height="11"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="8"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 july 2017 4:00 PM - 6:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-Ry-sg0">
+                                <rect key="frame" x="0.0" y="30.5" width="142" height="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCt-Pg-hsY">
-                        <rect key="frame" x="280" y="9" width="80" height="26"/>
+                        <rect key="frame" x="285" y="10.5" width="80" height="26"/>
                         <color key="backgroundColor" red="0.27058823529411763" green="0.70196078431372544" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="al5-0G-ncw"/>
@@ -71,21 +71,28 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only 4 spot left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTL-ON-s8M">
-                        <rect key="frame" x="292" y="38" width="56.5" height="11"/>
+                        <rect key="frame" x="297" y="39.5" width="56.5" height="11"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="8"/>
                         <color key="textColor" red="0.94901960780000005" green="0.34901960780000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose another day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHp-IW-ZPe">
-                        <rect key="frame" x="80" y="66" width="75.5" height="11"/>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="8"/>
+                        <rect key="frame" x="80" y="64.5" width="94" height="14"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calender_icon" translatesAutoresizingMaskIntoConstraints="NO" id="j18-ij-PJV">
+                        <rect key="frame" x="179" y="62.5" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="UFY-VA-n3H"/>
+                            <constraint firstAttribute="height" constant="22" id="gf8-Lf-Q7k"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAd-kB-K39">
-                        <rect key="frame" x="80" y="87" width="280" height="33"/>
+                        <rect key="frame" x="80" y="88.5" width="285" height="41"/>
                         <string key="text">Here's why volunteering through ConnectFor is different from volunteering in general - although that 'end-of-the-day feel-good' feeling is still the same.</string>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="8"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -98,21 +105,24 @@
                     <constraint firstItem="OZX-1A-R9d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LEi-TI-USH"/>
                     <constraint firstAttribute="bottom" secondItem="aAd-kB-K39" secondAttribute="bottom" constant="10" id="PM4-Mq-CWV"/>
                     <constraint firstItem="aAd-kB-K39" firstAttribute="trailing" secondItem="DCt-Pg-hsY" secondAttribute="trailing" id="PXR-V5-TqM"/>
-                    <constraint firstItem="KHp-IW-ZPe" firstAttribute="top" secondItem="2iL-ru-O38" secondAttribute="bottom" constant="5" id="QK0-0k-QLE"/>
+                    <constraint firstItem="j18-ij-PJV" firstAttribute="top" secondItem="KHp-IW-ZPe" secondAttribute="top" constant="-2" id="Skb-XC-Lpx"/>
                     <constraint firstItem="aAd-kB-K39" firstAttribute="top" secondItem="KHp-IW-ZPe" secondAttribute="bottom" constant="10" id="VEf-hr-Ywx"/>
                     <constraint firstItem="KHp-IW-ZPe" firstAttribute="leading" secondItem="2iL-ru-O38" secondAttribute="leading" id="Wdt-gb-mqd"/>
+                    <constraint firstItem="j18-ij-PJV" firstAttribute="leading" secondItem="KHp-IW-ZPe" secondAttribute="trailing" constant="5" id="hBu-B7-xtA"/>
+                    <constraint firstItem="KHp-IW-ZPe" firstAttribute="top" secondItem="2iL-ru-O38" secondAttribute="bottom" constant="5" id="hlc-ca-M4P"/>
                     <constraint firstItem="aAd-kB-K39" firstAttribute="leading" secondItem="2iL-ru-O38" secondAttribute="leading" id="iXj-gF-4HE"/>
                     <constraint firstItem="CTL-ON-s8M" firstAttribute="centerX" secondItem="DCt-Pg-hsY" secondAttribute="centerX" id="jPH-kM-kJM"/>
-                    <constraint firstAttribute="trailing" secondItem="DCt-Pg-hsY" secondAttribute="trailing" constant="15" id="sIk-dO-h9j"/>
+                    <constraint firstAttribute="trailing" secondItem="DCt-Pg-hsY" secondAttribute="trailing" constant="10" id="sIk-dO-h9j"/>
                     <constraint firstItem="OZX-1A-R9d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="vZ5-xB-BW3"/>
                     <constraint firstItem="2iL-ru-O38" firstAttribute="leading" secondItem="OZX-1A-R9d" secondAttribute="trailing" constant="10" id="wHT-tp-ziC"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-            <point key="canvasLocation" x="44.5" y="89.5"/>
+            <point key="canvasLocation" x="44.5" y="89"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Calender_icon" width="50" height="50"/>
         <image name="Image_icon1" width="448" height="383"/>
     </resources>
 </document>

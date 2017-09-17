@@ -19,7 +19,9 @@ extension UIViewController{
         _ = self.navigationController?.popViewController(animated: true)
     }
     
-    
+    func removeNavigationBackButtonTitle(){
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+    }
     
     func pushToPaymentPlan() {
         let payPlanVC = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.paymentPlan.rawValue) as! PaymentPlanViewController
@@ -28,6 +30,7 @@ extension UIViewController{
     
     func pushToOpportunityBoard() {
         let payPlanVC = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
+        removeNavigationBackButtonTitle()
         self.navigationController?.pushViewController(payPlanVC, animated: true)
     }
 
