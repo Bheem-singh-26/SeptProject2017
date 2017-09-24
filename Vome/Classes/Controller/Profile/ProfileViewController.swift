@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
 
     //MARK: ------------------------ IBOutlets and Variables ---------------------
     
@@ -29,11 +29,6 @@ class ProfileViewController: UIViewController {
         
         intializeView()
         
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationBarItem()
     }
     
     override func didReceiveMemoryWarning() {

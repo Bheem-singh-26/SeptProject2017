@@ -16,6 +16,7 @@
 		9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */; };
 		9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */; };
 		9B383AB71F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */; };
+		9B77ABB41F7813D4005303D6 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */; };
 		9B8F5CDE1F779C2E00D4DFE6 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CDD1F779C2E00D4DFE6 /* DrawerMenuViewController.swift */; };
 		9B8F5CE01F77A00000D4DFE6 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CDF1F77A00000D4DFE6 /* LeftViewController.swift */; };
 		9B8F5CE41F77A25900D4DFE6 /* ImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CE21F77A25900D4DFE6 /* ImageHeaderView.swift */; };
@@ -81,6 +82,7 @@
 		9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardViewController.swift; sourceTree = "<group>"; };
 		9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardTableViewCell.swift; sourceTree = "<group>"; };
 		9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpportunityBoardTableViewCell.xib; sourceTree = "<group>"; };
+		9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		9B8F5CDD1F779C2E00D4DFE6 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		9B8F5CDF1F77A00000D4DFE6 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		9B8F5CE21F77A25900D4DFE6 /* ImageHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeaderView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,14 @@
 				9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9B77ABB21F7813B1005303D6 /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */,
+			);
+			path = CheckIn;
 			sourceTree = "<group>";
 		};
 		9B8F5CDC1F779C1600D4DFE6 /* DrawerMenu */ = {
@@ -300,6 +310,7 @@
 				9BF9C12D1F653EAE0092DB80 /* Payment */,
 				9B383AB01F6D50F000C7FAA6 /* OpportunityBoard */,
 				9B8F5CDC1F779C1600D4DFE6 /* DrawerMenu */,
+				9B77ABB21F7813B1005303D6 /* CheckIn */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -610,6 +621,7 @@
 				9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */,
 				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
 				9B8F5CDE1F779C2E00D4DFE6 /* DrawerMenuViewController.swift in Sources */,
+				9B77ABB41F7813D4005303D6 /* CheckInViewController.swift in Sources */,
 				9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

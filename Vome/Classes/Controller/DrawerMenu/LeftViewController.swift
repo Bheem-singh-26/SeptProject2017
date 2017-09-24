@@ -28,7 +28,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var menuTitles = ["My Profile", "Check-in", "My Opportunities", "Notification", "Invite your friend", "FAQ", "Settings"]
     var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "CheckInIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
     var profileViewController: UIViewController!
-    var javaViewController: UIViewController!
+    var checkInViewController: UIViewController!
     var goViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
@@ -41,13 +41,13 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = getMainStoryBoard()
         let profileVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.profile.rawValue) as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileVC)
-//        
-//        let javaViewController = storyboard.instantiateViewController(withIdentifier: "JavaViewController") as! JavaViewController
-//        self.javaViewController = UINavigationController(rootViewController: javaViewController)
-//        
+        
+        let checkInVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.checkIn.rawValue) as! CheckInViewController
+        self.checkInViewController = UINavigationController(rootViewController: checkInVC)
+        
 //        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
 //        self.goViewController = UINavigationController(rootViewController: goViewController)
 //        
@@ -75,6 +75,9 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         switch menu {
             case .profile:
                 self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
+            
+            case .checkIn:
+                self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
             
             default:
                 break

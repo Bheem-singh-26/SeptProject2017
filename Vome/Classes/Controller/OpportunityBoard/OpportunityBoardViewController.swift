@@ -43,10 +43,6 @@ class OpportunityBoardViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationBarItem()
-    }
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         

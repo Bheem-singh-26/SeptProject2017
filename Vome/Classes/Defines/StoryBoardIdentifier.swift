@@ -33,6 +33,7 @@ enum StoryboardVCIdentifier: String {
     case register = "RegisterViewController"
     case loginSignup = "LoginSignUpViewController"
     case profile = "ProfileViewController"
+    case checkIn = "CheckInViewController"
     
 }
 
