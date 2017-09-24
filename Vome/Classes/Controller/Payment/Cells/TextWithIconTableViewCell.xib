@@ -31,19 +31,20 @@
                             <constraint firstAttribute="height" constant="20" id="OwN-w0-TbL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter to Search Optimization" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-Bd-YLv">
-                        <rect key="frame" x="81.5" y="10" width="212.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter to Search Optimization" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-Bd-YLv">
+                        <rect key="frame" x="60" y="10" width="290" height="21"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                         <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="bNj-Bd-YLv" firstAttribute="leading" secondItem="WFO-Ap-ji8" secondAttribute="trailing" constant="15" id="A6V-uG-kIX"/>
+                    <constraint firstItem="WFO-Ap-ji8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="IHS-Gy-wvq"/>
                     <constraint firstItem="bNj-Bd-YLv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="K5Q-8K-xtH"/>
-                    <constraint firstItem="bNj-Bd-YLv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MoD-fm-JlV"/>
                     <constraint firstItem="WFO-Ap-ji8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="QuF-33-eU2"/>
                     <constraint firstAttribute="bottom" secondItem="bNj-Bd-YLv" secondAttribute="bottom" constant="10" id="g9U-Et-Mze"/>
-                    <constraint firstItem="WFO-Ap-ji8" firstAttribute="centerY" secondItem="bNj-Bd-YLv" secondAttribute="centerY" id="nHd-MW-UuA"/>
+                    <constraint firstAttribute="trailing" secondItem="bNj-Bd-YLv" secondAttribute="trailing" constant="25" id="s8J-9g-D0t"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="tintColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>

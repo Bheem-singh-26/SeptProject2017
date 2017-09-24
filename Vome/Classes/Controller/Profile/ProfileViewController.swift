@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var dataSource = ["Description"," +91-9865637807", "Samuel@gmail.com", "www.samuel@gmail.ua", "Montreal, Quebec, Canada", "User Type: Organization"]
+    var dataSource = ["Description:\nI have seen many storms in my life. Most storms have caught me by surprise, so I had to learn very quickly to look further and understand that I am not capable of controlling the weather, to exercise the art of patience and to respect the fury of nature.", "+91-9865637807", "Samuel@gmail.com", "www.samuel@gmail.ua", "Montreal, Quebec, Canada", "User Type: Organization"]
     var dataSourceImage = [#imageLiteral(resourceName: "NewsIcon"), #imageLiteral(resourceName: "PhoneIcon"), #imageLiteral(resourceName: "MailIcon"), #imageLiteral(resourceName: "WebIcon"), #imageLiteral(resourceName: "Marker"), #imageLiteral(resourceName: "Briefcase")]
     
     //MARK: ------------------------ Default Mehtods ----------------------------
@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = StringConstant.PROFILE
         
         intializeView()
         
