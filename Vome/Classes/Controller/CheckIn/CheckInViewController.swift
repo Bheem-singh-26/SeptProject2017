@@ -9,11 +9,17 @@
 import UIKit
 
 class CheckInViewController: BaseViewController {
-
+    
+    @IBOutlet weak var checkStatus: UIView!
+    @IBOutlet weak var checkStatusButton: UIButton!
+    @IBOutlet weak var checkStatusView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = StringConstant.CHECKIN
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +27,12 @@ class CheckInViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func checkInButtonClicked(_ sender: UIButton) {
+        
+        self.checkStatusView.isHidden = false
+        
     }
-    */
+    
+    
 
 }

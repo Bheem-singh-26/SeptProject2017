@@ -314,7 +314,47 @@
                                 <state key="normal" title="CHECK - IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkInButtonClicked:" destination="bme-Wo-o3r" eventType="touchUpInside" id="g2m-hk-xEb"/>
+                                </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBB-0d-CFd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THANK YOU FOR CHECKING IN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-td-wzR">
+                                        <rect key="frame" x="20" y="30" width="335" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE EVENT COORDINATOR HAVE BEEN NOTIFIED." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="W83-rW-gzS">
+                                        <rect key="frame" x="20" y="79.5" width="335" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-cT-3AP">
+                                        <rect key="frame" x="40" y="126" width="295" height="29"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.58039215690000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="12"/>
+                                        <state key="normal" title="SEE STATUS OF CHECK - IN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="W83-rW-gzS" firstAttribute="trailing" secondItem="hWR-td-wzR" secondAttribute="trailing" id="4P3-TJ-7XO"/>
+                                    <constraint firstItem="tQl-cT-3AP" firstAttribute="leading" secondItem="CBB-0d-CFd" secondAttribute="leading" constant="40" id="5ID-zt-1D8"/>
+                                    <constraint firstAttribute="trailing" secondItem="tQl-cT-3AP" secondAttribute="trailing" constant="40" id="CdY-n7-lWO"/>
+                                    <constraint firstItem="hWR-td-wzR" firstAttribute="leading" secondItem="CBB-0d-CFd" secondAttribute="leading" constant="20" id="Vli-bK-S7i"/>
+                                    <constraint firstItem="W83-rW-gzS" firstAttribute="leading" secondItem="hWR-td-wzR" secondAttribute="leading" id="WZL-HP-ACR"/>
+                                    <constraint firstItem="W83-rW-gzS" firstAttribute="top" secondItem="hWR-td-wzR" secondAttribute="bottom" constant="30" id="bGQ-NK-dEU"/>
+                                    <constraint firstItem="tQl-cT-3AP" firstAttribute="top" secondItem="W83-rW-gzS" secondAttribute="bottom" constant="30" id="gZD-Br-2r4"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWR-td-wzR" secondAttribute="trailing" constant="20" id="rAe-Lk-Qzd"/>
+                                    <constraint firstItem="hWR-td-wzR" firstAttribute="top" secondItem="CBB-0d-CFd" secondAttribute="top" constant="30" id="y7n-J2-G0a"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -322,6 +362,7 @@
                             <constraint firstItem="jSp-TF-mwo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="33h-zs-oVd" secondAttribute="leading" constant="20" id="8rx-3V-JCk"/>
                             <constraint firstItem="u8M-tg-mXk" firstAttribute="leading" secondItem="33h-zs-oVd" secondAttribute="leading" constant="10" id="A0A-Dc-bHS"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jSp-TF-mwo" secondAttribute="trailing" constant="20" id="AnJ-6J-wZ3"/>
+                            <constraint firstAttribute="trailing" secondItem="CBB-0d-CFd" secondAttribute="trailing" id="Gxo-LH-keN"/>
                             <constraint firstItem="ctN-gc-4YH" firstAttribute="leading" secondItem="33h-zs-oVd" secondAttribute="leading" id="LNQ-wk-wze"/>
                             <constraint firstAttribute="trailing" secondItem="fCY-Yg-w7h" secondAttribute="trailing" constant="40" id="OMR-JF-31u"/>
                             <constraint firstItem="ctN-gc-4YH" firstAttribute="top" secondItem="33h-zs-oVd" secondAttribute="top" constant="64" id="R05-my-4Mi"/>
@@ -329,16 +370,24 @@
                             <constraint firstAttribute="trailing" secondItem="ctN-gc-4YH" secondAttribute="trailing" id="Xnv-d3-EQY"/>
                             <constraint firstItem="MLY-2e-jWC" firstAttribute="leading" secondItem="FZl-mt-FUc" secondAttribute="leading" id="dzr-IG-yww"/>
                             <constraint firstItem="MLY-2e-jWC" firstAttribute="trailing" secondItem="FZl-mt-FUc" secondAttribute="trailing" id="fnk-zX-DGa"/>
+                            <constraint firstItem="qcG-oc-Uf3" firstAttribute="top" secondItem="CBB-0d-CFd" secondAttribute="bottom" id="gzj-2s-0a3"/>
                             <constraint firstItem="fCY-Yg-w7h" firstAttribute="top" secondItem="MLY-2e-jWC" secondAttribute="bottom" constant="15" id="jIN-Ma-FP8"/>
                             <constraint firstItem="jSp-TF-mwo" firstAttribute="top" secondItem="ctN-gc-4YH" secondAttribute="bottom" constant="10" id="kal-3C-PYO"/>
                             <constraint firstItem="FZl-mt-FUc" firstAttribute="top" secondItem="u8M-tg-mXk" secondAttribute="bottom" constant="20" id="lPD-ac-teJ"/>
+                            <constraint firstItem="CBB-0d-CFd" firstAttribute="top" secondItem="ctN-gc-4YH" secondAttribute="top" id="mmi-kJ-uex"/>
                             <constraint firstItem="fCY-Yg-w7h" firstAttribute="leading" secondItem="33h-zs-oVd" secondAttribute="leading" constant="40" id="nG4-PM-myV"/>
                             <constraint firstItem="jSp-TF-mwo" firstAttribute="centerX" secondItem="ctN-gc-4YH" secondAttribute="centerX" id="pQE-On-s7q"/>
+                            <constraint firstItem="CBB-0d-CFd" firstAttribute="leading" secondItem="33h-zs-oVd" secondAttribute="leading" id="qk9-dD-geB"/>
                             <constraint firstAttribute="trailing" secondItem="u8M-tg-mXk" secondAttribute="trailing" constant="10" id="tmc-gA-5X5"/>
                             <constraint firstItem="MLY-2e-jWC" firstAttribute="top" secondItem="FZl-mt-FUc" secondAttribute="bottom" constant="5" id="wcP-48-Ith"/>
                             <constraint firstAttribute="trailing" secondItem="FZl-mt-FUc" secondAttribute="trailing" constant="50" id="zPb-GH-eN5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkStatus" destination="CBB-0d-CFd" id="WEQ-Ju-RwF"/>
+                        <outlet property="checkStatusButton" destination="tQl-cT-3AP" id="iTq-8Q-s6K"/>
+                        <outlet property="checkStatusView" destination="CBB-0d-CFd" id="dOR-t6-2Bh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02H-ym-l2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

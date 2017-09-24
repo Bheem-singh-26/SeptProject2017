@@ -15,4 +15,5 @@ class StringConstant {
     static let PROFILE = "Samuel's Profile"
     static let LOGIN = "Login"
     static let REGISTER = "Register"
+    static let CHECKIN = "Check-In"
 }
