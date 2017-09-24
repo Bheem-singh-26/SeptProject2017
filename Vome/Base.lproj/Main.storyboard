@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -146,6 +146,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vL8-gA-qrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860" y="139"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="bHo-VN-WbY">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="U4n-zv-zBl" customClass="LeftViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J2f-GG-Ebd"/>
+                        <viewControllerLayoutGuide type="bottom" id="jqM-r8-cCV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jzY-FD-w9q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FmB-xE-GS5">
+                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="U4n-zv-zBl" id="0pp-5p-CnG"/>
+                                    <outlet property="delegate" destination="U4n-zv-zBl" id="sdo-14-oqh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jqM-r8-cCV" firstAttribute="top" secondItem="FmB-xE-GS5" secondAttribute="bottom" id="9wg-tP-iH1"/>
+                            <constraint firstItem="FmB-xE-GS5" firstAttribute="leading" secondItem="jzY-FD-w9q" secondAttribute="leading" id="Qvc-J1-4s6"/>
+                            <constraint firstItem="FmB-xE-GS5" firstAttribute="top" secondItem="jzY-FD-w9q" secondAttribute="top" constant="180" id="gSk-HT-nFS"/>
+                            <constraint firstAttribute="trailing" secondItem="FmB-xE-GS5" secondAttribute="trailing" id="iu0-Zc-d9Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FmB-xE-GS5" id="FHt-hD-NR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oT3-Uz-Xv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2878" y="139"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Flp-DZ-bIr">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="mnv-in-OBV" customClass="ProfileViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zoe-Ne-bNI"/>
+                        <viewControllerLayoutGuide type="bottom" id="aUX-QK-K4V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KOO-rN-lSR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FOz-tj-ahS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mnv-in-OBV" id="Iv3-Ay-FkJ"/>
+                                    <outlet property="delegate" destination="mnv-in-OBV" id="iGG-0e-t6g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FOz-tj-ahS" secondAttribute="trailing" id="7ti-0R-UQi"/>
+                            <constraint firstItem="FOz-tj-ahS" firstAttribute="leading" secondItem="KOO-rN-lSR" secondAttribute="leading" id="I3j-aF-oTf"/>
+                            <constraint firstItem="aUX-QK-K4V" firstAttribute="top" secondItem="FOz-tj-ahS" secondAttribute="bottom" id="Rb0-hh-Pao"/>
+                            <constraint firstItem="FOz-tj-ahS" firstAttribute="top" secondItem="KOO-rN-lSR" secondAttribute="top" id="cLv-rv-tWg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FOz-tj-ahS" id="i7a-2W-3hM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9k-Ij-ADa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3576.8000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

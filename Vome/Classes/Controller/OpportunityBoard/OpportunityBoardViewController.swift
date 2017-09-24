@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class OpportunityBoardViewController: BaseViewController {
 
@@ -24,15 +25,27 @@ class OpportunityBoardViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         self.title = StringConstant.OPPORTUNITY_BOARD
-        tableView.register(UINib(nibName: OpportunityBoardTableViewCell.reuseIdentifier(),bundle: nil), forCellReuseIdentifier: OpportunityBoardTableViewCell.reuseIdentifier())
+        
+        intializeView()
+        
+    }
+    
+    func intializeView(){
+        
+        tableView.registerCellNib(OpportunityBoardTableViewCell.self)
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 130
         
     }
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNavigationBarItem()
     }
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
@@ -61,6 +74,12 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        pushToPaymentPlan()
+        
     }
     
 }

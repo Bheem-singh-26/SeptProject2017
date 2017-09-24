@@ -10,7 +10,7 @@ target 'Vome' do
   pod 'Alamofire’
   pod 'AlamofireImage'
   pod 'AlamofireObjectMapper’
-
+  pod 'SlideMenuControllerSwift'
   
 
   post_install do |installer|

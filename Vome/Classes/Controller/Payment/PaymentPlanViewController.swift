@@ -26,11 +26,9 @@ class PaymentPlanViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
         self.title = StringConstant.PAYMENT_PLAN
-        let nib = UINib(nibName: PaymentPlanSectionHearder.reuseIdentifier(), bundle: nil)
-        tableView.register(nib, forHeaderFooterViewReuseIdentifier: PaymentPlanSectionHearder.reuseIdentifier())
-        tableView.register(UINib(nibName: TextWithIconTableViewCell.reuseIdentifier(),bundle: nil), forCellReuseIdentifier: TextWithIconTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: OutlineButtonTableViewCell.reuseIdentifier(),bundle: nil), forCellReuseIdentifier: OutlineButtonTableViewCell.reuseIdentifier())
-        tableView.estimatedRowHeight = 41
+        
+        intializeView()
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +36,16 @@ class PaymentPlanViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func intializeView(){
+        
+        let nib = UINib(nibName: PaymentPlanSectionHearder.reuseIdentifier(), bundle: nil)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: PaymentPlanSectionHearder.reuseIdentifier())
+        tableView.registerCellNib(TextWithIconTableViewCell.self)
+        tableView.registerCellNib(OutlineButtonTableViewCell.self)
+        tableView.estimatedRowHeight = 41
+        
+    }
+
     
 
 }
@@ -64,6 +72,7 @@ extension PaymentPlanViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: TextWithIconTableViewCell.reuseIdentifier()) as! TextWithIconTableViewCell
         cell.selectionStyle = .none
         cell.cellTextLabel.text = dataSource[indexPath.row]
+        cell.imageIcon.image = #imageLiteral(resourceName: "Checkmark")
         
         return cell
     }

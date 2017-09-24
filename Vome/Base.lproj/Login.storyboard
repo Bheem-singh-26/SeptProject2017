@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Yu-Rm-ebt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -122,6 +122,9 @@
                                         <rect key="frame" x="0.0" y="139" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title=" NOT A MEMBER? SIGNUP"/>
+                                        <connections>
+                                            <action selector="pushToRegisterClicked:" destination="G66-tI-Zcy" eventType="touchUpInside" id="fac-mr-1hA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -185,6 +188,9 @@
                                         <rect key="frame" x="0.0" y="200" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Already a member? Login here"/>
+                                        <connections>
+                                            <action selector="pushToLoginClicked:" destination="OaO-ya-GtS" eventType="touchUpInside" id="lCz-0e-9a3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -267,25 +273,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqx-ax-BJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2591.1999999999998" y="605.84707646176912"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6EQ-qv-7LO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Yu-Rm-ebt" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dgT-Rz-Pbo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UGt-Zi-rye"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rS2-8d-Q02" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-487.19999999999999" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileMapTableViewCell" rowHeight="264" id="KGk-i7-Jjw" customClass="ProfileMapTableViewCell" customModule="Vome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="263.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-vq-kAC">
+                        <rect key="frame" x="25" y="15" width="325" height="49.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunities Published" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-5T-9DQ">
+                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="49.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteers Followings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTo-OS-uce">
+                                <rect key="frame" x="172.5" y="0.0" width="152.5" height="49.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.58039215690000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0V4-G6-FbE">
+                        <rect key="frame" x="25" y="69.5" width="325" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-DD-3Ap">
+                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="76" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQk-TZ-hl2">
+                                <rect key="frame" x="172.5" y="0.0" width="152.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.58039215690000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-ji-c8J">
+                        <rect key="frame" x="10" y="104.5" width="355" height="149"/>
+                    </mapView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aZV-ji-c8J" secondAttribute="bottom" constant="10" id="59V-Yr-gRV"/>
+                    <constraint firstItem="0V4-G6-FbE" firstAttribute="top" secondItem="PqV-vq-kAC" secondAttribute="bottom" constant="5" id="5fo-bP-z8d"/>
+                    <constraint firstItem="aZV-ji-c8J" firstAttribute="top" secondItem="0V4-G6-FbE" secondAttribute="bottom" constant="10" id="E57-r7-bce"/>
+                    <constraint firstAttribute="trailing" secondItem="aZV-ji-c8J" secondAttribute="trailing" constant="10" id="GWL-cp-GLc"/>
+                    <constraint firstItem="PqV-vq-kAC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="cmd-Gi-F9O"/>
+                    <constraint firstItem="PqV-vq-kAC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="gtr-jy-AOD"/>
+                    <constraint firstItem="aZV-ji-c8J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hC2-nf-f8z"/>
+                    <constraint firstItem="0V4-G6-FbE" firstAttribute="leading" secondItem="PqV-vq-kAC" secondAttribute="leading" id="rp5-dI-QQD"/>
+                    <constraint firstAttribute="trailing" secondItem="PqV-vq-kAC" secondAttribute="trailing" constant="25" id="scE-sz-8mr"/>
+                    <constraint firstItem="0V4-G6-FbE" firstAttribute="trailing" secondItem="PqV-vq-kAC" secondAttribute="trailing" id="xsR-Ci-TRK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="followingCount" destination="BQk-TZ-hl2" id="RQW-xW-ApU"/>
+                <outlet property="mapView" destination="aZV-ji-c8J" id="M8K-Go-amh"/>
+                <outlet property="opportunityCount" destination="t4b-DD-3Ap" id="eCT-i1-t6M"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="164"/>
+        </tableViewCell>
+    </objects>
+</document>

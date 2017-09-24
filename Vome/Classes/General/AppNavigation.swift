@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SlideMenuControllerSwift
 
 extension UIViewController{
 
@@ -23,17 +24,42 @@ extension UIViewController{
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     
+    func pushToLoginVC() {
+        let viewController = getLoginStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.login.rawValue) as! LoginViewController
+        self.present(viewController, animated: true) { }
+    }
+    
+    func pushToRegisterVC() {
+        let viewController = getLoginStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.register.rawValue) as! RegisterViewController
+        self.present(viewController, animated: true) { }
+    }
+    
     func pushToPaymentPlan() {
-        let payPlanVC = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.paymentPlan.rawValue) as! PaymentPlanViewController
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.paymentPlan.rawValue) as! PaymentPlanViewController
         removeNavigationBackButtonTitle()
-        self.navigationController?.pushViewController(payPlanVC, animated: true)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func pushToOpportunityBoard() {
-        let payPlanVC = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
         removeNavigationBackButtonTitle()
-        self.navigationController?.pushViewController(payPlanVC, animated: true)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
+    func pushToDrawerMenu(){
+        
+        let storyboard = getMainStoryBoard()
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        UINavigationBar.appearance().tintColor = UIColor.themeBlackColor()
+        
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = slideMenuController
+    }
+    
     
 }

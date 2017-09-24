@@ -24,21 +24,17 @@ class RegisterViewController: UIViewController {
     }
     
     
+    //MARK: ------------------------ Default Mehtods -----------------------
+    
     @IBAction func registerButtonClicked(_ sender: UIButton) {
         
-        pushToPaymentPlan()
+        pushToDrawerMenu()
     }
     
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func pushToLoginClicked(_ sender: UIButton) {
+        pushToLoginVC()
     }
-    */
+    
+    
 
 }
