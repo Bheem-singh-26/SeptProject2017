@@ -11,6 +11,7 @@ target 'Vome' do
   pod 'AlamofireImage'
   pod 'AlamofireObjectMapper’
   pod 'SlideMenuControllerSwift'
+  pod 'IQKeyboardManagerSwift'
   
 
   post_install do |installer|

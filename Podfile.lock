@@ -5,6 +5,7 @@ PODS:
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - IQKeyboardManagerSwift (4.0.11)
   - ObjectMapper (2.2.8)
   - SlideMenuControllerSwift (3.0.1)
 
@@ -12,15 +13,17 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - AlamofireObjectMapper
+  - IQKeyboardManagerSwift
   - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
 
-PODFILE CHECKSUM: df1afa4e25671ab5582ac8c25b5c695c7facb80e
+PODFILE CHECKSUM: 85f241120c7133e654465984f09bc3998b69bc64
 
 COCOAPODS: 1.2.1
