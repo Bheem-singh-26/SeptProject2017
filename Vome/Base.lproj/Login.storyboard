@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
         <array key="OpenSans-ExtraBold.ttf">
             <string>OpenSans-Extrabold</string>
         </array>
@@ -256,25 +259,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="e6n-jC-OtG">
-                                <rect key="frame" x="20" y="60" width="335" height="214"/>
+                                <rect key="frame" x="20" y="60" width="335" height="227"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR FIRST MONTH IS ON US!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-S2-CgN">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="18"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR FIRST MONTH IS ON US!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-S2-CgN">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-Dd-eW5">
-                                        <rect key="frame" x="0.0" y="33" width="335" height="128"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="335" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Therefore, your credit card will not be charged during the first month of use. You will begin getting billed after your 30-day trail has ended. To change your plan, you can do so at any time on your settings page.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwP-Ln-qac">
-                                        <rect key="frame" x="0.0" y="176" width="335" height="38"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="335" height="48.5"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
                                         <state key="normal" title="PROCEED TO STRIPE">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -292,7 +296,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="r36-Iq-TpZ" firstAttribute="top" secondItem="e6n-jC-OtG" secondAttribute="bottom" constant="393" id="9Ch-id-Uc5"/>
+                            <constraint firstItem="r36-Iq-TpZ" firstAttribute="top" secondItem="e6n-jC-OtG" secondAttribute="bottom" constant="380" id="9Ch-id-Uc5"/>
                             <constraint firstItem="e6n-jC-OtG" firstAttribute="leading" secondItem="nIs-dX-Bgy" secondAttribute="leading" constant="20" id="EWc-w1-nt7"/>
                             <constraint firstAttribute="trailing" secondItem="e6n-jC-OtG" secondAttribute="trailing" constant="20" id="SZ2-wZ-jFt"/>
                             <constraint firstItem="e6n-jC-OtG" firstAttribute="top" secondItem="v7l-Zl-dCO" secondAttribute="bottom" constant="40" id="zhn-6h-2Bd"/>
