@@ -58,6 +58,10 @@
 		9BD1B7971F65351200B3A641 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */; };
 		9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B7981F65354700B3A641 /* AppUser.swift */; };
 		9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */; };
+		9BEE2DF81F797B8300EBEB64 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE2DF71F797B8300EBEB64 /* MessageViewController.swift */; };
+		9BEE2DFA1F797BB100EBEB64 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE2DF91F797BB100EBEB64 /* Chat.storyboard */; };
+		9BEE2DFE1F797D1E00EBEB64 /* MessgaeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE2DFC1F797D1E00EBEB64 /* MessgaeTableViewCell.swift */; };
+		9BEE2DFF1F797D1E00EBEB64 /* MessgaeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE2DFD1F797D1E00EBEB64 /* MessgaeTableViewCell.xib */; };
 		9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C12E1F653F2E0092DB80 /* PaymentPlanViewController.swift */; };
 		9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1301F653FCA0092DB80 /* StringConstant.swift */; };
 		9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF9C1331F6541180092DB80 /* TextWithIconTableViewCell.swift */; };
@@ -125,6 +129,10 @@
 		9BD1B7961F65351200B3A641 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9BD1B7981F65354700B3A641 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		9BD1B79A1F65360C00B3A641 /* DatabaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
+		9BEE2DF71F797B8300EBEB64 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		9BEE2DF91F797BB100EBEB64 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		9BEE2DFC1F797D1E00EBEB64 /* MessgaeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessgaeTableViewCell.swift; sourceTree = "<group>"; };
+		9BEE2DFD1F797D1E00EBEB64 /* MessgaeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessgaeTableViewCell.xib; sourceTree = "<group>"; };
 		9BF9C12E1F653F2E0092DB80 /* PaymentPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPlanViewController.swift; sourceTree = "<group>"; };
 		9BF9C1301F653FCA0092DB80 /* StringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 		9BF9C1331F6541180092DB80 /* TextWithIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWithIconTableViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +313,7 @@
 		9BD1B7611F6533B500B3A641 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9BEE2DF61F797B6B00EBEB64 /* Message */,
 				9B8F5CF01F77D35E00D4DFE6 /* Profile */,
 				9BD1B7621F6533B500B3A641 /* LoginSignup */,
 				9BF9C12D1F653EAE0092DB80 /* Payment */,
@@ -396,6 +405,7 @@
 				1714A7291F6E257B00C9BB17 /* Login.storyboard */,
 				9BD1B74E1F65335100B3A641 /* Main.storyboard */,
 				9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */,
+				9BEE2DF91F797BB100EBEB64 /* Chat.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -419,6 +429,24 @@
 				9BD1B7871F6534D800B3A641 /* readme.txt */,
 			);
 			path = Open_Sans;
+			sourceTree = "<group>";
+		};
+		9BEE2DF61F797B6B00EBEB64 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE2DFB1F797C9100EBEB64 /* Views */,
+				9BEE2DF71F797B8300EBEB64 /* MessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		9BEE2DFB1F797C9100EBEB64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE2DFC1F797D1E00EBEB64 /* MessgaeTableViewCell.swift */,
+				9BEE2DFD1F797D1E00EBEB64 /* MessgaeTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9BF9C12D1F653EAE0092DB80 /* Payment */ = {
@@ -519,6 +547,8 @@
 				9B8F5CF71F77E0E100D4DFE6 /* ProfileMapTableViewCell.xib in Resources */,
 				9BD1B78B1F6534D800B3A641 /* OpenSans-CondLight.ttf in Resources */,
 				9B8F5CE51F77A25900D4DFE6 /* ImageHeaderView.xib in Resources */,
+				9BEE2DFA1F797BB100EBEB64 /* Chat.storyboard in Resources */,
+				9BEE2DFF1F797D1E00EBEB64 /* MessgaeTableViewCell.xib in Resources */,
 				9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */,
 				9BD1B76F1F6533F900B3A641 /* Assets.xcassets in Resources */,
 				9BD1B78A1F6534D800B3A641 /* OpenSans-CondBold.ttf in Resources */,
@@ -598,6 +628,7 @@
 				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
+				9BEE2DFE1F797D1E00EBEB64 /* MessgaeTableViewCell.swift in Sources */,
 				9B8F5CFC1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift in Sources */,
 				9BF9C13A1F6550200092DB80 /* PaymentPlanSectionHearder.swift in Sources */,
 				9B8F5CE91F77A4F900D4DFE6 /* String+Extension.swift in Sources */,
@@ -620,6 +651,7 @@
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
 				9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */,
 				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
+				9BEE2DF81F797B8300EBEB64 /* MessageViewController.swift in Sources */,
 				9B8F5CDE1F779C2E00D4DFE6 /* DrawerMenuViewController.swift in Sources */,
 				9B77ABB41F7813D4005303D6 /* CheckInViewController.swift in Sources */,
 				9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */,

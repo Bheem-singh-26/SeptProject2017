@@ -25,11 +25,11 @@ protocol LeftMenuProtocol : class {
 class LeftViewController : UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menuTitles = ["My Profile", "Check-in", "My Opportunities", "Notification", "Invite your friend", "FAQ", "Settings"]
+    var menuTitles = ["My Profile", "Check-in", "My Opportunities", "Notifications", "Invite your friend", "FAQ", "Settings"]
     var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "CheckInIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
     var profileViewController: UIViewController!
     var checkInViewController: UIViewController!
-    var goViewController: UIViewController!
+    var messageViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,8 +48,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let checkInVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.checkIn.rawValue) as! CheckInViewController
         self.checkInViewController = UINavigationController(rootViewController: checkInVC)
         
-//        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
-//        self.goViewController = UINavigationController(rootViewController: goViewController)
+        let messageVC = getChatStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.message.rawValue) as! MessageViewController
+        self.messageViewController = UINavigationController(rootViewController: messageVC)
 //        
 //        let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
 //        nonMenuController.delegate = self
@@ -78,11 +78,14 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             
             case .checkIn:
                 self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
+            case .notification:
+                self.slideMenuController()?.changeMainViewController(self.messageViewController, close: true)
             
             default:
                 break
         }
     }
+    
     
 }
 

@@ -17,6 +17,7 @@ enum StoryboardNames: String {
     
     case main = "Main"
     case login = "Login"
+    case chat = "Chat"
 
 }
 
@@ -34,6 +35,7 @@ enum StoryboardVCIdentifier: String {
     case loginSignup = "LoginSignUpViewController"
     case profile = "ProfileViewController"
     case checkIn = "CheckInViewController"
+    case message = "MessageViewController"
     
 }
 
@@ -50,6 +52,11 @@ func getMainStoryBoard() -> UIStoryboard {
 
 func getLoginStoryBoard() -> UIStoryboard {
     let storyboard: UIStoryboard = UIStoryboard(name: StoryboardNames.login.rawValue, bundle: nil)
+    return storyboard
+}
+
+func getChatStoryBoard() -> UIStoryboard {
+    let storyboard: UIStoryboard = UIStoryboard(name: StoryboardNames.chat.rawValue, bundle: nil)
     return storyboard
 }
 

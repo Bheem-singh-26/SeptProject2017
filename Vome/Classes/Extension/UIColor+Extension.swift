@@ -31,5 +31,10 @@ extension UIColor {
         return UIColor(red:69/255, green:179/255, blue:138/255, alpha:1.0)
     }
 
+    class func themeGrayColor() -> UIColor{
+        
+        return UIColor(red:224/255, green:224/255, blue:224/255, alpha:1.0)
+    }
+
     
 }

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessgaeTableViewCell" rowHeight="79" id="KGk-i7-Jjw" customClass="MessgaeTableViewCell" customModule="Vome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleProfile" translatesAutoresizingMaskIntoConstraints="NO" id="huI-dX-aoe">
+                        <rect key="frame" x="20" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="chI-EV-7rr"/>
+                            <constraint firstAttribute="height" constant="50" id="whx-K0-pNw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samuel Anderson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b0-P5-4Un">
+                        <rect key="frame" x="80" y="10" width="132" height="22"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 Jan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUn-Es-b2a">
+                        <rect key="frame" x="331.5" y="12" width="33.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't usually log in from this browser, so we want to make sure it was you." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="E9Y-pK-qRQ">
+                        <rect key="frame" x="80" y="37" width="275" height="16.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="huI-dX-aoe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0bA-oh-pRi"/>
+                    <constraint firstAttribute="trailing" secondItem="xUn-Es-b2a" secondAttribute="trailing" constant="10" id="8tZ-qU-OkM"/>
+                    <constraint firstItem="E9Y-pK-qRQ" firstAttribute="leading" secondItem="4b0-P5-4Un" secondAttribute="leading" id="DKK-RG-PDa"/>
+                    <constraint firstItem="huI-dX-aoe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="I0B-ZK-bdP"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="E9Y-pK-qRQ" secondAttribute="bottom" priority="750" constant="10" id="Nnk-tn-2Lh"/>
+                    <constraint firstAttribute="trailing" secondItem="E9Y-pK-qRQ" secondAttribute="trailing" constant="20" id="OYb-fp-XFM"/>
+                    <constraint firstItem="xUn-Es-b2a" firstAttribute="top" secondItem="4b0-P5-4Un" secondAttribute="top" constant="2" id="XXm-CL-anb"/>
+                    <constraint firstItem="4b0-P5-4Un" firstAttribute="top" secondItem="huI-dX-aoe" secondAttribute="top" id="d9g-xa-RnS"/>
+                    <constraint firstItem="E9Y-pK-qRQ" firstAttribute="top" secondItem="4b0-P5-4Un" secondAttribute="bottom" constant="5" id="s0G-D9-Kpf"/>
+                    <constraint firstItem="4b0-P5-4Un" firstAttribute="leading" secondItem="huI-dX-aoe" secondAttribute="trailing" constant="10" id="z48-Mp-3O3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="messageLabel" destination="E9Y-pK-qRQ" id="XkT-q0-fe6"/>
+                <outlet property="senderImage" destination="huI-dX-aoe" id="5YB-bh-u4c"/>
+                <outlet property="senderName" destination="4b0-P5-4Un" id="2XR-VU-eT9"/>
+                <outlet property="sentTime" destination="xUn-Es-b2a" id="9wG-Ne-jo8"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="-7.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SampleProfile" width="300" height="300"/>
+    </resources>
+</document>
