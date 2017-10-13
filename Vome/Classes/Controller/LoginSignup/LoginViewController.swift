@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //MARK: ------------------------ IBOutlets / Variables -----------------------
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,10 +33,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         
-        pushToDrawerMenu()
+        let apiService: APImanager.APIService = APImanager.APIService.login(username: self.usernameTextField.text!, password: self.passwordTextField.text!)
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            self.pushToDrawerMenu()
+            
+        }) { (errorMsg) in
+            print("Login failed !!!!!!!")
+        }
+        
     }
     @IBAction func pushToRegisterClicked(_ sender: UIButton) {
-        pushToRegisterVC()
+        self.pushToRegisterVC()
     }
 
     
