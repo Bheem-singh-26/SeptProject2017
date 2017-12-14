@@ -16,6 +16,11 @@
 		9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */; };
 		9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */; };
 		9B383AB71F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */; };
+		9B5606041FE2308F00C0FD50 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5606031FE2308F00C0FD50 /* Utility.swift */; };
+		9B5606071FE231FF00C0FD50 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5606061FE231FF00C0FD50 /* NotificationCenter.swift */; };
+		9B5606091FE2333800C0FD50 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5606081FE2333800C0FD50 /* Global.swift */; };
+		9B56060B1FE2349500C0FD50 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B56060A1FE2349500C0FD50 /* ErrorResponse.swift */; };
+		9B56060D1FE241A100C0FD50 /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B56060C1FE241A100C0FD50 /* LoginToken.swift */; };
 		9B77ABB41F7813D4005303D6 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */; };
 		9B8F5CDE1F779C2E00D4DFE6 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CDD1F779C2E00D4DFE6 /* DrawerMenuViewController.swift */; };
 		9B8F5CE01F77A00000D4DFE6 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CDF1F77A00000D4DFE6 /* LeftViewController.swift */; };
@@ -87,6 +92,11 @@
 		9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardViewController.swift; sourceTree = "<group>"; };
 		9B383AB41F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardTableViewCell.swift; sourceTree = "<group>"; };
 		9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpportunityBoardTableViewCell.xib; sourceTree = "<group>"; };
+		9B5606031FE2308F00C0FD50 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		9B5606061FE231FF00C0FD50 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		9B5606081FE2333800C0FD50 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		9B56060A1FE2349500C0FD50 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		9B56060C1FE241A100C0FD50 /* LoginToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
 		9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		9B8F5CDD1F779C2E00D4DFE6 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		9B8F5CDF1F77A00000D4DFE6 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */,
+				9B5606031FE2308F00C0FD50 /* Utility.swift */,
+				9B5606081FE2333800C0FD50 /* Global.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -200,6 +212,14 @@
 				9B383AB51F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9B5606051FE231D000C0FD50 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				9B5606061FE231FF00C0FD50 /* NotificationCenter.swift */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		9B77ABB21F7813B1005303D6 /* CheckIn */ = {
@@ -291,6 +311,7 @@
 				9BD1B7651F6533B500B3A641 /* Extension */,
 				9BD1B7661F6533B500B3A641 /* Models */,
 				9BD1B7671F6533B500B3A641 /* Network */,
+				9B5606051FE231D000C0FD50 /* Notification */,
 				9B383AAB1F6D4D3D00C7FAA6 /* General */,
 			);
 			path = Classes;
@@ -372,6 +393,8 @@
 			isa = PBXGroup;
 			children = (
 				9BD1B7981F65354700B3A641 /* AppUser.swift */,
+				9B56060A1FE2349500C0FD50 /* ErrorResponse.swift */,
+				9B56060C1FE241A100C0FD50 /* LoginToken.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -509,7 +532,8 @@
 				TargetAttributes = {
 					9BD1B7461F65335100B3A641 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = EXU7UPZB8S;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -577,9 +601,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Vome/Pods-Vome-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -607,13 +644,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vome-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -628,6 +668,8 @@
 				9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */,
 				9B8F5CEE1F77C78800D4DFE6 /* MenuTableViewCell.swift in Sources */,
 				9BF9C1381F6542830092DB80 /* UIColor+HexColor.swift in Sources */,
+				9B5606091FE2333800C0FD50 /* Global.swift in Sources */,
+				9B5606071FE231FF00C0FD50 /* NotificationCenter.swift in Sources */,
 				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
@@ -636,10 +678,13 @@
 				9BF9C13A1F6550200092DB80 /* PaymentPlanSectionHearder.swift in Sources */,
 				9B8F5CE91F77A4F900D4DFE6 /* String+Extension.swift in Sources */,
 				9BB0A3631F90BFA200F65CE0 /* APIManager.swift in Sources */,
+				9B56060B1FE2349500C0FD50 /* ErrorResponse.swift in Sources */,
 				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,
 				9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */,
 				9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */,
+				9B5606041FE2308F00C0FD50 /* Utility.swift in Sources */,
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
+				9B56060D1FE241A100C0FD50 /* LoginToken.swift in Sources */,
 				9B8F5CF21F77D37F00D4DFE6 /* ProfileViewController.swift in Sources */,
 				9B8F5CE01F77A00000D4DFE6 /* LeftViewController.swift in Sources */,
 				9B8F5CF91F77EF9A00D4DFE6 /* UIFont+Extension.swift in Sources */,
@@ -795,11 +840,14 @@
 			baseConfigurationReference = 8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EXU7UPZB8S;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vidheya.Vome;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d90d5815-e85b-4f29-a690-0e1de060430d";
+				PROVISIONING_PROFILE_SPECIFIER = devProfile;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -809,11 +857,15 @@
 			baseConfigurationReference = 7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EXU7UPZB8S;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vidheya.Vome;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "555f07f6-bd39-4c44-9d50-18b98333891a";
+				PROVISIONING_PROFILE_SPECIFIER = appstoreProfile;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

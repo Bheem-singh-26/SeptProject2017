@@ -11,7 +11,7 @@ import Alamofire
 
 class APImanager {
     
-    fileprivate static let baseUrl = "http://vomewebsite20171002054356.azurewebsites.net/TOKEN"
+    fileprivate static let baseUrl = "https://vomedev.azurewebsites.net/"
     
     enum APIService{
         
@@ -22,7 +22,7 @@ class APImanager {
         var path: String {
             switch self {
             case .login , .register:
-                return baseUrl
+                return baseUrl + "Token"
                 
             default:
                 return ""
@@ -51,15 +51,31 @@ class APImanager {
                 return .post
             case .register:
                 return .put
-            
+                
             default:
                 return .post
             }
         }
-
+        
         
         
     }
+    
+    class func login(apiService: APIService, handler: @escaping (_ user: LoginToken?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = LoginToken(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
+    
+    
     
     
 }

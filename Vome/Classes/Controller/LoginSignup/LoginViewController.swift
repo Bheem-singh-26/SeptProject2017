@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.title = StringConstant.LOGIN
+        self.usernameTextField.text = "emanuel.castiel@students.ha-mtl.org"
+        self.passwordTextField.text = "Temppassword124"
         
     }
 
@@ -33,17 +35,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         
-        let apiService: APImanager.APIService = APImanager.APIService.login(username: self.usernameTextField.text!, password: self.passwordTextField.text!)
-        
-        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+        APImanager.login(apiService: .login(username: self.usernameTextField.text!, password: self.passwordTextField.text!)) { (response, errorMsg) in
             
-            self.pushToDrawerMenu()
+            if isGuardObject(response){
+                self.pushToDrawerMenu()
+            }else{
+                print("Login failed !!!!!!!")
+            }
             
-        }) { (errorMsg) in
-            print("Login failed !!!!!!!")
         }
         
     }
+    
+    
     @IBAction func pushToRegisterClicked(_ sender: UIButton) {
         self.pushToRegisterVC()
     }

@@ -24,7 +24,7 @@ class NetworkManager {
     }
     
     
-    func callServiceWithName(_ serviceName:String, method: HTTPMethod, param: [String: Any] = ["":""], callbackSuccess:@ escaping(_ response: AnyObject) -> Void, callbackFaliure: @escaping (_ messgae:String) -> Void) {
+    func callServiceWithName(_ serviceName:String, method: HTTPMethod, param: [String: Any] = ["":""], callbackSuccess:@ escaping(_ response: AnyObject) -> Void, callbackFaliure: @escaping (_ messgae:AnyObject?) -> Void) {
         
         var header = [String: String]()
         
@@ -34,11 +34,25 @@ class NetworkManager {
             
             switch response.result {
             case .success:
-                callbackSuccess(response.result.value as AnyObject)
+                if let statusCode = APIStatusCode(rawValue: (response.response?.statusCode)!){
+                    switch statusCode{
+                        case .statusCode_200:
+                            callbackSuccess(response.result.value as AnyObject)
+                            break
+                        default:
+                            let objectModel = ErrorResponse(JSON: getResultDictWithoutDataKey(response.result.value as AnyObject))
+                            NotificationCenter.ShowNormalAlert(title: objectModel?.error, message: objectModel?.error_description, actionTitle: "Ok", complitionHandler: { (index) in
+                                
+                            })
+                            callbackFaliure(response.result.value as AnyObject)
+                            break
+                        
+                    }
+                }
                 break
                 
             case .failure:
-                callbackFaliure("Request failed due to error.")
+                callbackFaliure(nil)
                 break
             }
             
