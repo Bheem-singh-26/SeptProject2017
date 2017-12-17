@@ -7,11 +7,12 @@ target 'Vome' do
 
   # Pods for Vome
   
-  pod 'Alamofire’
-  pod 'AlamofireImage'
-  pod 'AlamofireObjectMapper’
-  pod 'SlideMenuControllerSwift'
-  pod 'IQKeyboardManagerSwift'
+  pod 'Alamofire’, '4.5.0'
+  pod 'AlamofireImage', '3.2.0'
+  pod 'AlamofireObjectMapper’, '4.1.0'
+  pod 'IQKeyboardManagerSwift', '4.0.11'
+  pod 'SlideMenuControllerSwift', '3.0.1'
+  pod 'SVProgressHUD', '2.2.2'
   
 
   post_install do |installer|

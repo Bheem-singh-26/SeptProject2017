@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SVProgressHUD
 
 
 class Utility{
@@ -16,8 +16,12 @@ class Utility{
     
     class func handleAPIErrorResponse(){
         
-        
+    }
     
+    class func hideSVProgressHud(){
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+        }
     }
     
     

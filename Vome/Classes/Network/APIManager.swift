@@ -16,13 +16,15 @@ class APImanager {
     enum APIService{
         
         case login(username: String, password: String)
-        case register(username: String, password: String)
-        
+        case register(username: String, password: String, userType:String)
+        case payment
         
         var path: String {
             switch self {
-            case .login , .register:
+            case .login:
                 return baseUrl + "Token"
+            case .register:
+                return baseUrl + "api/profileapi/RegisterUser"
                 
             default:
                 return ""
@@ -35,8 +37,8 @@ class APImanager {
                 let params = ["grant_type": "password","username": username, "password": password]
                 return params
                 
-            case let .register(username, password):
-                let params = ["email": username, "password": password]
+            case let .register(username, password, userType):
+                let params = ["Email": username, "Password": password, "PosterType": userType, "ConfirmPassword": password]
                 return params
                 
             default:
@@ -47,13 +49,11 @@ class APImanager {
         var method: HTTPMethod {
             
             switch self {
-            case .login:
+            case .login, .register:
                 return .post
-            case .register:
-                return .put
                 
             default:
-                return .post
+                return .get
             }
         }
         
@@ -75,6 +75,19 @@ class APImanager {
         }
     }
     
+    class func register(apiService: APIService, handler: @escaping (_ user: LoginToken?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = LoginToken(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
     
     
     

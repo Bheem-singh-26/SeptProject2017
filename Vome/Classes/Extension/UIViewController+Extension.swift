@@ -26,4 +26,18 @@ extension UIViewController {
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
     }
+    
+    func showAlert(title: String?, message: String?, actionTitle: String, complitionHandler:(() -> Void)? ) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alAction = UIAlertAction(title:actionTitle, style: .default) { (action) in
+            
+            if let _ = complitionHandler {
+                complitionHandler!()
+            }
+        }
+        alertController.addAction(alAction)
+        appDelegate?.window??.topMostController()?.present(alertController, animated: true, completion: nil)
+        
+    }
+    
 }

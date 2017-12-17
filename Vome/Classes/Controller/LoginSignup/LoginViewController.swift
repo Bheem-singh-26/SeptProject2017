@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -35,14 +36,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         
+        SVProgressHUD.show()
         APImanager.login(apiService: .login(username: self.usernameTextField.text!, password: self.passwordTextField.text!)) { (response, errorMsg) in
             
+            SVProgressHUD.dismiss()
             if isGuardObject(response){
                 self.pushToDrawerMenu()
             }else{
                 print("Login failed !!!!!!!")
             }
-            
         }
         
     }

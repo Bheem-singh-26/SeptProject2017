@@ -12,6 +12,7 @@ import ObjectMapper
 
 class LoginToken: Mappable {
     
+    var id:String?
     var userName = ""
     var token_type = ""
     var access_token: String?
@@ -25,6 +26,7 @@ class LoginToken: Mappable {
     
     // Mappable
     func mapping(map: Map) {
+        id            <- map["id"]
         userName      <- map["userName"]
         token_type    <- map["token_type"]
         access_token  <- map["access_token"]

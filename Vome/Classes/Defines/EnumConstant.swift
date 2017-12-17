@@ -23,3 +23,22 @@ enum APIStatusCode:Int{
     case statusCode_400 = 400
     
 }
+
+enum EnumUserType:String{
+    case school = "School"
+    case organization = "Organization"
+    case voulenteer = "Voulenteer"
+    
+    func valueOf() -> String{
+        switch self {
+        case .school:
+            return "School"
+        case .organization:
+            return "Organization"
+        case .voulenteer:
+            return "RegularUser"
+        }
+    }
+    
+}
+

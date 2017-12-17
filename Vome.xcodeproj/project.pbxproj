@@ -21,6 +21,7 @@
 		9B5606091FE2333800C0FD50 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5606081FE2333800C0FD50 /* Global.swift */; };
 		9B56060B1FE2349500C0FD50 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B56060A1FE2349500C0FD50 /* ErrorResponse.swift */; };
 		9B56060D1FE241A100C0FD50 /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B56060C1FE241A100C0FD50 /* LoginToken.swift */; };
+		9B6DC6E41FE6910C008EFE57 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DC6E31FE6910C008EFE57 /* Validation.swift */; };
 		9B77ABB41F7813D4005303D6 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */; };
 		9B8F5CDE1F779C2E00D4DFE6 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CDD1F779C2E00D4DFE6 /* DrawerMenuViewController.swift */; };
 		9B8F5CE01F77A00000D4DFE6 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CDF1F77A00000D4DFE6 /* LeftViewController.swift */; };
@@ -97,6 +98,7 @@
 		9B5606081FE2333800C0FD50 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		9B56060A1FE2349500C0FD50 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		9B56060C1FE241A100C0FD50 /* LoginToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
+		9B6DC6E31FE6910C008EFE57 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		9B77ABB31F7813D4005303D6 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		9B8F5CDD1F779C2E00D4DFE6 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		9B8F5CDF1F77A00000D4DFE6 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */,
 				9B5606031FE2308F00C0FD50 /* Utility.swift */,
 				9B5606081FE2333800C0FD50 /* Global.swift */,
+				9B6DC6E31FE6910C008EFE57 /* Validation.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -616,6 +620,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,6 +702,7 @@
 				9B8F5CE71F77A4A000D4DFE6 /* UITableView+Extension.swift in Sources */,
 				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
 				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
+				9B6DC6E41FE6910C008EFE57 /* Validation.swift in Sources */,
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
 				9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */,
 				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
@@ -840,14 +846,15 @@
 			baseConfigurationReference = 8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = EXU7UPZB8S;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vome;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d90d5815-e85b-4f29-a690-0e1de060430d";
-				PROVISIONING_PROFILE_SPECIFIER = devProfile;
+				PROVISIONING_PROFILE = "db9328c7-3ff9-4bf9-a715-79a70d46b7ba";
+				PROVISIONING_PROFILE_SPECIFIER = VomeProdProfile;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -862,10 +869,10 @@
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vome;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "555f07f6-bd39-4c44-9d50-18b98333891a";
-				PROVISIONING_PROFILE_SPECIFIER = appstoreProfile;
+				PROVISIONING_PROFILE = "db9328c7-3ff9-4bf9-a715-79a70d46b7ba";
+				PROVISIONING_PROFILE_SPECIFIER = VomeProdProfile;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
