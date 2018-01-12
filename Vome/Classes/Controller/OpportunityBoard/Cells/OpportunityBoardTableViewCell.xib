@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,7 +39,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-ru-O38">
                         <rect key="frame" x="80" y="15" width="195" height="44.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FUNDRAISER EVENT SET-UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIq-b4-xNX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FUNDRAISER EVENT SET-UP" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIq-b4-xNX">
                                 <rect key="frame" x="0.0" y="0.0" width="160.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -69,6 +69,9 @@
                         <state key="normal" title="BOOK NOW">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="bookNowBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PfU-Kb-zgf"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only 4 spot left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTL-ON-s8M">
                         <rect key="frame" x="297" y="39.5" width="56.5" height="11"/>
@@ -118,7 +121,16 @@
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-            <point key="canvasLocation" x="44.5" y="89"/>
+            <connections>
+                <outlet property="availableSpotsLabel" destination="CTL-ON-s8M" id="jd1-Jt-4ue"/>
+                <outlet property="bookBtn" destination="DCt-Pg-hsY" id="HW9-wn-fFG"/>
+                <outlet property="dateLabel" destination="pVX-Ry-sg0" id="wkC-Tk-Byl"/>
+                <outlet property="descriptionLabel" destination="aAd-kB-K39" id="pke-z3-fqO"/>
+                <outlet property="imageIcon" destination="OZX-1A-R9d" id="KmB-ch-bIn"/>
+                <outlet property="locationLabel" destination="wpl-Eh-Y7G" id="iYK-Sj-kjI"/>
+                <outlet property="titleLabel" destination="zIq-b4-xNX" id="YcR-Yc-dPq"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="71"/>
         </tableViewCell>
     </objects>
     <resources>

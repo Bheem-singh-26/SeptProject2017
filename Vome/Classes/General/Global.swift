@@ -12,7 +12,8 @@ import UIKit
 
 //MARK: -------------------------------- Variables --------------------------------------
 let appDelegate = UIApplication.shared.delegate
-
+var USER_TOKEN = ""
+var USER_AUTHORIZATION = ""
 
 //MARK: --------------------------------- Swift Guard -------------------------------------
 
@@ -59,3 +60,7 @@ func getResultArray(_ result: AnyObject?) -> [AnyObject] {
     return []
     
 }
+
+
+
+

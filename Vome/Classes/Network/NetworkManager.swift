@@ -29,6 +29,7 @@ class NetworkManager {
         var header = [String: String]()
         
         header [APIHeaderEnum.CONTENT_TYPE] = APIHeaderEnum.CONTENT_TYPE_VALUE
+        header [APIHeaderEnum.AUTHORIZATION] = USER_AUTHORIZATION
         
         AlamofireManager.request(serviceName, method: method, parameters: param, headers: header).responseJSON { response in
             

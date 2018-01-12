@@ -41,6 +41,8 @@ class LoginViewController: UIViewController {
             
             SVProgressHUD.dismiss()
             if isGuardObject(response){
+                USER_TOKEN = (response?.access_token)!
+                USER_AUTHORIZATION = (response?.token_type.capitalized)! + " " + (response?.access_token)!
                 self.pushToDrawerMenu()
             }else{
                 print("Login failed !!!!!!!")
@@ -48,6 +50,8 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+    
     
     
     @IBAction func pushToRegisterClicked(_ sender: UIButton) {

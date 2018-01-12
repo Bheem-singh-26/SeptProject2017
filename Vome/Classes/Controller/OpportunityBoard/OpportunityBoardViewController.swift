@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 import SlideMenuControllerSwift
 
 class OpportunityBoardViewController: BaseViewController {
@@ -16,6 +17,8 @@ class OpportunityBoardViewController: BaseViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentView: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
+    var opportunityPost:OpportunityPosts?
     
     
     //MARK: ------------------------ Default Mehtods -----------------------
@@ -27,6 +30,7 @@ class OpportunityBoardViewController: BaseViewController {
         self.title = StringConstant.OPPORTUNITY_BOARD
         
         intializeView()
+        fetchOpportunityPosts()
         
     }
     
@@ -44,8 +48,24 @@ class OpportunityBoardViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func fetchOpportunityPosts() {
+        
+        SVProgressHUD.show()
+        APImanager.opportunityPosts(apiService: .opportunityBoardPostList) { (posts, errorObject) in
+            
+            SVProgressHUD.dismiss()
+            if isGuardObject(posts){
+                self.opportunityPost = posts
+                self.tableView.reloadData()
+            }else{
+                print("Opportunity failed !!!!!!!")
+            }
+        }
+    }
+    
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         
+        self.tableView.reloadData()
     }
     
     
@@ -57,13 +77,31 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
     //MARK: ------------------------ TableView Delegates -----------------------
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        
+        if self.segmentView.selectedSegmentIndex == 1 {
+            if let posts = self.opportunityPost {
+                return posts.pledgeCount!
+            }
+        }else {
+            if let posts = self.opportunityPost {
+                return posts.oneTimerCount!
+            }
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: OpportunityBoardTableViewCell.reuseIdentifier()) as! OpportunityBoardTableViewCell
         cell.selectionStyle = .none
+        
+        if self.segmentView.selectedSegmentIndex == 1 {
+            cell.post = self.opportunityPost?.pledgePostList?[indexPath.row]
+            
+        }else {
+            cell.post = self.opportunityPost?.oneTimerPostList?[indexPath.row]
+        }
         
         return cell
     }
@@ -79,3 +117,29 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

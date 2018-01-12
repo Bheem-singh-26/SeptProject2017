@@ -13,6 +13,7 @@ enum APIHeaderEnum{
     
     public static let CONTENT_TYPE = "Content-Type"
     public static let CONTENT_TYPE_VALUE = "application/x-www-form-urlencoded"
+    public static let AUTHORIZATION = "Authorization"
     
 }
 

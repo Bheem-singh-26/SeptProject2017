@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1708AE692005CEF800CAFD36 /* OpportunityPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708AE682005CEF800CAFD36 /* OpportunityPosts.swift */; };
+		1708AE6B2005D09F00CAFD36 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708AE6A2005D09F00CAFD36 /* PostResponse.swift */; };
 		1714A72B1F6E257B00C9BB17 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A7291F6E257B00C9BB17 /* Login.storyboard */; };
 		1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */; };
 		1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1708AE682005CEF800CAFD36 /* OpportunityPosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityPosts.swift; sourceTree = "<group>"; };
+		1708AE6A2005D09F00CAFD36 /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		1714A72A1F6E257B00C9BB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +402,8 @@
 				9BD1B7981F65354700B3A641 /* AppUser.swift */,
 				9B56060A1FE2349500C0FD50 /* ErrorResponse.swift */,
 				9B56060C1FE241A100C0FD50 /* LoginToken.swift */,
+				1708AE682005CEF800CAFD36 /* OpportunityPosts.swift */,
+				1708AE6A2005D09F00CAFD36 /* PostResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -658,7 +664,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -682,6 +688,7 @@
 				9B8F5CFC1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift in Sources */,
 				9BF9C13A1F6550200092DB80 /* PaymentPlanSectionHearder.swift in Sources */,
 				9B8F5CE91F77A4F900D4DFE6 /* String+Extension.swift in Sources */,
+				1708AE6B2005D09F00CAFD36 /* PostResponse.swift in Sources */,
 				9BB0A3631F90BFA200F65CE0 /* APIManager.swift in Sources */,
 				9B56060B1FE2349500C0FD50 /* ErrorResponse.swift in Sources */,
 				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,
@@ -695,6 +702,7 @@
 				9B8F5CF91F77EF9A00D4DFE6 /* UIFont+Extension.swift in Sources */,
 				1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */,
 				9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */,
+				1708AE692005CEF800CAFD36 /* OpportunityPosts.swift in Sources */,
 				1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */,
 				9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */,
 				9B8F5CE41F77A25900D4DFE6 /* ImageHeaderView.swift in Sources */,
@@ -846,15 +854,15 @@
 			baseConfigurationReference = 8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EXU7UPZB8S;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db9328c7-3ff9-4bf9-a715-79a70d46b7ba";
-				PROVISIONING_PROFILE_SPECIFIER = VomeProdProfile;
+				PROVISIONING_PROFILE = "87d3e449-47cd-4317-a75b-7f45f81013ee";
+				PROVISIONING_PROFILE_SPECIFIER = VomeDevProfile;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -871,7 +879,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db9328c7-3ff9-4bf9-a715-79a70d46b7ba";
+				PROVISIONING_PROFILE = "9f5a832e-843f-44f9-aaa4-5aee31db5d55";
 				PROVISIONING_PROFILE_SPECIFIER = VomeProdProfile;
 				SWIFT_VERSION = 3.0;
 			};

@@ -28,6 +28,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var menuTitles = ["My Profile", "Check-in", "My Opportunities", "Notifications", "Invite your friend", "FAQ", "Settings"]
     var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "CheckInIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
     var profileViewController: UIViewController!
+    var myOpportunityViewController: UIViewController!
     var checkInViewController: UIViewController!
     var messageViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
@@ -44,6 +45,10 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let storyboard = getMainStoryBoard()
         let profileVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.profile.rawValue) as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileVC)
+        
+        let opportunityBoardVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
+        self.myOpportunityViewController = UINavigationController(rootViewController: opportunityBoardVC)
+        
         
         let checkInVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.checkIn.rawValue) as! CheckInViewController
         self.checkInViewController = UINavigationController(rootViewController: checkInVC)
@@ -75,7 +80,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         switch menu {
             case .profile:
                 self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
-            
+            case .myOpportunities:
+                self.slideMenuController()?.changeMainViewController(self.myOpportunityViewController, close: true)
             case .checkIn:
                 self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
             case .notification:

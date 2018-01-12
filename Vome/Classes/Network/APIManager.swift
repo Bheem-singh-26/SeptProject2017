@@ -18,6 +18,7 @@ class APImanager {
         case login(username: String, password: String)
         case register(username: String, password: String, userType:String)
         case payment
+        case opportunityBoardPostList
         
         var path: String {
             switch self {
@@ -25,6 +26,8 @@ class APImanager {
                 return baseUrl + "Token"
             case .register:
                 return baseUrl + "api/profileapi/RegisterUser"
+            case .opportunityBoardPostList:
+                return baseUrl + "api/posts_api/GetAllPosts"
                 
             default:
                 return ""
@@ -41,6 +44,7 @@ class APImanager {
                 let params = ["Email": username, "Password": password, "PosterType": userType, "ConfirmPassword": password]
                 return params
                 
+                
             default:
                 return ["": ""]
             }
@@ -56,8 +60,6 @@ class APImanager {
                 return .get
             }
         }
-        
-        
         
     }
     
@@ -89,6 +91,40 @@ class APImanager {
         }
     }
     
+    class func opportunityPosts(apiService: APIService, handler: @escaping (_ posts: OpportunityPosts?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = OpportunityPosts(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
+    
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
