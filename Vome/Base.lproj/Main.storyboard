@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="2878" y="139"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Volunteer Profile View Controller-->
         <scene sceneID="Flp-DZ-bIr">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="mnv-in-OBV" customClass="ProfileViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VolunteerProfileViewController" id="mnv-in-OBV" customClass="VolunteerProfileViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zoe-Ne-bNI"/>
                         <viewControllerLayoutGuide type="bottom" id="aUX-QK-K4V"/>
@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9k-Ij-ADa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3576.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3577" y="819"/>
         </scene>
         <!--Check In View Controller-->
         <scene sceneID="xC8-mP-jMG">
@@ -392,6 +392,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02H-ym-l2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4456.8000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="rl1-Kt-w5U">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Q3u-AO-5Vw" customClass="ProfileViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uO0-gp-2VP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Loz-LQ-tsm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cm3-Ls-pBD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-2m-Al1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q3u-AO-5Vw" id="5tZ-7H-blB"/>
+                                    <outlet property="delegate" destination="Q3u-AO-5Vw" id="gGt-Zr-sde"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Loz-LQ-tsm" firstAttribute="top" secondItem="jq1-2m-Al1" secondAttribute="bottom" id="0Ac-0D-u1g"/>
+                            <constraint firstAttribute="trailing" secondItem="jq1-2m-Al1" secondAttribute="trailing" id="4AY-Rq-7Rv"/>
+                            <constraint firstItem="jq1-2m-Al1" firstAttribute="leading" secondItem="Cm3-Ls-pBD" secondAttribute="leading" id="YmP-zZ-U55"/>
+                            <constraint firstItem="jq1-2m-Al1" firstAttribute="top" secondItem="Cm3-Ls-pBD" secondAttribute="top" id="gLH-aX-8RY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jq1-2m-Al1" id="fFs-zB-nLr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCv-yC-LBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3576.8000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

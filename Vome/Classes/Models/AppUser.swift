@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class AppUser{
+
+    static var sharedInstance: LoginToken?
+
+}

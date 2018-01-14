@@ -201,15 +201,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5o2-X4-y4a">
                                 <rect key="frame" x="20" y="323" width="335" height="304"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3C-f3-bn0">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
-                                        <state key="normal" title="Select type">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="selectUserTypeBtnClicked:" destination="OaO-ya-GtS" eventType="touchUpInside" id="ntP-Ds-bUB"/>
-                                        </connections>
-                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xi6-sP-FiT" customClass="CustomSegmentedControl" customModule="Vome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
+                                        <segments>
+                                            <segment title="VOLUNTEER"/>
+                                            <segment title="ORGANIZATION"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.27058823529999998" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-iG-ZAe" userLabel="Email">
                                         <rect key="frame" x="0.0" y="54" width="335" height="34"/>
                                         <nil key="textColor"/>
@@ -258,22 +257,12 @@
                                     <constraint firstItem="0A1-Db-LJN" firstAttribute="trailing" secondItem="Iex-iG-ZAe" secondAttribute="trailing" id="k0v-Zu-cME"/>
                                 </constraints>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3H-DI-nlf">
-                                <rect key="frame" x="20" y="368" width="335" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="OaO-ya-GtS" id="Or3-rZ-kSV"/>
-                                    <outlet property="delegate" destination="OaO-ya-GtS" id="cTR-gr-3th"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.58039215690000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ghF-2m-I6U" firstAttribute="trailing" secondItem="5o2-X4-y4a" secondAttribute="trailing" id="0L2-7V-vr0"/>
-                            <constraint firstItem="V3H-DI-nlf" firstAttribute="trailing" secondItem="B3C-f3-bn0" secondAttribute="trailing" id="721-Bm-BE2"/>
-                            <constraint firstItem="V3H-DI-nlf" firstAttribute="top" secondItem="B3C-f3-bn0" secondAttribute="top" constant="45" id="8CS-1o-HrV"/>
                             <constraint firstItem="5o2-X4-y4a" firstAttribute="top" secondItem="ghF-2m-I6U" secondAttribute="bottom" constant="40" id="MQq-3u-Y2J"/>
                             <constraint firstItem="5o2-X4-y4a" firstAttribute="leading" secondItem="N3e-BC-wig" secondAttribute="leading" constant="20" id="dkS-nH-Lco"/>
-                            <constraint firstItem="V3H-DI-nlf" firstAttribute="leading" secondItem="B3C-f3-bn0" secondAttribute="leading" id="fhu-0G-wZc"/>
                             <constraint firstItem="ghF-2m-I6U" firstAttribute="leading" secondItem="5o2-X4-y4a" secondAttribute="leading" id="h2D-tz-Zei"/>
                             <constraint firstItem="bzT-98-caw" firstAttribute="top" secondItem="5o2-X4-y4a" secondAttribute="bottom" constant="40" id="tOb-jQ-hBj"/>
                             <constraint firstAttribute="trailing" secondItem="5o2-X4-y4a" secondAttribute="trailing" constant="20" id="yEg-Xy-eha"/>
@@ -283,8 +272,7 @@
                         <outlet property="confirmPassTextField" destination="yim-i3-4yg" id="jap-n2-8xu"/>
                         <outlet property="emailtextfield" destination="Iex-iG-ZAe" id="ZSn-Pi-T1d"/>
                         <outlet property="passwordTextfield" destination="0A1-Db-LJN" id="x6N-xi-Ps0"/>
-                        <outlet property="pickerView" destination="V3H-DI-nlf" id="35L-aS-CbW"/>
-                        <outlet property="userTypeBtn" destination="B3C-f3-bn0" id="bVc-5g-74c"/>
+                        <outlet property="segmentView" destination="Xi6-sP-FiT" id="WFb-5K-phR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJr-sO-gUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
