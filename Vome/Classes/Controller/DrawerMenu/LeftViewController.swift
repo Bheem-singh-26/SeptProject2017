@@ -28,10 +28,13 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var menuTitles = ["My Profile", "Check-in", "My Opportunities", "Notifications", "Invite your friend", "FAQ", "Settings"]
     var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "CheckInIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
     var profileViewController: UIViewController!
+    var volunteerProfileViewController: UIViewController!
     var myOpportunityViewController: UIViewController!
     var checkInViewController: UIViewController!
     var messageViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
+    
+    var userType = EnumUserType.voulenteer
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -45,6 +48,9 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let storyboard = getMainStoryBoard()
         let profileVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.profile.rawValue) as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileVC)
+        
+        let volunteerProfileVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.volunteerProfile.rawValue) as! VolunteerProfileViewController
+        self.volunteerProfileViewController = UINavigationController(rootViewController: volunteerProfileVC)
         
         let opportunityBoardVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
         self.myOpportunityViewController = UINavigationController(rootViewController: opportunityBoardVC)
@@ -79,7 +85,13 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     func changeViewController(_ menu: LeftMenu) {
         switch menu {
             case .profile:
-                self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
+                switch self.userType {
+                case .organization:
+                    self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
+                default:
+                    self.slideMenuController()?.changeMainViewController(self.volunteerProfileViewController, close: true)
+                }
+            
             case .myOpportunities:
                 self.slideMenuController()?.changeMainViewController(self.myOpportunityViewController, close: true)
             case .checkIn:
