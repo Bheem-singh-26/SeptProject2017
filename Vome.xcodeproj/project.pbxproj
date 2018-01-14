@@ -12,6 +12,7 @@
 		1714A72B1F6E257B00C9BB17 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A7291F6E257B00C9BB17 /* Login.storyboard */; };
 		1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */; };
 		1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */; };
+		17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17871756200A7D4000F1213B /* ProfileResponse.swift */; };
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
 		9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */; };
 		9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */; };
@@ -89,6 +90,7 @@
 		1714A72A1F6E257B00C9BB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
+		17871756200A7D4000F1213B /* ProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				9B56060C1FE241A100C0FD50 /* LoginToken.swift */,
 				1708AE682005CEF800CAFD36 /* OpportunityPosts.swift */,
 				1708AE6A2005D09F00CAFD36 /* PostResponse.swift */,
+				17871756200A7D4000F1213B /* ProfileResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
 				9B6DC6E41FE6910C008EFE57 /* Validation.swift in Sources */,
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
+				17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */,
 				9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */,
 				9BD1B76C1F6533B500B3A641 /* BaseViewController.swift in Sources */,
 				9BEE2DF81F797B8300EBEB64 /* MessageViewController.swift in Sources */,
