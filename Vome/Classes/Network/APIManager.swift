@@ -29,8 +29,8 @@ class APImanager {
                 return baseUrl + "api/profileapi/RegisterUser"
             case .opportunityBoardPostList:
                 return baseUrl + "api/posts_api/GetAllPosts"
-            case .profileDetails(id):
-                return baseUrl + "api/profileapi/myprofile/" + id
+            case let .profileDetails(userId):
+                return baseUrl + "api/profileapi/myprofile/" + userId
                 
             default:
                 return ""

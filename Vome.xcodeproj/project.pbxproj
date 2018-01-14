@@ -16,6 +16,11 @@
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
 		9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */; };
 		9B367F60200B39A00060C0A7 /* VolunteerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5F200B39A00060C0A7 /* VolunteerProfileViewController.swift */; };
+		9B367F62200B85910060C0A7 /* UserInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F61200B85910060C0A7 /* UserInterest.swift */; };
+		9B367F64200B86B70060C0A7 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F63200B86B70060C0A7 /* Organization.swift */; };
+		9B367F67200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F65200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.swift */; };
+		9B367F68200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B367F66200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.xib */; };
+		9B367F6C200B96530060C0A7 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F6B200B96530060C0A7 /* UIImageView+Extension.swift */; };
 		9B383AAD1F6D4D6900C7FAA6 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */; };
 		9B383AAF1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */; };
 		9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */; };
@@ -98,6 +103,11 @@
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
 		9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		9B367F5F200B39A00060C0A7 /* VolunteerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerProfileViewController.swift; sourceTree = "<group>"; };
+		9B367F61200B85910060C0A7 /* UserInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterest.swift; sourceTree = "<group>"; };
+		9B367F63200B86B70060C0A7 /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		9B367F65200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9B367F66200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolunteerProfileTableViewCell.xib; sourceTree = "<group>"; };
+		9B367F6B200B96530060C0A7 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		9B383AAC1F6D4D6900C7FAA6 /* AppNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		9B383AAE1F6D4E9900C7FAA6 /* StoryBoardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardIdentifier.swift; sourceTree = "<group>"; };
 		9B383AB21F6D517700C7FAA6 /* OpportunityBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityBoardViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +289,8 @@
 			children = (
 				9B8F5CF41F77E0E100D4DFE6 /* ProfileMapTableViewCell.swift */,
 				9B8F5CF51F77E0E100D4DFE6 /* ProfileMapTableViewCell.xib */,
+				9B367F65200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.swift */,
+				9B367F66200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.xib */,
 				9B8F5CFA1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift */,
 				9B8F5CFB1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib */,
 			);
@@ -400,6 +412,7 @@
 				9B8F5CEA1F77AC0200D4DFE6 /* UIViewController+Extension.swift */,
 				9B8F5CF81F77EF9A00D4DFE6 /* UIFont+Extension.swift */,
 				9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */,
+				9B367F6B200B96530060C0A7 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -413,6 +426,8 @@
 				1708AE682005CEF800CAFD36 /* OpportunityPosts.swift */,
 				1708AE6A2005D09F00CAFD36 /* PostResponse.swift */,
 				17871756200A7D4000F1213B /* ProfileResponse.swift */,
+				9B367F61200B85910060C0A7 /* UserInterest.swift */,
+				9B367F63200B86B70060C0A7 /* Organization.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -578,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B367F68200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.xib in Resources */,
 				9BD1B7901F6534D800B3A641 /* OpenSans-Light.ttf in Resources */,
 				9BD1B78C1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf in Resources */,
 				9BD1B7911F6534D800B3A641 /* OpenSans-LightItalic.ttf in Resources */,
@@ -685,6 +701,7 @@
 			files = (
 				9B8F5CF61F77E0E100D4DFE6 /* ProfileMapTableViewCell.swift in Sources */,
 				9B8F5CEB1F77AC0200D4DFE6 /* UIViewController+Extension.swift in Sources */,
+				9B367F6C200B96530060C0A7 /* UIImageView+Extension.swift in Sources */,
 				9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */,
 				9B8F5CEE1F77C78800D4DFE6 /* MenuTableViewCell.swift in Sources */,
 				9BF9C1381F6542830092DB80 /* UIColor+HexColor.swift in Sources */,
@@ -709,11 +726,13 @@
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
 				9B56060D1FE241A100C0FD50 /* LoginToken.swift in Sources */,
 				9B8F5CF21F77D37F00D4DFE6 /* ProfileViewController.swift in Sources */,
+				9B367F62200B85910060C0A7 /* UserInterest.swift in Sources */,
 				9B8F5CE01F77A00000D4DFE6 /* LeftViewController.swift in Sources */,
 				9B8F5CF91F77EF9A00D4DFE6 /* UIFont+Extension.swift in Sources */,
 				1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */,
 				9BF9C1311F653FCA0092DB80 /* StringConstant.swift in Sources */,
 				1708AE692005CEF800CAFD36 /* OpportunityPosts.swift in Sources */,
+				9B367F67200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.swift in Sources */,
 				1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */,
 				9BD1B7761F6534AC00B3A641 /* NetworkManager.swift in Sources */,
 				9B8F5CE41F77A25900D4DFE6 /* ImageHeaderView.swift in Sources */,
@@ -721,6 +740,7 @@
 				9B8F5CE71F77A4A000D4DFE6 /* UITableView+Extension.swift in Sources */,
 				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
 				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
+				9B367F64200B86B70060C0A7 /* Organization.swift in Sources */,
 				9B6DC6E41FE6910C008EFE57 /* Validation.swift in Sources */,
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
 				17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */,

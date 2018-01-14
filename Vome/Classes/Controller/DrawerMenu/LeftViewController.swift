@@ -50,7 +50,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.profileViewController = UINavigationController(rootViewController: profileVC)
         
         let volunteerProfileVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.volunteerProfile.rawValue) as! VolunteerProfileViewController
-        self.profileViewController = UINavigationController(rootViewController: volunteerProfileVC)
+        self.volunteerProfileViewController = UINavigationController(rootViewController: volunteerProfileVC)
         
         let opportunityBoardVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.opportunityBoard.rawValue) as! OpportunityBoardViewController
         self.myOpportunityViewController = UINavigationController(rootViewController: opportunityBoardVC)

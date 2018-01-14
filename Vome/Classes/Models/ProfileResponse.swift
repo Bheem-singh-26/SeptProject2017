@@ -17,26 +17,30 @@ class ProfileResponse: Mappable {
     var firstName:String?
     var lastName:String?
     var name:String?
-    var email:Int?
-    var description:String?
+    var email:String?
+    var description:String? = ""
     var dateOfBirth:String?
     var occupation:String?
-    var gender:[String]?
+    var gender:String?
     var streetAddress:String?
-    var city:String?
+    var city:String? = ""
     var postalCode:String?
-    var country:String?
-    var provinceState:String?
+    var country:String? = ""
+    var provinceState:String? = ""
     var phoneNumber:String?
-    var opportunityPublished:String?
-    var contactPosition:Int?
+    var opportunityPublished:Int?
+    var contactPosition:String?
     var website:String?
     var facebookUsername:String?
     var twitterUsername:String?
-    var linkedIn:[String]?
+    var linkedIn:String?
     var googlePlus:String?
     var youtube:String?
-    
+    var interests:[UserInterest]?
+    var followOrganisations:[Organization]?
+    var verifiedTotalHours:Int?
+    var grade:Int?
+    var totalHoursDone:Int?
     
     required init?(map: Map) {
         
@@ -69,6 +73,11 @@ class ProfileResponse: Mappable {
         linkedIn                <- map["LinkedIn"]
         googlePlus              <- map["GooglePlus"]
         youtube                 <- map["Youtube"]
+        interests               <- map["Interests"]
+        followOrganisations     <- map["FollowOrganisations"]
+        verifiedTotalHours      <- map["VerifiedTotalHours"]
+        grade                   <- map["Grade"]
+        totalHoursDone          <- map["TotalHoursDone"]
     }
     
 }
