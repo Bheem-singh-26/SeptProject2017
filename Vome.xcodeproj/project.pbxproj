@@ -12,6 +12,7 @@
 		1714A72B1F6E257B00C9BB17 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714A7291F6E257B00C9BB17 /* Login.storyboard */; };
 		1714A72D1F6E293100C9BB17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */; };
 		1714A72F1F6E295400C9BB17 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */; };
+		174F944D200BA66D001F7351 /* AddBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F944C200BA66D001F7351 /* AddBookingViewController.swift */; };
 		17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17871756200A7D4000F1213B /* ProfileResponse.swift */; };
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
 		9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */; };
@@ -97,6 +98,7 @@
 		1714A72A1F6E257B00C9BB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		1714A72C1F6E293100C9BB17 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1714A72E1F6E295400C9BB17 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
+		174F944C200BA66D001F7351 /* AddBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookingViewController.swift; sourceTree = "<group>"; };
 		17871756200A7D4000F1213B /* ProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174F944B200BA637001F7351 /* AddBooking */ = {
+			isa = PBXGroup;
+			children = (
+				174F944C200BA66D001F7351 /* AddBookingViewController.swift */,
+			);
+			name = AddBooking;
+			sourceTree = "<group>";
+		};
 		43AF07283CCAAB6121506256 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +377,7 @@
 				9BD1B7621F6533B500B3A641 /* LoginSignup */,
 				9BF9C12D1F653EAE0092DB80 /* Payment */,
 				9B383AB01F6D50F000C7FAA6 /* OpportunityBoard */,
+				174F944B200BA637001F7351 /* AddBooking */,
 				9B8F5CDC1F779C1600D4DFE6 /* DrawerMenu */,
 				9B77ABB21F7813B1005303D6 /* CheckIn */,
 			);
@@ -689,7 +700,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -709,6 +720,7 @@
 				9B5606071FE231FF00C0FD50 /* NotificationCenter.swift in Sources */,
 				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
+				174F944D200BA66D001F7351 /* AddBookingViewController.swift in Sources */,
 				9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
 				9BEE2DFE1F797D1E00EBEB64 /* MessgaeTableViewCell.swift in Sources */,
