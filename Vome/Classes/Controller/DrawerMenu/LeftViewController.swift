@@ -34,14 +34,13 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var messageViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
-    var userType = EnumUserType.voulenteer
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
@@ -70,6 +69,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         
         self.imageHeaderView = ImageHeaderView.loadNib()
         self.view.addSubview(self.imageHeaderView)
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,7 +86,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     func changeViewController(_ menu: LeftMenu) {
         switch menu {
             case .profile:
-                switch self.userType {
+                let userType = EnumUserType(rawValue: (AppUser.sharedInstance?.userType)!)
+                switch userType! {
                 case .organization:
                     self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
                 default:

@@ -12,7 +12,8 @@ class StringConstant {
     
     static let PAYMENT_PLAN = "Payment Plan"
     static let OPPORTUNITY_BOARD = "Opportunity Board"
-    static let PROFILE = "Samuel's Profile"
+    static let PROFILE = "'s Profile"
+    static let ORGANIZATION_PROFILE = "Organization's Profile"
     static let LOGIN = "Login"
     static let REGISTER = "Register"
     static let CHECKIN = "Check-In"

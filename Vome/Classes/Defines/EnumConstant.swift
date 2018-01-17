@@ -29,6 +29,7 @@ enum EnumUserType:String{
     case school = "School"
     case organization = "Organization"
     case voulenteer = "Voulenteer"
+    case student = "Student"
     
     func valueOf() -> String{
         switch self {
@@ -38,7 +39,10 @@ enum EnumUserType:String{
             return "Organization"
         case .voulenteer:
             return "RegularUser"
+        case .student:
+            return "Student"
         }
+        
     }
     
 }
