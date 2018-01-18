@@ -19,6 +19,7 @@ class LoginToken: Mappable {
     var expires_in: Int?
     var issued: String?
     var expires: String?
+    var userType: String?
     
     required init?(map: Map) {
         
@@ -33,6 +34,7 @@ class LoginToken: Mappable {
         expires_in    <- map["expires_in"]
         issued        <- map[".issued"]
         expires       <- map[".expires"]
+        userType      <- map["userType"]
     }
     
 }

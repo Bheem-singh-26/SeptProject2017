@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.title = StringConstant.LOGIN
-        self.usernameTextField.text = "emanuel.castiel@students.ha-mtl.org"
+        self.usernameTextField.text = "natadmin@acorncanada.org"
         self.passwordTextField.text = "Temppassword124"
         
     }

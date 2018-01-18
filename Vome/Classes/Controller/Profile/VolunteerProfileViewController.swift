@@ -26,7 +26,6 @@ class VolunteerProfileViewController: BaseViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = StringConstant.PROFILE
         
         intializeView()
         
@@ -53,6 +52,7 @@ class VolunteerProfileViewController: BaseViewController {
             SVProgressHUD.dismiss()
             if isGuardObject(details){
                 self.profileDetails = details
+                self.title = (self.profileDetails?.firstName?.capitalized)! + StringConstant.PROFILE
                 self.tableView.reloadData()
             }else{
                 print("Fetch profile details failed !!!!!!!")
@@ -107,10 +107,10 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
                 if let descriptionStr = self.profileDetails?.description{
                     cell.labelTextStrig = descriptionStr
                 }else{
-                    cell.labelTextStrig = "Description:\n Most storms have caught me by surprise, so I had to learn very quickly to look further and understand that I am not capable of controlling the weather."
+                    cell.labelTextStrig = "Description:\nMost storms have caught me by surprise, so I had to learn very quickly to look further and understand that I am not capable of controlling the weather."
                 }
             case 2:
-                if let gender = self.profileDetails?.description{
+                if let gender = self.profileDetails?.gender, gender != ""{
                     cell.labelTextStrig = gender
                 }else{
                     cell.labelTextStrig = "Male"
@@ -138,7 +138,7 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
                 cell.labelTextStrig = "Interests:  " + interestStr
             case 6:
                 if let city = self.profileDetails?.city, let provinceState = self.profileDetails?.provinceState, let country = self.profileDetails?.country{
-                    cell.labelTextStrig = city + provinceState + country
+                    cell.labelTextStrig = city + ", " + provinceState + ", " + country
                 }else{
                     cell.labelTextStrig = "Montreal, Quebec, Canada"
                 }
