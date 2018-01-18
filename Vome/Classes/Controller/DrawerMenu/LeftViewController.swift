@@ -88,7 +88,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             case .profile:
                 let userType = EnumUserType(rawValue: (AppUser.sharedInstance?.userType)!)
                 switch userType! {
-                case .organization:
+                case .organization, .school:
                     self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
                 default:
                     self.slideMenuController()?.changeMainViewController(self.volunteerProfileViewController, close: true)

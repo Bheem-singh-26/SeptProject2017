@@ -97,8 +97,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == dataSourceImage.count + 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileMapTableViewCell.reuseIdentifier()) as! ProfileMapTableViewCell
             cell.selectionStyle = .none
-            cell.followingCount.text = String(describing: self.profileDetails?.followOrganisations?.count)
-            cell.opportunityCount.text = String(describing: self.profileDetails?.opportunityPublished)
+            if let followOrganisations = self.profileDetails?.followOrganisations?.count{
+                cell.followingCount.text = "\(followOrganisations)"
+            }else{
+                cell.followingCount.text = "0"
+            }
+            if let opportunityPublished = self.profileDetails?.opportunityPublished{
+                cell.opportunityCount.text = "\(opportunityPublished)"
+            }else{
+                cell.opportunityCount.text = "0"
+            }
+            
+            
             
             return cell
         }
@@ -133,8 +143,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 cell.labelTextStrig = "www.samuel@gmail.ua"
             }
         case 5:
+            
             if let city = self.profileDetails?.city, let provinceState = self.profileDetails?.provinceState, let country = self.profileDetails?.country{
-                cell.labelTextStrig = city + provinceState + country
+                cell.labelTextStrig = city + ", " + provinceState + ", " + country
             }else{
                 cell.labelTextStrig = "Montreal, Quebec, Canada"
             }

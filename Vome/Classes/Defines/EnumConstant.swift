@@ -26,9 +26,10 @@ enum APIStatusCode:Int{
 }
 
 enum EnumUserType:String{
+    case admin = "Admin"
     case school = "School"
     case organization = "Organization"
-    case voulenteer = "Voulenteer"
+    case voulenteer = "RegularUser"
     case student = "Student"
     
     func valueOf() -> String{
@@ -41,6 +42,8 @@ enum EnumUserType:String{
             return "RegularUser"
         case .student:
             return "Student"
+        case .admin:
+            return "Admin"
         }
         
     }
