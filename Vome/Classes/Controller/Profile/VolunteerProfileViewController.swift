@@ -38,9 +38,9 @@ class VolunteerProfileViewController: BaseViewController {
     
     func intializeView(){
         
-        tableView.registerCellNib(ProfileMapTableViewCell.self)
-        tableView.registerCellNib(TextWithIconTableViewCell.self)
         tableView.registerCellNib(VolunteerProfileTableViewCell.self)
+        tableView.registerCellNib(TextWithIconTableViewCell.self)
+        tableView.registerCellNib(HoursProgressTableViewCell.self)
         tableView.estimatedRowHeight = 200
         fetchProfileDetails()
     }
@@ -77,7 +77,7 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let _ = self.profileDetails{
-            return self.dataSourceImage.count + 2
+            return self.dataSourceImage.count + 1
         }
         return 0
     }
@@ -92,9 +92,14 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
             
             return cell
         }
-        if indexPath.row == dataSourceImage.count + 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileMapTableViewCell.reuseIdentifier()) as! ProfileMapTableViewCell
+        if indexPath.row == dataSourceImage.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HoursProgressTableViewCell.reuseIdentifier()) as! HoursProgressTableViewCell
             cell.selectionStyle = .none
+            if let verifiedTotalHours = self.profileDetails?.verifiedTotalHours{
+                cell.completedHourCount.text = String(verifiedTotalHours)
+            }else{
+                cell.completedHourCount.text = "0"
+            }
             
             return cell
         }
@@ -144,8 +149,6 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
                 }
             case 7:
                 cell.labelTextStrig = (self.profileDetails?.firstName)! + "'s Organizations"
-            case 8:
-                cell.labelTextStrig = "Send a message"
             
             default:
                 break
@@ -158,10 +161,14 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == dataSourceImage.count + 1{
-            return 320
+        if indexPath.row == dataSourceImage.count{
+            return 125
         }
         return UITableViewAutomaticDimension
     }
     
 }
+
+
+
+

@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 import SlideMenuControllerSwift
+import DropDown
 
 class OpportunityBoardViewController: BaseViewController {
 
@@ -20,7 +21,12 @@ class OpportunityBoardViewController: BaseViewController {
     
     var opportunityPost:OpportunityPosts?
     
+    let dropDown = DropDown()
     
+    @IBOutlet weak var selectCityButton: UIButton!
+    
+    let dropDownDataSource = ["Montreal", "Ottawa", "Toronto"]
+
     //MARK: ------------------------ Default Mehtods -----------------------
     
     override func viewDidLoad() {
@@ -39,9 +45,31 @@ class OpportunityBoardViewController: BaseViewController {
         tableView.registerCellNib(OpportunityBoardTableViewCell.self)
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 130
-        
+        selectCityButton.addBorder(borderWidth: 1, color: UIColor.white)
+    
+        initializeDropDown()
     }
 
+    func initializeDropDown(){
+        
+        // The view to which the drop down will appear on
+        dropDown.anchorView = self.selectCityButton // UIView or UIBarButtonItem
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        DropDown.appearance().textColor = UIColor.black
+        DropDown.appearance().textFont = UIFont.openSans_14()
+        DropDown.appearance().backgroundColor = UIColor.white
+        DropDown.appearance().selectionBackgroundColor = UIColor.lightGray
+        //DropDown.appearance().cellHeight = 60
+        // The list of items to display. Can be changed dynamically
+        dropDown.dataSource = dropDownDataSource
+        
+        // Action triggered on selection
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.selectCityButton.setTitle(self.dropDownDataSource[index], for: .normal)
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -66,6 +94,9 @@ class OpportunityBoardViewController: BaseViewController {
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         
         self.tableView.reloadData()
+    }
+    @IBAction func SelectCityBtnClicked(_ sender: UIButton) {
+        self.dropDown.show()
     }
     
     
@@ -117,28 +148,6 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

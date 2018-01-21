@@ -13,7 +13,7 @@ target 'Vome' do
   pod 'IQKeyboardManagerSwift', '4.0.11'
   pod 'SlideMenuControllerSwift', '3.0.1'
   pod 'SVProgressHUD', '2.2.2'
-  
+  pod 'DropDown'
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|
