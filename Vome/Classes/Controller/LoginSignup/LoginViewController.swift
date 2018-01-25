@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,26 @@ class LoginViewController: UIViewController {
         self.usernameTextField.text = "ron@vomecommunity.com"
         self.passwordTextField.text = "Temppassword124"
         
+        initializeView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func initializeView(){
+        
+        self.usernameTextField.text = "emanuel.castiel@students.ha-mtl.org"
+        self.passwordTextField.text = "Temppassword124"
+        self.usernameTextField.setCustomTextField(leftIcon: #imageLiteral(resourceName: "UserIcon"))
+        self.passwordTextField.setCustomTextField(leftIcon: #imageLiteral(resourceName: "LockIcon"))
+        
+        self.signUpButton.addBorder(borderWidth: 1.0, color: UIColor.white)
+        
+    }
+    
     
     //MARK: ------------------------ Actions Mehtods -----------------------
     

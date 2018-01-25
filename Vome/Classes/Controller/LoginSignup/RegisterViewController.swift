@@ -18,6 +18,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var segmentView: CustomSegmentedControl!
     
+    @IBOutlet weak var signInButton: UIButton!
+    
+    
     //MARK: ------------------------ Default Mehtods -----------------------
     
     override func viewDidLoad() {
@@ -26,11 +29,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         self.title = StringConstant.REGISTER
         
+        initializeView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func initializeView(){
+    
+        self.emailtextfield.setCustomTextField()
+        self.passwordTextfield.setCustomTextField()
+        self.confirmPassTextField.setCustomTextField()
+        
+        self.signInButton.addBorder(borderWidth: 1.0, color: UIColor.white)
     }
     
     //MARK: ------------------------ Methods -----------------------
