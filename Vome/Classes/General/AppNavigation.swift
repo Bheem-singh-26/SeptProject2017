@@ -61,5 +61,10 @@ extension UIViewController{
         appDelegate.window?.rootViewController = slideMenuController
     }
     
+    func pushToEditProfile() {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.editProfile.rawValue) as! EditProfileViewController
+        removeNavigationBackButtonTitle()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     
 }

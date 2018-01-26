@@ -75,6 +75,8 @@ class VolunteerProfileViewController: BaseViewController {
 
 extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSource{
     
+    //MARK: ------------------------ UITableView delegates ---------------------
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let _ = self.profileDetails{
             return self.dataSourceImage.count + 1

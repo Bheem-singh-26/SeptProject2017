@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -359,6 +359,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9k-Ij-ADa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3577" y="819"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="8p6-hF-ujB">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileViewController" id="nix-JT-Hdj" customClass="EditProfileViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QDi-mG-SNE"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYb-bR-Vbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQj-cU-bTl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jdC-Zp-DWM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nix-JT-Hdj" id="peb-V7-E09"/>
+                                    <outlet property="delegate" destination="nix-JT-Hdj" id="4wv-a6-65N"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fx-sM-gsf">
+                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-kN-yAl">
+                                        <rect key="frame" x="40" y="15" width="295" height="32"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.58039215690000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
+                                        <state key="normal" title="SUBMIT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitButtonClicked:" destination="nix-JT-Hdj" eventType="touchUpInside" id="cF8-UY-M5v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="eCZ-kN-yAl" firstAttribute="leading" secondItem="2Fx-sM-gsf" secondAttribute="leading" constant="40" id="8ln-eR-nct"/>
+                                    <constraint firstAttribute="bottom" secondItem="eCZ-kN-yAl" secondAttribute="bottom" constant="15" id="AO3-xQ-NOn"/>
+                                    <constraint firstAttribute="height" constant="62" id="dhA-6e-pCB"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCZ-kN-yAl" secondAttribute="trailing" constant="40" id="mWO-57-hyE"/>
+                                    <constraint firstItem="eCZ-kN-yAl" firstAttribute="top" secondItem="2Fx-sM-gsf" secondAttribute="top" constant="15" id="qgA-E1-YZQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jdC-Zp-DWM" secondAttribute="trailing" id="3iU-ag-G5a"/>
+                            <constraint firstItem="jdC-Zp-DWM" firstAttribute="top" secondItem="gQj-cU-bTl" secondAttribute="top" id="8T7-cY-EVQ"/>
+                            <constraint firstItem="2Fx-sM-gsf" firstAttribute="leading" secondItem="gQj-cU-bTl" secondAttribute="leading" id="Soe-zf-8gP"/>
+                            <constraint firstAttribute="trailing" secondItem="2Fx-sM-gsf" secondAttribute="trailing" id="g8F-Ts-Dax"/>
+                            <constraint firstItem="uYb-bR-Vbs" firstAttribute="top" secondItem="2Fx-sM-gsf" secondAttribute="bottom" id="gW8-fL-TnN"/>
+                            <constraint firstItem="jdC-Zp-DWM" firstAttribute="leading" secondItem="gQj-cU-bTl" secondAttribute="leading" id="lfC-rF-pZ7"/>
+                            <constraint firstItem="2Fx-sM-gsf" firstAttribute="top" secondItem="jdC-Zp-DWM" secondAttribute="bottom" id="qZq-EA-cr4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="submitButton" destination="eCZ-kN-yAl" id="7Fd-uU-w5A"/>
+                        <outlet property="tableView" destination="jdC-Zp-DWM" id="8dj-Kp-hze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyA-aJ-E1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4452" y="816.34182908545733"/>
         </scene>
         <!--Check In View Controller-->
         <scene sceneID="xC8-mP-jMG">

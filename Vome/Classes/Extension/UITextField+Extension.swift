@@ -21,7 +21,7 @@ extension UITextField {
         }
     }
     
-    func setCustomTextField(leftIcon: UIImage? = nil) {
+    func setCustomTextField(leftIcon: UIImage? = nil, borderColor: CGColor? = nil) {
         
         self.placeHolderColor = UIColor.themeWhiteColor()
         
@@ -35,7 +35,11 @@ extension UITextField {
         
         let border = CALayer()
         let width = CGFloat(1.0)
-        border.borderColor = UIColor.white.cgColor
+        if borderColor != nil{
+            border.borderColor = borderColor
+        }else{
+           border.borderColor = UIColor.white.cgColor
+        }
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
         
         border.borderWidth = width

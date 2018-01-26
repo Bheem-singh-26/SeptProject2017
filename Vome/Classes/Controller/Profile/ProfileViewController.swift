@@ -76,6 +76,8 @@ class ProfileViewController: BaseViewController {
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     
+    //MARK: ------------------------ UITableView delegates ---------------------
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let _ = self.profileDetails{
             return self.dataSourceImage.count + 2
@@ -168,6 +170,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         return UITableViewAutomaticDimension
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        pushToEditProfile()
+    }
+    
 }
 
 

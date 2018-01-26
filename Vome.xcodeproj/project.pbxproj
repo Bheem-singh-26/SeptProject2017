@@ -50,6 +50,13 @@
 		9B8F5CFC1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CFA1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift */; };
 		9B8F5CFD1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F5CFB1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib */; };
 		9BB0A3631F90BFA200F65CE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0A3621F90BFA200F65CE0 /* APIManager.swift */; };
+		9BD02693201B001B002BC8E7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD02692201B001B002BC8E7 /* EditProfileViewController.swift */; };
+		9BD02697201B0107002BC8E7 /* EditProfileImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD02695201B0107002BC8E7 /* EditProfileImageTableViewCell.swift */; };
+		9BD02698201B0107002BC8E7 /* EditProfileImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD02696201B0107002BC8E7 /* EditProfileImageTableViewCell.xib */; };
+		9BD0269B201B2903002BC8E7 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD02699201B2903002BC8E7 /* TextFieldTableViewCell.swift */; };
+		9BD0269C201B2903002BC8E7 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD0269A201B2903002BC8E7 /* TextFieldTableViewCell.xib */; };
+		9BD0269F201B2E38002BC8E7 /* EditDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0269D201B2E38002BC8E7 /* EditDescriptionTableViewCell.swift */; };
+		9BD026A0201B2E38002BC8E7 /* EditDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD0269E201B2E38002BC8E7 /* EditDescriptionTableViewCell.xib */; };
 		9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B74E1F65335100B3A641 /* Main.storyboard */; };
 		9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1B7531F65335100B3A641 /* LaunchScreen.storyboard */; };
 		9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1B75E1F6533B500B3A641 /* AppDelegate.swift */; };
@@ -143,6 +150,13 @@
 		9B8F5CFA1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewCell.swift; sourceTree = "<group>"; };
 		9B8F5CFB1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewTableViewCell.xib; sourceTree = "<group>"; };
 		9BB0A3621F90BFA200F65CE0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9BD02692201B001B002BC8E7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9BD02695201B0107002BC8E7 /* EditProfileImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageTableViewCell.swift; sourceTree = "<group>"; };
+		9BD02696201B0107002BC8E7 /* EditProfileImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileImageTableViewCell.xib; sourceTree = "<group>"; };
+		9BD02699201B2903002BC8E7 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		9BD0269A201B2903002BC8E7 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		9BD0269D201B2E38002BC8E7 /* EditDescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		9BD0269E201B2E38002BC8E7 /* EditDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		9BD1B7471F65335100B3A641 /* Vome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD1B74F1F65335100B3A641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BD1B7541F65335100B3A641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -319,6 +333,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9BD02690201AFFD5002BC8E7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BD02691201AFFEF002BC8E7 /* EditProfile */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9BD02691201AFFEF002BC8E7 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9BD02694201B009D002BC8E7 /* Cells */,
+				9BD02692201B001B002BC8E7 /* EditProfileViewController.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		9BD02694201B009D002BC8E7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9BD02695201B0107002BC8E7 /* EditProfileImageTableViewCell.swift */,
+				9BD02696201B0107002BC8E7 /* EditProfileImageTableViewCell.xib */,
+				9BD02699201B2903002BC8E7 /* TextFieldTableViewCell.swift */,
+				9BD0269A201B2903002BC8E7 /* TextFieldTableViewCell.xib */,
+				9BD0269D201B2E38002BC8E7 /* EditDescriptionTableViewCell.swift */,
+				9BD0269E201B2E38002BC8E7 /* EditDescriptionTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9BD1B73E1F65335100B3A641 = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +431,7 @@
 			children = (
 				9BEE2DF61F797B6B00EBEB64 /* Message */,
 				9B8F5CF01F77D35E00D4DFE6 /* Profile */,
+				9BD02690201AFFD5002BC8E7 /* Settings */,
 				9BD1B7621F6533B500B3A641 /* LoginSignup */,
 				9BF9C12D1F653EAE0092DB80 /* Payment */,
 				9B383AB01F6D50F000C7FAA6 /* OpportunityBoard */,
@@ -627,6 +672,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD026A0201B2E38002BC8E7 /* EditDescriptionTableViewCell.xib in Resources */,
 				9B367F68200B8F5A0060C0A7 /* VolunteerProfileTableViewCell.xib in Resources */,
 				9BD1B7901F6534D800B3A641 /* OpenSans-Light.ttf in Resources */,
 				9BD1B78C1F6534D800B3A641 /* OpenSans-CondLightItalic.ttf in Resources */,
@@ -640,6 +686,7 @@
 				9BD1B7701F6533F900B3A641 /* Info.plist in Resources */,
 				9B8F5CFD1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib in Resources */,
 				9B8F5CF71F77E0E100D4DFE6 /* ProfileMapTableViewCell.xib in Resources */,
+				9BD02698201B0107002BC8E7 /* EditProfileImageTableViewCell.xib in Resources */,
 				9BD1B78B1F6534D800B3A641 /* OpenSans-CondLight.ttf in Resources */,
 				9B8F5CE51F77A25900D4DFE6 /* ImageHeaderView.xib in Resources */,
 				9BEE2DFA1F797BB100EBEB64 /* Chat.storyboard in Resources */,
@@ -651,6 +698,7 @@
 				9BD1B7881F6534D800B3A641 /* OpenSans-Bold.ttf in Resources */,
 				9BD1B7921F6534D800B3A641 /* OpenSans-Regular.ttf in Resources */,
 				9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */,
+				9BD0269C201B2903002BC8E7 /* TextFieldTableViewCell.xib in Resources */,
 				9BD1B78F1F6534D800B3A641 /* OpenSans-Italic.ttf in Resources */,
 				9BF9C1401F655B020092DB80 /* OutlineButtonTableViewCell.xib in Resources */,
 				9BD1B78E1F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
@@ -737,6 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8F5CF61F77E0E100D4DFE6 /* ProfileMapTableViewCell.swift in Sources */,
+				9BD02697201B0107002BC8E7 /* EditProfileImageTableViewCell.swift in Sources */,
 				9B8F5CEB1F77AC0200D4DFE6 /* UIViewController+Extension.swift in Sources */,
 				9B367F6C200B96530060C0A7 /* UIImageView+Extension.swift in Sources */,
 				9BF8B0CA2014401E00C73BD4 /* UIButton+Extension.swift in Sources */,
@@ -747,6 +796,7 @@
 				9B5606071FE231FF00C0FD50 /* NotificationCenter.swift in Sources */,
 				9BF8B0C820141F3A00C73BD4 /* CustomTextField.swift in Sources */,
 				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
+				9BD0269B201B2903002BC8E7 /* TextFieldTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
 				174F944D200BA66D001F7351 /* AddBookingViewController.swift in Sources */,
 				9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */,
@@ -762,11 +812,13 @@
 				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,
 				9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */,
 				9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */,
+				9BD02693201B001B002BC8E7 /* EditProfileViewController.swift in Sources */,
 				9BF8B0C52013C64A00C73BD4 /* UITextField+Extension.swift in Sources */,
 				9B5606041FE2308F00C0FD50 /* Utility.swift in Sources */,
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
 				9B56060D1FE241A100C0FD50 /* LoginToken.swift in Sources */,
 				9B8F5CF21F77D37F00D4DFE6 /* ProfileViewController.swift in Sources */,
+				9BD0269F201B2E38002BC8E7 /* EditDescriptionTableViewCell.swift in Sources */,
 				9B367F62200B85910060C0A7 /* UserInterest.swift in Sources */,
 				9B8F5CE01F77A00000D4DFE6 /* LeftViewController.swift in Sources */,
 				9B8F5CF91F77EF9A00D4DFE6 /* UIFont+Extension.swift in Sources */,

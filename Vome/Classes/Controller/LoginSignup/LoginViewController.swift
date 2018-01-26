@@ -23,8 +23,6 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.title = StringConstant.LOGIN
-        self.usernameTextField.text = "ron@vomecommunity.com"
-        self.passwordTextField.text = "Temppassword124"
         
         initializeView()
     }
@@ -37,7 +35,7 @@ class LoginViewController: UIViewController {
     
     func initializeView(){
         
-        self.usernameTextField.text = "emanuel.castiel@students.ha-mtl.org"
+        self.usernameTextField.text = "natadmin@acorncanada.org"
         self.passwordTextField.text = "Temppassword124"
         self.usernameTextField.setCustomTextField(leftIcon: #imageLiteral(resourceName: "UserIcon"))
         self.passwordTextField.setCustomTextField(leftIcon: #imageLiteral(resourceName: "LockIcon"))
