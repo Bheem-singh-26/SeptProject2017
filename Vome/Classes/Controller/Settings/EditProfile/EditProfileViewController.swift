@@ -36,7 +36,7 @@ class EditProfileViewController: UIViewController {
     }
     
     func intializeView(){
-        
+        self.changeNaviagtionLeftItem()
         tableView.registerCellNib(EditProfileImageTableViewCell.self)
         tableView.registerCellNib(TextFieldTableViewCell.self)
         tableView.registerCellNib(EditDescriptionTableViewCell.self)

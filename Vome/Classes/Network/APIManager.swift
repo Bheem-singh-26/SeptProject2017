@@ -20,6 +20,7 @@ class APImanager {
         case payment
         case opportunityBoardPostList
         case profileDetails(userId: String)
+        case opportunityDetailView(id:String)
         
         var path: String {
             switch self {
@@ -31,6 +32,8 @@ class APImanager {
                 return baseUrl + "api/posts_api/GetAllPosts"
             case let .profileDetails(userId):
                 return baseUrl + "api/profileapi/myprofile/" + userId
+            case let .opportunityDetailView(id):
+                return baseUrl + "api/Posts_Api/MyOpportunityDetail/" + id
                 
             default:
                 return ""
@@ -122,6 +125,19 @@ class APImanager {
         }
     }
     
+    class func opportunityDetailView(apiService: APIService, handler: @escaping (_ details: EventDetails?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = EventDetails(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
     
 }
 

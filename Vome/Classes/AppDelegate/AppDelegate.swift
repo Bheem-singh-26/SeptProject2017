@@ -94,7 +94,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
     func setupAppConfiguration(){
         
         IQKeyboardManager.sharedManager().enable = true

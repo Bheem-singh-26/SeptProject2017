@@ -38,6 +38,7 @@ enum StoryboardVCIdentifier: String {
     case checkIn = "CheckInViewController"
     case message = "MessageViewController"
     case editProfile = "EditProfileViewController"
+    case addBooking = "AddBookingViewController"
     
 }
 

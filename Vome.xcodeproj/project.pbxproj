@@ -50,6 +50,9 @@
 		9B8F5CFC1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F5CFA1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift */; };
 		9B8F5CFD1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F5CFB1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib */; };
 		9BB0A3631F90BFA200F65CE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0A3621F90BFA200F65CE0 /* APIManager.swift */; };
+		9BC6019A201ED958006DB20A /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC60199201ED958006DB20A /* EventDetails.swift */; };
+		9BC6019E201EDBED006DB20A /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6019D201EDBED006DB20A /* EventDate.swift */; };
+		9BC601A0201EDD61006DB20A /* BookedBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6019F201EDD61006DB20A /* BookedBooking.swift */; };
 		9BD02693201B001B002BC8E7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD02692201B001B002BC8E7 /* EditProfileViewController.swift */; };
 		9BD02697201B0107002BC8E7 /* EditProfileImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD02695201B0107002BC8E7 /* EditProfileImageTableViewCell.swift */; };
 		9BD02698201B0107002BC8E7 /* EditProfileImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD02696201B0107002BC8E7 /* EditProfileImageTableViewCell.xib */; };
@@ -150,6 +153,9 @@
 		9B8F5CFA1F77F2C700D4DFE6 /* ProfileViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewCell.swift; sourceTree = "<group>"; };
 		9B8F5CFB1F77F2C700D4DFE6 /* ProfileViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewTableViewCell.xib; sourceTree = "<group>"; };
 		9BB0A3621F90BFA200F65CE0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9BC60199201ED958006DB20A /* EventDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
+		9BC6019D201EDBED006DB20A /* EventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDate.swift; sourceTree = "<group>"; };
+		9BC6019F201EDD61006DB20A /* BookedBooking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedBooking.swift; sourceTree = "<group>"; };
 		9BD02692201B001B002BC8E7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		9BD02695201B0107002BC8E7 /* EditProfileImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageTableViewCell.swift; sourceTree = "<group>"; };
 		9BD02696201B0107002BC8E7 /* EditProfileImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileImageTableViewCell.xib; sourceTree = "<group>"; };
@@ -499,6 +505,9 @@
 				17871756200A7D4000F1213B /* ProfileResponse.swift */,
 				9B367F61200B85910060C0A7 /* UserInterest.swift */,
 				9B367F63200B86B70060C0A7 /* Organization.swift */,
+				9BC60199201ED958006DB20A /* EventDetails.swift */,
+				9BC6019D201EDBED006DB20A /* EventDate.swift */,
+				9BC6019F201EDD61006DB20A /* BookedBooking.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -785,12 +794,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8F5CF61F77E0E100D4DFE6 /* ProfileMapTableViewCell.swift in Sources */,
+				9BC6019A201ED958006DB20A /* EventDetails.swift in Sources */,
 				9BD02697201B0107002BC8E7 /* EditProfileImageTableViewCell.swift in Sources */,
 				9B8F5CEB1F77AC0200D4DFE6 /* UIViewController+Extension.swift in Sources */,
 				9B367F6C200B96530060C0A7 /* UIImageView+Extension.swift in Sources */,
 				9BF8B0CA2014401E00C73BD4 /* UIButton+Extension.swift in Sources */,
 				9BD1B7991F65354700B3A641 /* AppUser.swift in Sources */,
 				9B8F5CEE1F77C78800D4DFE6 /* MenuTableViewCell.swift in Sources */,
+				9BC601A0201EDD61006DB20A /* BookedBooking.swift in Sources */,
 				9BF9C1381F6542830092DB80 /* UIColor+HexColor.swift in Sources */,
 				9B5606091FE2333800C0FD50 /* Global.swift in Sources */,
 				9B5606071FE231FF00C0FD50 /* NotificationCenter.swift in Sources */,
@@ -807,6 +818,7 @@
 				9B8F5CE91F77A4F900D4DFE6 /* String+Extension.swift in Sources */,
 				1708AE6B2005D09F00CAFD36 /* PostResponse.swift in Sources */,
 				9BB0A3631F90BFA200F65CE0 /* APIManager.swift in Sources */,
+				9BC6019E201EDBED006DB20A /* EventDate.swift in Sources */,
 				9B56060B1FE2349500C0FD50 /* ErrorResponse.swift in Sources */,
 				9B367F60200B39A00060C0A7 /* VolunteerProfileViewController.swift in Sources */,
 				9BD1B7721F65344300B3A641 /* LoginViewController.swift in Sources */,

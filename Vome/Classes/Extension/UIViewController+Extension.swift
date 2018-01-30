@@ -40,4 +40,10 @@ extension UIViewController {
         
     }
     
+    func changeNaviagtionLeftItem(){
+        let yourBackImage = #imageLiteral(resourceName: "BackArrow")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+    }
+    
 }

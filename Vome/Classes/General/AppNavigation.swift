@@ -67,4 +67,11 @@ extension UIViewController{
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func pushToAddBooking(eventId:String) {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.addBooking.rawValue) as! AddBookingViewController
+        removeNavigationBackButtonTitle()
+        viewController.eventId = eventId
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }

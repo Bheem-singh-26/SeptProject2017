@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -170,7 +169,7 @@
         <!--Add Booking View Controller-->
         <scene sceneID="oNl-0K-APf">
             <objects>
-                <viewController id="qXc-XC-ykx" customClass="AddBookingViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddBookingViewController" id="qXc-XC-ykx" customClass="AddBookingViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xZb-7J-ifk"/>
                         <viewControllerLayoutGuide type="bottom" id="RoD-Qa-TV8"/>
@@ -179,107 +178,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-xX-mFF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD BOOKING" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-hs-C4Z">
+                                <rect key="frame" x="20" y="50" width="335" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check this box if you plan on attending this opportunity for the entire duration." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnh-3h-II7">
+                                <rect key="frame" x="20" y="87" width="335" height="38.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click &quot;confirm&quot; to confirm your spot at the opportunity." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-GO-IxT">
+                                <rect key="frame" x="20" y="140.5" width="335" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev0-Z8-92f">
+                                <rect key="frame" x="97.5" y="187" width="180" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hVB-Lx-piJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="vqi-UD-6zR"/>
+                                    <constraint firstAttribute="width" constant="180" id="zD8-JO-AGe"/>
                                 </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ffG-dq-GPx">
-                                <rect key="frame" x="16" y="70" width="343" height="330"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD BOOKING" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-hs-C4Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Check this box if you plan on attending this opportunity for the entire duration." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2X-b0-B66" userLabel="CheckBox">
-                                        <rect key="frame" x="0.0" y="70" width="343" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="if not, enter the time period for which you will attend." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mvz-5T-Ssx" userLabel="Enter Time">
-                                        <rect key="frame" x="0.0" y="140" width="343" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s9C-3I-h6Y" userLabel="FROM TO">
-                                        <rect key="frame" x="0.0" y="210" width="343" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1f-EP-ZQs">
-                                                <rect key="frame" x="0.0" y="18.5" width="78.5" height="26.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-XZ-fKl">
-                                                <rect key="frame" x="88.5" y="20" width="78" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETG-oh-7ey">
-                                                <rect key="frame" x="176.5" y="18.5" width="78.5" height="26.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-jh-OVc">
-                                                <rect key="frame" x="265" y="20" width="78" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click &quot;confirm&quot; to confirm your spot at the opportunity." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-Xc-lFM" userLabel="Click confirm">
-                                        <rect key="frame" x="0.0" y="280" width="343" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Select Date" image="DownArrow">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectDateButtonClicked:" destination="qXc-XC-ykx" eventType="touchUpInside" id="vyR-fB-yCS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY0-Dw-dzo">
+                                <rect key="frame" x="60" y="239" width="122.5" height="25"/>
                                 <constraints>
-                                    <constraint firstItem="s9C-3I-h6Y" firstAttribute="leading" secondItem="ffG-dq-GPx" secondAttribute="leading" id="56Y-w2-9hQ"/>
-                                    <constraint firstItem="Mvz-5T-Ssx" firstAttribute="trailing" secondItem="s9C-3I-h6Y" secondAttribute="trailing" id="Zj7-o5-blf"/>
-                                    <constraint firstItem="s9C-3I-h6Y" firstAttribute="trailing" secondItem="EhL-Xc-lFM" secondAttribute="trailing" id="beP-p4-b8l"/>
-                                    <constraint firstAttribute="trailing" secondItem="s9C-3I-h6Y" secondAttribute="trailing" id="eIg-rK-TE3"/>
-                                    <constraint firstItem="a2X-b0-B66" firstAttribute="trailing" secondItem="Mvz-5T-Ssx" secondAttribute="trailing" id="ggH-6H-Wlh"/>
+                                    <constraint firstAttribute="height" constant="25" id="K80-wu-VoK"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="From" image="DownArrow">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fromTimeButtonClicked:" destination="qXc-XC-ykx" eventType="touchUpInside" id="y3o-Q9-iC8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-Rb-A10">
+                                <rect key="frame" x="192.5" y="239" width="122.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="vPn-8o-Oth"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="To" image="DownArrow">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toTimeButtonClicked:" destination="qXc-XC-ykx" eventType="touchUpInside" id="7Hd-9Z-U2f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="if not, enter the time period for which you will attend." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQR-4H-V5I">
+                                <rect key="frame" x="20" y="287" width="335" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pOh-T4-rye">
-                                <rect key="frame" x="16" y="430" width="343" height="36"/>
+                                <rect key="frame" x="20" y="328.5" width="335" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-0Y-ck3">
-                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonClicked:" destination="qXc-XC-ykx" eventType="touchUpInside" id="H7w-Hd-qXE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNI-hX-HuY">
-                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="Confirm"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="167.5" height="32"/>
+                                        <color key="backgroundColor" red="0.27058823529999998" green="0.70196078429999997" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                        <state key="normal" title="CONFIRM">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmButtonClicked:" destination="qXc-XC-ykx" eventType="touchUpInside" id="e8s-b1-zQf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pOh-T4-rye" firstAttribute="trailing" secondItem="ffG-dq-GPx" secondAttribute="trailing" id="3YY-pr-TS5"/>
-                            <constraint firstItem="pOh-T4-rye" firstAttribute="leading" secondItem="ffG-dq-GPx" secondAttribute="leading" id="NmO-hQ-etg"/>
-                            <constraint firstItem="pOh-T4-rye" firstAttribute="top" secondItem="EhL-Xc-lFM" secondAttribute="bottom" constant="30" id="Tl6-2g-X42"/>
-                            <constraint firstItem="1Qd-xX-mFF" firstAttribute="leading" secondItem="8C2-AM-WFt" secondAttribute="leading" id="mfs-hO-JdP"/>
-                            <constraint firstItem="ffG-dq-GPx" firstAttribute="trailing" secondItem="8C2-AM-WFt" secondAttribute="trailingMargin" id="pWN-TH-swD"/>
-                            <constraint firstItem="ffG-dq-GPx" firstAttribute="leading" secondItem="8C2-AM-WFt" secondAttribute="leadingMargin" id="qxI-9t-XxI"/>
-                            <constraint firstAttribute="trailing" secondItem="1Qd-xX-mFF" secondAttribute="trailing" id="sFI-Lw-6FI"/>
-                            <constraint firstItem="1Qd-xX-mFF" firstAttribute="top" secondItem="xZb-7J-ifk" secondAttribute="bottom" id="wLr-tv-STY"/>
-                            <constraint firstItem="ffG-dq-GPx" firstAttribute="top" secondItem="8C2-AM-WFt" secondAttribute="top" constant="70" id="zFL-qa-gf9"/>
+                            <constraint firstItem="sQR-4H-V5I" firstAttribute="trailing" secondItem="bvr-hs-C4Z" secondAttribute="trailing" id="2YX-12-pYO"/>
+                            <constraint firstItem="MTk-Rb-A10" firstAttribute="width" secondItem="KY0-Dw-dzo" secondAttribute="width" id="7zv-S4-gjT"/>
+                            <constraint firstItem="mnh-3h-II7" firstAttribute="trailing" secondItem="bvr-hs-C4Z" secondAttribute="trailing" id="ACH-mL-iRZ"/>
+                            <constraint firstItem="mnh-3h-II7" firstAttribute="leading" secondItem="bvr-hs-C4Z" secondAttribute="leading" id="BW8-cN-6Nf"/>
+                            <constraint firstItem="Ev0-Z8-92f" firstAttribute="top" secondItem="RH9-GO-IxT" secondAttribute="bottom" constant="30" id="Hbr-7H-xsw"/>
+                            <constraint firstItem="RH9-GO-IxT" firstAttribute="top" secondItem="mnh-3h-II7" secondAttribute="bottom" constant="15" id="HwA-qQ-Mb8"/>
+                            <constraint firstItem="Ev0-Z8-92f" firstAttribute="centerX" secondItem="bvr-hs-C4Z" secondAttribute="centerX" id="Ing-D7-HG0"/>
+                            <constraint firstItem="KY0-Dw-dzo" firstAttribute="leading" secondItem="8C2-AM-WFt" secondAttribute="leading" constant="60" id="NnT-mM-UaB"/>
+                            <constraint firstAttribute="trailing" secondItem="MTk-Rb-A10" secondAttribute="trailing" constant="60" id="O3e-2x-Gth"/>
+                            <constraint firstItem="RH9-GO-IxT" firstAttribute="leading" secondItem="bvr-hs-C4Z" secondAttribute="leading" id="Q1g-AQ-Z3a"/>
+                            <constraint firstItem="bvr-hs-C4Z" firstAttribute="top" secondItem="xZb-7J-ifk" secondAttribute="bottom" constant="30" id="Qvh-Ty-7tH"/>
+                            <constraint firstItem="MTk-Rb-A10" firstAttribute="leading" secondItem="KY0-Dw-dzo" secondAttribute="trailing" constant="10" id="SZ1-gE-rOg"/>
+                            <constraint firstItem="pOh-T4-rye" firstAttribute="top" secondItem="sQR-4H-V5I" secondAttribute="bottom" constant="25" id="Vk9-3A-6hm"/>
+                            <constraint firstItem="pOh-T4-rye" firstAttribute="trailing" secondItem="bvr-hs-C4Z" secondAttribute="trailing" id="Xpl-5d-5fr"/>
+                            <constraint firstItem="RH9-GO-IxT" firstAttribute="trailing" secondItem="bvr-hs-C4Z" secondAttribute="trailing" id="cml-g2-IEe"/>
+                            <constraint firstItem="sQR-4H-V5I" firstAttribute="leading" secondItem="bvr-hs-C4Z" secondAttribute="leading" id="eWD-wn-qQb"/>
+                            <constraint firstItem="pOh-T4-rye" firstAttribute="leading" secondItem="bvr-hs-C4Z" secondAttribute="leading" id="hn0-Oo-0RO"/>
+                            <constraint firstItem="sQR-4H-V5I" firstAttribute="top" secondItem="MTk-Rb-A10" secondAttribute="bottom" constant="23" id="jwp-Es-Njh"/>
+                            <constraint firstAttribute="trailing" secondItem="bvr-hs-C4Z" secondAttribute="trailing" constant="20" id="u17-pe-0y3"/>
+                            <constraint firstItem="MTk-Rb-A10" firstAttribute="top" secondItem="Ev0-Z8-92f" secondAttribute="bottom" constant="22" id="vwI-Jo-eO1"/>
+                            <constraint firstItem="mnh-3h-II7" firstAttribute="top" secondItem="bvr-hs-C4Z" secondAttribute="bottom" constant="15" id="w80-Ia-nYI"/>
+                            <constraint firstItem="KY0-Dw-dzo" firstAttribute="top" secondItem="Ev0-Z8-92f" secondAttribute="bottom" constant="22" id="xqh-1e-Z0K"/>
+                            <constraint firstItem="bvr-hs-C4Z" firstAttribute="leading" secondItem="8C2-AM-WFt" secondAttribute="leading" constant="20" id="zze-o2-QOW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="bDI-0Y-ck3" id="8e9-Qa-9xp"/>
+                        <outlet property="dateLabelButton" destination="Ev0-Z8-92f" id="WgP-oH-Bhy"/>
+                        <outlet property="fromTimeButton" destination="KY0-Dw-dzo" id="cYW-fy-p3P"/>
+                        <outlet property="submitButton" destination="yNI-hX-HuY" id="MvQ-Jd-MfB"/>
+                        <outlet property="toTimeButton" destination="MTk-Rb-A10" id="qnH-YA-Q03"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJA-wF-GSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

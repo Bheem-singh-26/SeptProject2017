@@ -103,6 +103,22 @@ class OpportunityBoardViewController: BaseViewController {
 }
 
 
+extension OpportunityBoardViewController:PushToBookNow{
+    
+    func bookNowButtonClicked(cell: OpportunityBoardTableViewCell) {
+        let indexPath = self.tableView.indexPath(for: cell)
+        if self.segmentView.selectedSegmentIndex == 1 {
+            let eventId = self.opportunityPost?.pledgePostList?[(indexPath?.row)!].id
+            pushToAddBooking(eventId: eventId!)
+        }else {
+            let eventId = self.opportunityPost?.oneTimerPostList?[(indexPath?.row)!].id
+            pushToAddBooking(eventId: eventId!)
+        }
+    }
+    
+}
+
+
 extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSource{
     
     //MARK: ------------------------ TableView Delegates -----------------------
@@ -126,6 +142,7 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
         
         let cell = tableView.dequeueReusableCell(withIdentifier: OpportunityBoardTableViewCell.reuseIdentifier()) as! OpportunityBoardTableViewCell
         cell.selectionStyle = .none
+        cell.delegate = self
         
         if self.segmentView.selectedSegmentIndex == 1 {
             cell.post = self.opportunityPost?.pledgePostList?[indexPath.row]
