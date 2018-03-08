@@ -15,6 +15,7 @@
 		174F944D200BA66D001F7351 /* AddBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F944C200BA66D001F7351 /* AddBookingViewController.swift */; };
 		17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17871756200A7D4000F1213B /* ProfileResponse.swift */; };
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
+		695A06B12051544900B3DC2B /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A06B02051544900B3DC2B /* ALChatManager.swift */; };
 		9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */; };
 		9B367F60200B39A00060C0A7 /* VolunteerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5F200B39A00060C0A7 /* VolunteerProfileViewController.swift */; };
 		9B367F62200B85910060C0A7 /* UserInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F61200B85910060C0A7 /* UserInterest.swift */; };
@@ -116,6 +117,8 @@
 		174F944C200BA66D001F7351 /* AddBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookingViewController.swift; sourceTree = "<group>"; };
 		17871756200A7D4000F1213B /* ProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		695A06AF20511B8100B3DC2B /* Vome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vome-Bridging-Header.h"; sourceTree = "<group>"; };
+		695A06B02051544900B3DC2B /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
 		9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 		9BD1B7491F65335100B3A641 /* Vome */ = {
 			isa = PBXGroup;
 			children = (
+				695A06AF20511B8100B3DC2B /* Vome-Bridging-Header.h */,
+				695A06B02051544900B3DC2B /* ALChatManager.swift */,
 				9BD1B75C1F6533B500B3A641 /* Classes */,
 				9BD1B7681F6533B500B3A641 /* Font */,
 				9BD1B7691F6533B500B3A641 /* Resources */,
@@ -731,9 +736,11 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Applozic/Applozic.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
@@ -742,9 +749,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Applozic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
@@ -847,6 +856,7 @@
 				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
 				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
 				9B367F64200B86B70060C0A7 /* Organization.swift in Sources */,
+				695A06B12051544900B3DC2B /* ALChatManager.swift in Sources */,
 				9B6DC6E41FE6910C008EFE57 /* Validation.swift in Sources */,
 				9BD1B76B1F6533B500B3A641 /* AppDelegate.swift in Sources */,
 				17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */,
@@ -1001,6 +1011,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "99a17404-9b18-4800-bb78-83040a67d66c";
 				PROVISIONING_PROFILE_SPECIFIER = VomeDevProfile;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/himanshulikhyani/SeptProject2017/Vome/Vome-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1019,6 +1030,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "99a17404-9b18-4800-bb78-83040a67d66c";
 				PROVISIONING_PROFILE_SPECIFIER = VomeDevProfile;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/himanshulikhyani/SeptProject2017/Vome/Vome-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

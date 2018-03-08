@@ -20,6 +20,8 @@ class StringConstant {
     static let MESSAGE = "Message"
     static let EDITPROFILE = "Edit Profile"
     static let ADDBOOKING = "Add Booking"
+    static let APPLOGICCHATKEY = "vomed596f29b0ef689bf3849311b49"
+   // vomed596f29b0ef689bf3849311b49
     
     
 }

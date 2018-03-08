@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Applozic
+
 
 enum LeftMenu: Int {
     
@@ -33,6 +35,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var checkInViewController: UIViewController!
     var messageViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
+    var chatManager: ALChatManager?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,9 +44,10 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
         
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
-        
+        self.chatSetUp()
         let storyboard = getMainStoryBoard()
         let profileVC = storyboard.instantiateViewController(withIdentifier: StoryboardVCIdentifier.profile.rawValue) as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileVC)
@@ -73,6 +77,28 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         
     }
     
+    func chatSetUp()  {
+        let alUser : ALUser =  ALUser()
+        alUser.userId = "demoUserId"     // NOTE : +,*,? are not allowed chars in userId.
+        alUser.email = "github@applozic.com"
+        alUser.imageLink = ""                                // User's profile image link.
+        alUser.displayName = "DemoUserName"
+        ALUserDefaultsHandler.setUserId(alUser.userId)
+        ALUserDefaultsHandler.setEmailId(alUser.email)
+        ALUserDefaultsHandler.setDisplayName(alUser.displayName)
+        
+        self.chatManager = ALChatManager(applicationKey:StringConstant.APPLOGICCHATKEY as NSString)
+        chatManager?.registerUser(alUser) { (response, error) in
+            if (error == nil)
+                        {
+                            //Applozic registration successful
+                        } else {
+            //                NSLog("Error in Applozic registration : %@",error?.description);
+                        }
+        }
+
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
@@ -100,6 +126,9 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
                 self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
             case .notification:
                 self.slideMenuController()?.changeMainViewController(self.messageViewController, close: true)
+        case .inviteFriend:
+            self.chatManager!.launchChat(self)
+            //self.slideMenuController()?.changeMainViewController(chatManager!.launchChat(self), close: true)
             
             default:
                 break
