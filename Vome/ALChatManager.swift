@@ -36,6 +36,7 @@ class ALChatManager: NSObject {
         ALDefaultChatViewSettings()
 
         let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
+        
         registerUserClientService.initWithCompletion(alUser, withCompletion: { (response, error) in
             
             if (error != nil)

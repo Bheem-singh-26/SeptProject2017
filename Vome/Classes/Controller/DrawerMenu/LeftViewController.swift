@@ -13,6 +13,7 @@ enum LeftMenu: Int {
     
     case profile = 0
     case checkIn
+    case opportunities
     case myOpportunities
     case notification
     case inviteFriend
@@ -27,7 +28,7 @@ protocol LeftMenuProtocol : class {
 class LeftViewController : UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menuTitles = ["My Profile", "Check-in", "My Opportunities", "Notifications", "Invite your friend", "FAQ", "Settings"]
+    var menuTitles = ["My Profile", "Check-in","Opportunities", "My Opportunities", "Notifications", "Invite your friend", "FAQ", "Settings"]
     var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "CheckInIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
     var profileViewController: UIViewController!
     var volunteerProfileViewController: UIViewController!
@@ -76,16 +77,24 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
     func chatSetUp()  {
         let alUser : ALUser =  ALUser()
-        alUser.userId = "demoUserId"     // NOTE : +,*,? are not allowed chars in userId.
-        alUser.email = "github@applozic.com"
+        alUser.userId = "demoUserId123"     // NOTE : +,*,? are not allowed chars in userId.
+        alUser.email = "github1@applozic.com"
         alUser.imageLink = ""                                // User's profile image link.
-        alUser.displayName = "DemoUserName"
+        alUser.displayName = "DemoUserName12"
+        alUser.password = "123456"
+        alUser.authenticationTypeId = 0
         ALUserDefaultsHandler.setUserId(alUser.userId)
         ALUserDefaultsHandler.setEmailId(alUser.email)
         ALUserDefaultsHandler.setDisplayName(alUser.displayName)
+        ALUserDefaultsHandler.setUserAuthenticationTypeId(0)
+        ALUserDefaultsHandler.setPassword("123456")
+
+    
+      //  ALUserDefaultsHandler.setPassword("123456")
         
         self.chatManager = ALChatManager(applicationKey:StringConstant.APPLOGICCHATKEY as NSString)
         chatManager?.registerUser(alUser) { (response, error) in
+            
             if (error == nil)
                         {
                             //Applozic registration successful
