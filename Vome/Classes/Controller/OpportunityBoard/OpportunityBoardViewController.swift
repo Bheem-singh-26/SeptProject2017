@@ -165,7 +165,7 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //pushToPaymentPlan()
+        pushToPaymentPlan()
         
     }
     
