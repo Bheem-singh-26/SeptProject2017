@@ -41,12 +41,11 @@ class OpportunityBoardViewController: BaseViewController {
     }
     
     func intializeView(){
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "SearchIcon"), style: .plain, target: self, action: #selector(searchButtonClicked))
         tableView.registerCellNib(OpportunityBoardTableViewCell.self)
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 130
         selectCityButton.addBorder(borderWidth: 1, color: UIColor.white)
-    
         initializeDropDown()
     }
 
@@ -90,6 +89,12 @@ class OpportunityBoardViewController: BaseViewController {
             }
         }
     }
+    
+    func searchButtonClicked(){
+        pushToSearch()
+    }
+        
+    //MARK: ------------------------ Actions Mehtods ----------------------------
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         
@@ -160,7 +165,7 @@ extension OpportunityBoardViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        pushToPaymentPlan()
+        //pushToPaymentPlan()
         
     }
     

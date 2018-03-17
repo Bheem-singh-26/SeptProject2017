@@ -20,6 +20,11 @@ class VolunteerProfileViewController: BaseViewController {
     
     var dataSourceImage = [#imageLiteral(resourceName: "AboutIcon"), #imageLiteral(resourceName: "GenderIcon"), #imageLiteral(resourceName: "CakeIcon"), #imageLiteral(resourceName: "Briefcase"), #imageLiteral(resourceName: "InterestIcon"), #imageLiteral(resourceName: "Marker"), #imageLiteral(resourceName: "OrganizationIcon"), #imageLiteral(resourceName: "SendMessageIcon")]
     
+    
+    // For search users profile
+    var userID: String?
+    var isComingFromSearch = false
+    
     //MARK: ------------------------ Default Mehtods ----------------------------
     
     override func viewDidLoad() {
@@ -42,13 +47,19 @@ class VolunteerProfileViewController: BaseViewController {
         tableView.registerCellNib(TextWithIconTableViewCell.self)
         tableView.registerCellNib(HoursProgressTableViewCell.self)
         tableView.estimatedRowHeight = 200
+        if isComingFromSearch{
+            removeNavigationBarItem()
+            changeNaviagtionLeftItem()
+        }
         fetchProfileDetails()
     }
     
     func fetchProfileDetails(){
+        var userId = ""
+        isComingFromSearch ? (userId = self.userID!) : (userId = (AppUser.sharedInstance?.id)!)
         
         SVProgressHUD.show()
-        APImanager.profileDetails(apiService: .profileDetails(userId: (AppUser.sharedInstance?.id)!)) { (details, errorMsg) in
+        APImanager.profileDetails(apiService: .profileDetails(userId: userId)) { (details, errorMsg) in
             SVProgressHUD.dismiss()
             if isGuardObject(details){
                 self.profileDetails = details
@@ -90,7 +101,7 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
             let cell = tableView.dequeueReusableCell(withIdentifier: VolunteerProfileTableViewCell.reuseIdentifier()) as! VolunteerProfileTableViewCell
             cell.selectionStyle = .none
             cell.userName.text = (self.profileDetails?.firstName?.capitalized)! + " " + (self.profileDetails?.lastName?.capitalized)!
-            cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "SampleProfile"))
+            cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "UserIcon"))
             
             return cell
         }

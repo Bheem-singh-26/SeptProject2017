@@ -64,11 +64,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         
         let messageVC = getChatStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.message.rawValue) as! MessageViewController
         self.messageViewController = UINavigationController(rootViewController: messageVC)
-//        
-//        let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
-//        nonMenuController.delegate = self
-//        self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
-//        
+        
+            
         self.tableView.registerCellNib(MenuTableViewCell.self)
         
         self.imageHeaderView = ImageHeaderView.loadNib()
