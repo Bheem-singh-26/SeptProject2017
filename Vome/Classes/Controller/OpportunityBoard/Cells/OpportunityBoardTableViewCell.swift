@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PushToBookNow:class {
+    func bookNowButtonClicked(cell:OpportunityBoardTableViewCell)
+}
+
 class OpportunityBoardTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageIcon: UIImageView!
@@ -17,6 +21,8 @@ class OpportunityBoardTableViewCell: UITableViewCell {
     @IBOutlet weak var bookBtn: UIButton!
     @IBOutlet weak var availableSpotsLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var delegate:PushToBookNow?
     
     var post: PostResponse! {
         didSet {
@@ -48,7 +54,7 @@ class OpportunityBoardTableViewCell: UITableViewCell {
     }
     
     @IBAction func bookNowBtnClicked(_ sender: UIButton) {
-        
+        self.delegate?.bookNowButtonClicked(cell: self)
     }
     
     

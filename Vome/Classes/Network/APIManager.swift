@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
 
 class APImanager {
     
@@ -20,6 +21,8 @@ class APImanager {
         case payment
         case opportunityBoardPostList
         case profileDetails(userId: String)
+        case opportunityDetailView(id:String)
+        case searchUser(text: String)
         
         var path: String {
             switch self {
@@ -31,7 +34,11 @@ class APImanager {
                 return baseUrl + "api/posts_api/GetAllPosts"
             case let .profileDetails(userId):
                 return baseUrl + "api/profileapi/myprofile/" + userId
-                
+            case let .opportunityDetailView(userId):
+                return baseUrl + "api/Posts_Api/MyOpportunityDetail/" + userId + " ?tabswitch=past"
+            case let .searchUser(text):
+                return baseUrl + "api/ProfileAPI/SearchUsers?request=" + text
+            
             default:
                 return ""
             }
@@ -114,6 +121,48 @@ class APImanager {
             
             let objectModel = ProfileResponse(JSON: response as! [String : Any])
             handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
+    
+    class func prDetails(apiService: APIService, handler: @escaping (_ details: ProfileResponse?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = ProfileResponse(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
+    
+    class func opportunityDetailView(apiService: APIService, handler: @escaping (_ details: EventDetails?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = EventDetails(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
+    
+    class func searchUser(apiService: APIService, handler: @escaping (_ users: [SearchUser]?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectArray = Mapper<SearchUser>().mapArray(JSONObject: response)
+            handler(objectArray, nil)
             
         }) { (failureResponse) in
             print(failureResponse as Any)

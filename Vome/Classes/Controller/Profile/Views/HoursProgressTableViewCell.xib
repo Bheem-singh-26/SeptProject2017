@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HoursProgressTableViewCell" rowHeight="123" id="KGk-i7-Jjw" customClass="HoursProgressTableViewCell" customModule="Vome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE3-Gc-SXN">
+                        <rect key="frame" x="176.5" y="10" width="21" height="25"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified Hours Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc3-K3-NNN">
+                        <rect key="frame" x="103.5" y="41" width="169" height="19.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.27058823529411763" green="0.70196078431372544" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="iE3-Gc-SXN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OEU-GP-FoC"/>
+                    <constraint firstItem="rc3-K3-NNN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RIN-YX-8Gc"/>
+                    <constraint firstItem="iE3-Gc-SXN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Rlb-h7-8dM"/>
+                    <constraint firstItem="rc3-K3-NNN" firstAttribute="top" secondItem="iE3-Gc-SXN" secondAttribute="bottom" constant="6" id="tbX-DY-c5F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="completedHourCount" destination="iE3-Gc-SXN" id="tsC-ql-2Gk"/>
+                <outlet property="completedHourLabel" destination="rc3-K3-NNN" id="VF6-I0-zug"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="93.5"/>
+        </tableViewCell>
+    </objects>
+</document>

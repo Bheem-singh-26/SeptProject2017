@@ -32,4 +32,9 @@ class ProfileViewTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func followBtnClicked(_ sender: UIButton) {
+        
+    }
+    
+
 }

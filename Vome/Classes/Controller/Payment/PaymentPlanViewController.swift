@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaymentPlanViewController: BaseViewController {
+class PaymentPlanViewController: UIViewController {
     
     //MARK: ------------------------ IBOutlets and Variables ---------------------
 
@@ -38,6 +38,7 @@ class PaymentPlanViewController: BaseViewController {
     
     func intializeView(){
         
+        self.changeNaviagtionLeftItem()
         let nib = UINib(nibName: PaymentPlanSectionHearder.reuseIdentifier(), bundle: nil)
         tableView.register(nib, forHeaderFooterViewReuseIdentifier: PaymentPlanSectionHearder.reuseIdentifier())
         tableView.registerCellNib(TextWithIconTableViewCell.self)

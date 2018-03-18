@@ -61,5 +61,39 @@ extension UIViewController{
         appDelegate.window?.rootViewController = slideMenuController
     }
     
+    func pushToEditProfile() {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.editProfile.rawValue) as! EditProfileViewController
+        removeNavigationBackButtonTitle()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToOrganizationProfile(userId: String, iscomingFromSearch:Bool = false) {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.profile.rawValue) as! ProfileViewController
+        removeNavigationBackButtonTitle()
+        viewController.userID = userId
+        viewController.isComingFromSearch = iscomingFromSearch
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToVolunteerProfile(userId: String, iscomingFromSearch:Bool = false) {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.volunteerProfile.rawValue) as! VolunteerProfileViewController
+        removeNavigationBackButtonTitle()
+        viewController.userID = userId
+        viewController.isComingFromSearch = iscomingFromSearch
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToAddBooking(eventId:String) {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.addBooking.rawValue) as! AddBookingViewController
+        removeNavigationBackButtonTitle()
+        viewController.eventId = eventId
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToSearch() {
+        let viewController = getMainStoryBoard().instantiateViewController(withIdentifier: StoryboardVCIdentifier.searchVC.rawValue) as! SearchViewController
+        removeNavigationBackButtonTitle()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     
 }

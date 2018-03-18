@@ -20,13 +20,17 @@ class VolunteerProfileViewController: BaseViewController {
     
     var dataSourceImage = [#imageLiteral(resourceName: "AboutIcon"), #imageLiteral(resourceName: "GenderIcon"), #imageLiteral(resourceName: "CakeIcon"), #imageLiteral(resourceName: "Briefcase"), #imageLiteral(resourceName: "InterestIcon"), #imageLiteral(resourceName: "Marker"), #imageLiteral(resourceName: "OrganizationIcon"), #imageLiteral(resourceName: "SendMessageIcon")]
     
+    
+    // For search users profile
+    var userID: String?
+    var isComingFromSearch = false
+    
     //MARK: ------------------------ Default Mehtods ----------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = StringConstant.PROFILE
         
         intializeView()
         
@@ -39,20 +43,27 @@ class VolunteerProfileViewController: BaseViewController {
     
     func intializeView(){
         
-        tableView.registerCellNib(ProfileMapTableViewCell.self)
-        tableView.registerCellNib(TextWithIconTableViewCell.self)
         tableView.registerCellNib(VolunteerProfileTableViewCell.self)
+        tableView.registerCellNib(TextWithIconTableViewCell.self)
+        tableView.registerCellNib(HoursProgressTableViewCell.self)
         tableView.estimatedRowHeight = 200
+        if isComingFromSearch{
+            removeNavigationBarItem()
+            changeNaviagtionLeftItem()
+        }
         fetchProfileDetails()
     }
     
     func fetchProfileDetails(){
+        var userId = ""
+        isComingFromSearch ? (userId = self.userID!) : (userId = (AppUser.sharedInstance?.id)!)
         
         SVProgressHUD.show()
-        APImanager.profileDetails(apiService: .profileDetails(userId: (AppUser.sharedInstance?.id)!)) { (details, errorMsg) in
+        APImanager.profileDetails(apiService: .profileDetails(userId: userId)) { (details, errorMsg) in
             SVProgressHUD.dismiss()
             if isGuardObject(details){
                 self.profileDetails = details
+                self.title = (self.profileDetails?.firstName?.capitalized)! + StringConstant.PROFILE
                 self.tableView.reloadData()
             }else{
                 print("Fetch profile details failed !!!!!!!")
@@ -75,9 +86,11 @@ class VolunteerProfileViewController: BaseViewController {
 
 extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSource{
     
+    //MARK: ------------------------ UITableView delegates ---------------------
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let _ = self.profileDetails{
-            return self.dataSourceImage.count + 2
+            return self.dataSourceImage.count + 1
         }
         return 0
     }
@@ -88,13 +101,18 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
             let cell = tableView.dequeueReusableCell(withIdentifier: VolunteerProfileTableViewCell.reuseIdentifier()) as! VolunteerProfileTableViewCell
             cell.selectionStyle = .none
             cell.userName.text = (self.profileDetails?.firstName?.capitalized)! + " " + (self.profileDetails?.lastName?.capitalized)!
-            cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "SampleProfile"))
+            cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "UserIcon"))
             
             return cell
         }
-        if indexPath.row == dataSourceImage.count + 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileMapTableViewCell.reuseIdentifier()) as! ProfileMapTableViewCell
+        if indexPath.row == dataSourceImage.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HoursProgressTableViewCell.reuseIdentifier()) as! HoursProgressTableViewCell
             cell.selectionStyle = .none
+            if let verifiedTotalHours = self.profileDetails?.verifiedTotalHours{
+                cell.completedHourCount.text = String(verifiedTotalHours)
+            }else{
+                cell.completedHourCount.text = "0"
+            }
             
             return cell
         }
@@ -107,10 +125,10 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
                 if let descriptionStr = self.profileDetails?.description{
                     cell.labelTextStrig = descriptionStr
                 }else{
-                    cell.labelTextStrig = "Description:\n Most storms have caught me by surprise, so I had to learn very quickly to look further and understand that I am not capable of controlling the weather."
+                    cell.labelTextStrig = "Description:\nMost storms have caught me by surprise, so I had to learn very quickly to look further and understand that I am not capable of controlling the weather."
                 }
             case 2:
-                if let gender = self.profileDetails?.description{
+                if let gender = self.profileDetails?.gender, gender != ""{
                     cell.labelTextStrig = gender
                 }else{
                     cell.labelTextStrig = "Male"
@@ -138,14 +156,12 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
                 cell.labelTextStrig = "Interests:  " + interestStr
             case 6:
                 if let city = self.profileDetails?.city, let provinceState = self.profileDetails?.provinceState, let country = self.profileDetails?.country{
-                    cell.labelTextStrig = city + provinceState + country
+                    cell.labelTextStrig = city + ", " + provinceState + ", " + country
                 }else{
                     cell.labelTextStrig = "Montreal, Quebec, Canada"
                 }
             case 7:
                 cell.labelTextStrig = (self.profileDetails?.firstName)! + "'s Organizations"
-            case 8:
-                cell.labelTextStrig = "Send a message"
             
             default:
                 break
@@ -158,10 +174,14 @@ extension VolunteerProfileViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == dataSourceImage.count + 1{
-            return 320
+        if indexPath.row == dataSourceImage.count{
+            return 125
         }
         return UITableViewAutomaticDimension
     }
     
 }
+
+
+
+
