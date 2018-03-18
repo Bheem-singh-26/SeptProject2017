@@ -30,10 +30,11 @@ class APImanager {
                 return baseUrl + "api/profileapi/RegisterUser"
             case .opportunityBoardPostList:
                 return baseUrl + "api/posts_api/GetAllPosts"
+                
             case let .profileDetails(userId):
                 return baseUrl + "api/profileapi/myprofile/" + userId
-            case let .opportunityDetailView(id):
-                return baseUrl + "api/Posts_Api/MyOpportunityDetail/" + id
+            case let .opportunityDetailView(userId):
+                return baseUrl + "api/Posts_Api/MyOpportunityDetail/" + userId + " ?tabswitch=past"
                 
             default:
                 return ""
@@ -125,6 +126,20 @@ class APImanager {
         }
     }
     
+    class func prDetails(apiService: APIService, handler: @escaping (_ details: ProfileResponse?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectModel = ProfileResponse(JSON: response as! [String : Any])
+            handler(objectModel, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
+    
     class func opportunityDetailView(apiService: APIService, handler: @escaping (_ details: EventDetails?, _ error: AnyObject?) -> ()) {
         
         NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
@@ -138,6 +153,8 @@ class APImanager {
             
         }
     }
+    
+    
     
 }
 

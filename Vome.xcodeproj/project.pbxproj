@@ -16,6 +16,7 @@
 		17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17871756200A7D4000F1213B /* ProfileResponse.swift */; };
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
 		695A06B12051544900B3DC2B /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A06B02051544900B3DC2B /* ALChatManager.swift */; };
+		69FC5A27205ACCFF00A92AAE /* MyOpportunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FC5A26205ACCFF00A92AAE /* MyOpportunityViewController.swift */; };
 		9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */; };
 		9B367F60200B39A00060C0A7 /* VolunteerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5F200B39A00060C0A7 /* VolunteerProfileViewController.swift */; };
 		9B367F62200B85910060C0A7 /* UserInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F61200B85910060C0A7 /* UserInterest.swift */; };
@@ -119,6 +120,7 @@
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		695A06AF20511B8100B3DC2B /* Vome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vome-Bridging-Header.h"; sourceTree = "<group>"; };
 		695A06B02051544900B3DC2B /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
+		69FC5A26205ACCFF00A92AAE /* MyOpportunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOpportunityViewController.swift; sourceTree = "<group>"; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
 		9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
@@ -240,6 +242,14 @@
 				2C295DA423BFA74667E88197 /* Pods_Vome.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69FC5A25205ACCB600A92AAE /* MyOpportunity */ = {
+			isa = PBXGroup;
+			children = (
+				69FC5A26205ACCFF00A92AAE /* MyOpportunityViewController.swift */,
+			);
+			path = MyOpportunity;
 			sourceTree = "<group>";
 		};
 		6A949624AFD2CE1D7C8079D2 /* Pods */ = {
@@ -440,6 +450,7 @@
 		9BD1B7611F6533B500B3A641 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				69FC5A25205ACCB600A92AAE /* MyOpportunity */,
 				9BEE2DF61F797B6B00EBEB64 /* Message */,
 				9B8F5CF01F77D35E00D4DFE6 /* Profile */,
 				9BD02690201AFFD5002BC8E7 /* Settings */,
@@ -818,6 +829,7 @@
 				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
 				9BD0269B201B2903002BC8E7 /* TextFieldTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
+				69FC5A27205ACCFF00A92AAE /* MyOpportunityViewController.swift in Sources */,
 				174F944D200BA66D001F7351 /* AddBookingViewController.swift in Sources */,
 				9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
