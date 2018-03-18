@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setNavigationBarItemWith()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +24,6 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem()
     }
     
     

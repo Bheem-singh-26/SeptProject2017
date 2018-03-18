@@ -22,6 +22,10 @@ class ProfileViewController: BaseViewController {
     
     var profileDetails: ProfileResponse?
     
+    // For search users profile
+    var userID: String?
+    var isComingFromSearch = false
+    
     //MARK: ------------------------ Default Mehtods ----------------------------
     
     override func viewDidLoad() {
@@ -44,13 +48,18 @@ class ProfileViewController: BaseViewController {
         tableView.registerCellNib(TextWithIconTableViewCell.self)
         tableView.registerCellNib(ProfileViewTableViewCell.self)
         tableView.estimatedRowHeight = 200
+        if isComingFromSearch{
+            removeNavigationBarItem()
+        }
         fetchProfileDetails()
     }
     
     func fetchProfileDetails(){
+        var userId = ""
+        isComingFromSearch ? (userId = self.userID!) : (userId = (AppUser.sharedInstance?.id)!)
         
         SVProgressHUD.show()
-        APImanager.profileDetails(apiService: .profileDetails(userId: (AppUser.sharedInstance?.id)!)) { (details, errorMsg) in
+        APImanager.profileDetails(apiService: .profileDetails(userId: userId)) { (details, errorMsg) in
             SVProgressHUD.dismiss()
             if isGuardObject(details){
                 self.profileDetails = details
@@ -91,7 +100,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileViewTableViewCell.reuseIdentifier()) as! ProfileViewTableViewCell
             cell.selectionStyle = .none
             cell.userName.text = (self.profileDetails?.name?.capitalized)
-            cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "SampleProfile"))
+            cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "UserIcon"))
             
             return cell
         }

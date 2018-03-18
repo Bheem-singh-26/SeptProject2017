@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
 
 class APImanager {
     
@@ -21,6 +22,7 @@ class APImanager {
         case opportunityBoardPostList
         case profileDetails(userId: String)
         case opportunityDetailView(id:String)
+        case searchUser(text: String)
         
         var path: String {
             switch self {

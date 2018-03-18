@@ -95,7 +95,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registerButtonClicked(_ sender: UIButton) {
         
-        let userType = self.segmentView.selectedSegmentIndex == 0 ? EnumUserType.voulenteer : EnumUserType.organization
+        let userType = self.segmentView.selectedSegmentIndex == 0 ? EnumUserType.volunteer : EnumUserType.organization
                 
         //self.pushToOpportunityBoard()
         

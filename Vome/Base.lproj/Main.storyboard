@@ -353,6 +353,71 @@
             </objects>
             <point key="canvasLocation" x="1860" y="817.24137931034488"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="1Kt-Vj-O9t">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="0HV-CY-RIq" customClass="SearchViewController" customModule="Vome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mQV-XO-z1i"/>
+                        <viewControllerLayoutGuide type="bottom" id="cna-pI-vb8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v6q-iQ-sOA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-T6-gNP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <searchBar contentMode="redraw" placeholder="Search Vome" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-J0-LJc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0HV-CY-RIq" id="hvk-Yx-Ach"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tpn-bg-hDw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0HV-CY-RIq" id="G0E-za-ag9"/>
+                                    <outlet property="delegate" destination="0HV-CY-RIq" id="WpB-dF-SQG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TvU-T6-gNP" firstAttribute="bottom" secondItem="gpT-J0-LJc" secondAttribute="bottom" id="3IE-tm-nXm"/>
+                            <constraint firstItem="gpT-J0-LJc" firstAttribute="top" secondItem="v6q-iQ-sOA" secondAttribute="top" constant="20" id="GlN-67-jek"/>
+                            <constraint firstItem="tpn-bg-hDw" firstAttribute="leading" secondItem="v6q-iQ-sOA" secondAttribute="leading" id="L74-px-MOE"/>
+                            <constraint firstAttribute="trailing" secondItem="tpn-bg-hDw" secondAttribute="trailing" id="Lib-iv-19E"/>
+                            <constraint firstItem="cna-pI-vb8" firstAttribute="top" secondItem="tpn-bg-hDw" secondAttribute="bottom" id="MvE-RN-1NA"/>
+                            <constraint firstAttribute="trailing" secondItem="gpT-J0-LJc" secondAttribute="trailing" id="NTH-a6-OMb"/>
+                            <constraint firstItem="TvU-T6-gNP" firstAttribute="top" secondItem="v6q-iQ-sOA" secondAttribute="top" id="QEU-be-257"/>
+                            <constraint firstAttribute="trailing" secondItem="TvU-T6-gNP" secondAttribute="trailing" id="TFT-cX-GXM"/>
+                            <constraint firstItem="gpT-J0-LJc" firstAttribute="leading" secondItem="v6q-iQ-sOA" secondAttribute="leading" id="Y04-fs-Phr"/>
+                            <constraint firstItem="TvU-T6-gNP" firstAttribute="leading" secondItem="v6q-iQ-sOA" secondAttribute="leading" id="gYp-fm-Xyn"/>
+                            <constraint firstItem="tpn-bg-hDw" firstAttribute="top" secondItem="gpT-J0-LJc" secondAttribute="bottom" id="ijZ-J4-vCz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="gpT-J0-LJc" id="gfX-pt-UiS"/>
+                        <outlet property="searchDisplayController" destination="Vim-Ck-iPW" id="oZ1-vn-yZ7"/>
+                        <outlet property="tableView" destination="tpn-bg-hDw" id="pwM-QO-Ybv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TyK-vt-lX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Vim-Ck-iPW">
+                    <connections>
+                        <outlet property="delegate" destination="0HV-CY-RIq" id="MRg-hr-RrH"/>
+                        <outlet property="searchContentsController" destination="0HV-CY-RIq" id="6rS-pi-XCY"/>
+                        <outlet property="searchResultsDataSource" destination="0HV-CY-RIq" id="jjJ-Mk-SjK"/>
+                        <outlet property="searchResultsDelegate" destination="0HV-CY-RIq" id="k5m-kF-TFY"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1860" y="1565.6671664167918"/>
+        </scene>
         <!--Left View Controller-->
         <scene sceneID="bHo-VN-WbY">
             <objects>
