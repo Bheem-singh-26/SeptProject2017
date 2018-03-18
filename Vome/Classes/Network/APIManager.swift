@@ -32,12 +32,13 @@ class APImanager {
                 return baseUrl + "api/profileapi/RegisterUser"
             case .opportunityBoardPostList:
                 return baseUrl + "api/posts_api/GetAllPosts"
-                
             case let .profileDetails(userId):
                 return baseUrl + "api/profileapi/myprofile/" + userId
             case let .opportunityDetailView(userId):
                 return baseUrl + "api/Posts_Api/MyOpportunityDetail/" + userId + " ?tabswitch=past"
-                
+            case let .searchUser(text):
+                return baseUrl + "api/ProfileAPI/SearchUsers?request=" + text
+            
             default:
                 return ""
             }
@@ -156,6 +157,19 @@ class APImanager {
         }
     }
     
+    class func searchUser(apiService: APIService, handler: @escaping (_ users: [SearchUser]?, _ error: AnyObject?) -> ()) {
+        
+        NetworkManager.shareInstance.callServiceWithName(apiService.path, method: apiService.method, param: apiService.parameters, callbackSuccess: { (response) in
+            
+            let objectArray = Mapper<SearchUser>().mapArray(JSONObject: response)
+            handler(objectArray, nil)
+            
+        }) { (failureResponse) in
+            print(failureResponse as Any)
+            handler(nil, failureResponse)
+            
+        }
+    }
     
     
 }

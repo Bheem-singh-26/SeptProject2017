@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SearchViewController: UIViewController {
     
@@ -45,8 +46,9 @@ class SearchViewController: UIViewController {
     }
     
     func fetchSearchResultfrom(searchTxt: String){
-        
+        SVProgressHUD.show()
         APImanager.searchUser(apiService: .searchUser(text: searchTxt)) { (users, error) in
+            SVProgressHUD.dismiss()
             if isGuardObject(users){
                 self.usersArray = users!
                 self.tableView.reloadData()
