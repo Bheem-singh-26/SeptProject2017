@@ -76,35 +76,39 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     }
     
     func chatSetUp()  {
+        
         let alUser : ALUser =  ALUser()
+        
         alUser.userId = "demoUserId123"     // NOTE : +,*,? are not allowed chars in userId.
         alUser.email = "github1@applozic.com"
         alUser.imageLink = ""                                // User's profile image link.
         alUser.displayName = "DemoUserName12"
         alUser.password = "123456"
         alUser.authenticationTypeId = 0
+        alUser.applicationId = (StringConstant.APPLOGICCHATKEY as NSString) as String!
+        
         ALUserDefaultsHandler.setUserId(alUser.userId)
         ALUserDefaultsHandler.setEmailId(alUser.email)
         ALUserDefaultsHandler.setDisplayName(alUser.displayName)
         ALUserDefaultsHandler.setUserAuthenticationTypeId(0)
         ALUserDefaultsHandler.setPassword("123456")
-
-    
-      //  ALUserDefaultsHandler.setPassword("123456")
+        
+        //  ALUserDefaultsHandler.setPassword("123456")
         
         self.chatManager = ALChatManager(applicationKey:StringConstant.APPLOGICCHATKEY as NSString)
+        
         chatManager?.registerUser(alUser) { (response, error) in
-            
-            if (error == nil)
-                        {
-                            //Applozic registration successful
-                        } else {
-            //                NSLog("Error in Applozic registration : %@",error?.description);
-                        }
+            if (error == nil){
+                //Applozic registration successful
+                
+            } else {
+                //NSLog("Error in Applozic registration : %@",error?.description);
+            }
         }
-
+        
     }
     
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
