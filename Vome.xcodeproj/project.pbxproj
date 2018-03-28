@@ -861,7 +861,6 @@
 				9BD0269B201B2903002BC8E7 /* TextFieldTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
 				69FC5A27205ACCFF00A92AAE /* MyOpportunityViewController.swift in Sources */,
-				174F944D200BA66D001F7351 /* AddBookingViewController.swift in Sources */,
 				9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
 				9BEE2DFE1F797D1E00EBEB64 /* MessgaeTableViewCell.swift in Sources */,
@@ -1066,15 +1065,15 @@
 			baseConfigurationReference = 7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = EXU7UPZB8S;
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "99a17404-9b18-4800-bb78-83040a67d66c";
-				PROVISIONING_PROFILE_SPECIFIER = VomeDevProfile;
+				PROVISIONING_PROFILE = "ea93ba52-389f-4d7b-979f-10d6588e328a";
+				PROVISIONING_PROFILE_SPECIFIER = VomeProdProfile;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/himanshulikhyani/SeptProject2017/Vome/Vome-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
