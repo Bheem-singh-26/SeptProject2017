@@ -97,6 +97,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAppConfiguration(){
         
         IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         DropDown.startListeningToKeyboard()
         
     }

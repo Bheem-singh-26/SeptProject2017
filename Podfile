@@ -10,7 +10,7 @@ target 'Vome' do
   pod 'Alamofire’, '4.5.0'
   pod 'AlamofireImage', '3.2.0'
   pod 'AlamofireObjectMapper’, '4.1.0'
-  pod 'IQKeyboardManagerSwift', '4.0.11'
+  pod 'IQKeyboardManagerSwift', '4.0.10'
   pod 'SlideMenuControllerSwift', '3.0.1'
   pod 'SVProgressHUD', '2.2.2'
   pod 'DropDown', '2.0.0'

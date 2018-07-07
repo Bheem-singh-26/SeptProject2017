@@ -12,7 +12,6 @@ import Applozic
 enum LeftMenu: Int {
     
     case profile = 0
-    case checkIn
     case opportunities
     case myOpportunities
     case messages
@@ -20,6 +19,7 @@ enum LeftMenu: Int {
     case inviteFriend
     case faq
     case setting
+    case checkIn
 }
 
 protocol LeftMenuProtocol : class {
@@ -29,8 +29,8 @@ protocol LeftMenuProtocol : class {
 class LeftViewController : UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menuTitles = ["My Profile", "Check-in","Opportunities", "My Opportunities", "Messages","Notifications", "Invite your friend", "FAQ", "Settings"]
-    var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "CheckInIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "InterestIcon"), #imageLiteral(resourceName: "MessageIcon"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
+    var menuTitles = ["My Profile","Opportunities", "My Opportunities", "Messages","Notifications", "Invite your friend", "FAQ", "Settings"]
+    var menuImages = [#imageLiteral(resourceName: "UserIcon"), #imageLiteral(resourceName: "Calender"), #imageLiteral(resourceName: "InterestIcon"), #imageLiteral(resourceName: "MessageIcon"), #imageLiteral(resourceName: "Notification"), #imageLiteral(resourceName: "Adduser"), #imageLiteral(resourceName: "FaqICon"), #imageLiteral(resourceName: "Settings")]
     var profileViewController: UIViewController!
     var volunteerProfileViewController: UIViewController!
     var myOpportunityViewController: UIViewController!
@@ -133,8 +133,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             
             case .myOpportunities:
                 self.slideMenuController()?.changeMainViewController(self.myOpportunityViewController, close: true)
-        case .opportunities:
-            self.slideMenuController()?.changeMainViewController(self.myOpportunityViewController, close: true)
+            case .opportunities:
+                self.slideMenuController()?.changeMainViewController(self.myOpportunityViewController, close: true)
             case .checkIn:
                 self.slideMenuController()?.changeMainViewController(self.checkInViewController, close: true)
             case .messages:

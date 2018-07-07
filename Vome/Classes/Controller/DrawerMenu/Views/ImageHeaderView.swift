@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ImageHeaderView : UIView {
     
@@ -25,5 +26,16 @@ class ImageHeaderView : UIView {
         self.backgroundImage.backgroundColor = UIColor.themeRed2Color()
         //self.profileImage.setRandomDownloadImage(80, height: 80)
         //self.backgroundImage.setRandomDownloadImage(Int(self.bounds.size.width), height: 160)
+        setUserDetails()
     }
+    func setUserDetails(){
+        
+        self.userNameLabel.text = AppUser.sharedInstance?.userName
+        if let imageUrl = AppUser.sharedInstance?.profileImageUrl,imageUrl != ""{
+            
+            self.profileImage.af_setImage(withURL: URL(string: imageUrl)!, placeholderImage: #imageLiteral(resourceName: "UserIcon"))
+        }
+        
+    }
+    
 }
