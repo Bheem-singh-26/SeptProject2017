@@ -23,7 +23,7 @@ class ProfileViewController: BaseViewController {
     var profileDetails: ProfileResponse?
     
     // For search users profile
-    var userID: String?
+    var userID: String = (AppUser.sharedInstance?.id)!
     var isComingFromSearch = false
     
     //MARK: ------------------------ Default Mehtods ----------------------------
@@ -56,7 +56,7 @@ class ProfileViewController: BaseViewController {
     
     func fetchProfileDetails(){
         var userId = ""
-        isComingFromSearch ? (userId = self.userID!) : (userId = (AppUser.sharedInstance?.id)!)
+        isComingFromSearch ? (userId = self.userID) : (userId = (AppUser.sharedInstance?.id)!)
         
         SVProgressHUD.show()
         APImanager.profileDetails(apiService: .profileDetails(userId: userId)) { (details, errorMsg) in
@@ -99,6 +99,12 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileViewTableViewCell.reuseIdentifier()) as! ProfileViewTableViewCell
             cell.selectionStyle = .none
+            if self.userID == AppUser.sharedInstance?.id{
+                cell.isOwnsProfile = true
+                cell.followButton.isHidden = true
+            }else{
+                cell.followButton.isHidden = false
+            }
             cell.userName.text = (self.profileDetails?.name?.capitalized)
             cell.userImage.setImageFrom(url: self.profileDetails?.profileImageUrl, placeHolder: #imageLiteral(resourceName: "UserIcon"))
             

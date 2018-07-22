@@ -14,11 +14,19 @@ class ProfileViewTableViewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var followButton: UIButton!
     
+    var isOwnsProfile = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         userImage.layer.cornerRadius = userImage.bounds.height/2
         userImage.layer.masksToBounds = true
+        if isOwnsProfile{
+            self.followButton.isHidden = true
+        }else{
+            self.followButton.isHidden = false
+        }
+        
     }
     
     class func reuseIdentifier() -> String {

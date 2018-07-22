@@ -98,6 +98,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAppConfiguration(){
         
         IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         DropDown.startListeningToKeyboard()
         STPPaymentConfiguration.shared().publishableKey = "pk_test_t6OPwTWm4g1S4ug1E7xq1uyd"
         

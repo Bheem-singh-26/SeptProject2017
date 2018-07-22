@@ -20,6 +20,7 @@ class LoginToken: Mappable {
     var issued: String?
     var expires: String?
     var userType: String?
+    var profileImageUrl: String?
     
     required init?(map: Map) {
         
@@ -27,14 +28,15 @@ class LoginToken: Mappable {
     
     // Mappable
     func mapping(map: Map) {
-        id            <- map["id"]
-        userName      <- map["userName"]
-        token_type    <- map["token_type"]
-        access_token  <- map["access_token"]
-        expires_in    <- map["expires_in"]
-        issued        <- map[".issued"]
-        expires       <- map[".expires"]
-        userType      <- map["userType"]
+        id                  <- map["id"]
+        userName            <- map["userName"]
+        token_type          <- map["token_type"]
+        access_token        <- map["access_token"]
+        expires_in          <- map["expires_in"]
+        issued              <- map[".issued"]
+        expires             <- map[".expires"]
+        userType            <- map["userType"]
+        profileImageUrl     <- map["profileImageUrl"]
     }
     
 }
