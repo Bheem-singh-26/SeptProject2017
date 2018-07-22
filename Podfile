@@ -15,6 +15,7 @@ target 'Vome' do
   pod 'SVProgressHUD', '2.2.2'
   pod 'DropDown', '2.0.0'
   pod 'Applozic', '4.4.0'
+  pod 'Stripe'
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|

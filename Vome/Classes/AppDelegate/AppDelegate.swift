@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import DropDown
+import Stripe
 
 
 @UIApplicationMain
@@ -98,6 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         DropDown.startListeningToKeyboard()
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_t6OPwTWm4g1S4ug1E7xq1uyd"
         
     }
 

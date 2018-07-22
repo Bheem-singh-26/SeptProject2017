@@ -14,6 +14,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SlideMenuControllerSwift (3.0.1)
+  - Stripe (13.0.1)
   - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
@@ -24,7 +25,22 @@ DEPENDENCIES:
   - DropDown (= 2.0.0)
   - IQKeyboardManagerSwift (= 4.0.11)
   - SlideMenuControllerSwift (= 3.0.1)
+  - Stripe
   - SVProgressHUD (= 2.2.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - Applozic
+    - DropDown
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - SDWebImage
+    - SlideMenuControllerSwift
+    - Stripe
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -36,8 +52,9 @@ SPEC CHECKSUMS:
   ObjectMapper: 63cfe41bc6f8e7c8f44344c49901b8ae7de14c52
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+  Stripe: b3c69e4a269d5ae707916a090ee54b1f6011ccd9
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 9117e573760083288deced2a214b878fadf9b803
+PODFILE CHECKSUM: aff07488fdae0ff481c8e99ce047d0b9273436ca
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.2
