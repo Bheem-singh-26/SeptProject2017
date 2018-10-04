@@ -15,6 +15,18 @@
 		17871757200A7D4000F1213B /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17871756200A7D4000F1213B /* ProfileResponse.swift */; };
 		6444463AEBC5AD93872C8B96 /* Pods_Vome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C295DA423BFA74667E88197 /* Pods_Vome.framework */; };
 		695A06B12051544900B3DC2B /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A06B02051544900B3DC2B /* ALChatManager.swift */; };
+		697244D8210495320039F8C5 /* OpportunityHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697244D6210495320039F8C5 /* OpportunityHeaderViewCell.swift */; };
+		697244D9210495320039F8C5 /* OpportunityHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697244D7210495320039F8C5 /* OpportunityHeaderViewCell.xib */; };
+		697244DC2104A03D0039F8C5 /* OpportunitySectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697244DA2104A03D0039F8C5 /* OpportunitySectionCell.swift */; };
+		697244DD2104A03D0039F8C5 /* OpportunitySectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697244DB2104A03D0039F8C5 /* OpportunitySectionCell.xib */; };
+		697244E22104A8700039F8C5 /* OpportunityDescCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697244E02104A8700039F8C5 /* OpportunityDescCell.swift */; };
+		697244E32104A8700039F8C5 /* OpportunityDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697244E12104A8700039F8C5 /* OpportunityDescCell.xib */; };
+		697244E62104A9AB0039F8C5 /* OpportunityRoleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697244E42104A9AB0039F8C5 /* OpportunityRoleCell.swift */; };
+		697244E72104A9AB0039F8C5 /* OpportunityRoleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697244E52104A9AB0039F8C5 /* OpportunityRoleCell.xib */; };
+		697244EC2104AAB30039F8C5 /* OpportunityContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697244EA2104AAB30039F8C5 /* OpportunityContactCell.swift */; };
+		697244ED2104AAB30039F8C5 /* OpportunityContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697244EB2104AAB30039F8C5 /* OpportunityContactCell.xib */; };
+		697244F02104ABBD0039F8C5 /* OpportunityDatesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697244EE2104ABBD0039F8C5 /* OpportunityDatesCell.swift */; };
+		697244F12104ABBD0039F8C5 /* OpportunityDatesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697244EF2104ABBD0039F8C5 /* OpportunityDatesCell.xib */; };
 		69FC5A27205ACCFF00A92AAE /* MyOpportunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FC5A26205ACCFF00A92AAE /* MyOpportunityViewController.swift */; };
 		9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5B200B2E710060C0A7 /* CustomSegmentedControl.swift */; };
 		9B367F60200B39A00060C0A7 /* VolunteerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B367F5F200B39A00060C0A7 /* VolunteerProfileViewController.swift */; };
@@ -123,6 +135,18 @@
 		2C295DA423BFA74667E88197 /* Pods_Vome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		695A06AF20511B8100B3DC2B /* Vome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vome-Bridging-Header.h"; sourceTree = "<group>"; };
 		695A06B02051544900B3DC2B /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
+		697244D6210495320039F8C5 /* OpportunityHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityHeaderViewCell.swift; sourceTree = "<group>"; };
+		697244D7210495320039F8C5 /* OpportunityHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityHeaderViewCell.xib; sourceTree = "<group>"; };
+		697244DA2104A03D0039F8C5 /* OpportunitySectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitySectionCell.swift; sourceTree = "<group>"; };
+		697244DB2104A03D0039F8C5 /* OpportunitySectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunitySectionCell.xib; sourceTree = "<group>"; };
+		697244E02104A8700039F8C5 /* OpportunityDescCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityDescCell.swift; sourceTree = "<group>"; };
+		697244E12104A8700039F8C5 /* OpportunityDescCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityDescCell.xib; sourceTree = "<group>"; };
+		697244E42104A9AB0039F8C5 /* OpportunityRoleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityRoleCell.swift; sourceTree = "<group>"; };
+		697244E52104A9AB0039F8C5 /* OpportunityRoleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityRoleCell.xib; sourceTree = "<group>"; };
+		697244EA2104AAB30039F8C5 /* OpportunityContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityContactCell.swift; sourceTree = "<group>"; };
+		697244EB2104AAB30039F8C5 /* OpportunityContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityContactCell.xib; sourceTree = "<group>"; };
+		697244EE2104ABBD0039F8C5 /* OpportunityDatesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityDatesCell.swift; sourceTree = "<group>"; };
+		697244EF2104ABBD0039F8C5 /* OpportunityDatesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityDatesCell.xib; sourceTree = "<group>"; };
 		69FC5A26205ACCFF00A92AAE /* MyOpportunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOpportunityViewController.swift; sourceTree = "<group>"; };
 		7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.release.xcconfig"; sourceTree = "<group>"; };
 		8A0692D6E13FFF2B314AE027 /* Pods-Vome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vome/Pods-Vome.debug.xcconfig"; sourceTree = "<group>"; };
@@ -242,6 +266,33 @@
 				2C295DA423BFA74667E88197 /* Pods_Vome.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		697244D4210494400039F8C5 /* OpportunityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				697244D5210494940039F8C5 /* View */,
+			);
+			path = OpportunityDetails;
+			sourceTree = "<group>";
+		};
+		697244D5210494940039F8C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				697244D6210495320039F8C5 /* OpportunityHeaderViewCell.swift */,
+				697244D7210495320039F8C5 /* OpportunityHeaderViewCell.xib */,
+				697244DA2104A03D0039F8C5 /* OpportunitySectionCell.swift */,
+				697244DB2104A03D0039F8C5 /* OpportunitySectionCell.xib */,
+				697244E02104A8700039F8C5 /* OpportunityDescCell.swift */,
+				697244E12104A8700039F8C5 /* OpportunityDescCell.xib */,
+				697244E42104A9AB0039F8C5 /* OpportunityRoleCell.swift */,
+				697244E52104A9AB0039F8C5 /* OpportunityRoleCell.xib */,
+				697244EA2104AAB30039F8C5 /* OpportunityContactCell.swift */,
+				697244EB2104AAB30039F8C5 /* OpportunityContactCell.xib */,
+				697244EE2104ABBD0039F8C5 /* OpportunityDatesCell.swift */,
+				697244EF2104ABBD0039F8C5 /* OpportunityDatesCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		69FC5A25205ACCB600A92AAE /* MyOpportunity */ = {
@@ -476,6 +527,7 @@
 		9BD1B7611F6533B500B3A641 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				697244D4210494400039F8C5 /* OpportunityDetails */,
 				69FC5A25205ACCB600A92AAE /* MyOpportunity */,
 				9BEE2DF61F797B6B00EBEB64 /* Message */,
 				9B8F5CF01F77D35E00D4DFE6 /* Profile */,
@@ -696,8 +748,7 @@
 				TargetAttributes = {
 					9BD1B7461F65335100B3A641 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = EXU7UPZB8S;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -731,6 +782,7 @@
 				9BA67447205D2F0600A31D10 /* SearchTableViewCell.xib in Resources */,
 				9BD1B7911F6534D800B3A641 /* OpenSans-LightItalic.ttf in Resources */,
 				9BF9C13C1F6550B50092DB80 /* PaymentPlanSectionHearder.xib in Resources */,
+				697244DD2104A03D0039F8C5 /* OpportunitySectionCell.xib in Resources */,
 				9BD1B7891F6534D800B3A641 /* OpenSans-BoldItalic.ttf in Resources */,
 				9BD1B7931F6534D800B3A641 /* OpenSans-Semibold.ttf in Resources */,
 				9BD1B7941F6534D800B3A641 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -747,15 +799,20 @@
 				9BD1B7551F65335100B3A641 /* LaunchScreen.storyboard in Resources */,
 				9BD1B76F1F6533F900B3A641 /* Assets.xcassets in Resources */,
 				9BD1B78A1F6534D800B3A641 /* OpenSans-CondBold.ttf in Resources */,
+				697244E32104A8700039F8C5 /* OpportunityDescCell.xib in Resources */,
 				9BF9C1361F6541180092DB80 /* TextWithIconTableViewCell.xib in Resources */,
 				9BD1B7881F6534D800B3A641 /* OpenSans-Bold.ttf in Resources */,
 				9BD1B7921F6534D800B3A641 /* OpenSans-Regular.ttf in Resources */,
+				697244E72104A9AB0039F8C5 /* OpportunityRoleCell.xib in Resources */,
+				697244F12104ABBD0039F8C5 /* OpportunityDatesCell.xib in Resources */,
 				9BD1B7501F65335100B3A641 /* Main.storyboard in Resources */,
 				9BD0269C201B2903002BC8E7 /* TextFieldTableViewCell.xib in Resources */,
 				9BD1B78F1F6534D800B3A641 /* OpenSans-Italic.ttf in Resources */,
 				9BF9C1401F655B020092DB80 /* OutlineButtonTableViewCell.xib in Resources */,
 				9BD1B78E1F6534D800B3A641 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				697244D9210495320039F8C5 /* OpportunityHeaderViewCell.xib in Resources */,
 				9BF8B0CE201447DA00C73BD4 /* HoursProgressTableViewCell.xib in Resources */,
+				697244ED2104AAB30039F8C5 /* OpportunityContactCell.xib in Resources */,
 				1714A72B1F6E257B00C9BB17 /* Login.storyboard in Resources */,
 				9B8F5CEF1F77C78800D4DFE6 /* MenuTableViewCell.xib in Resources */,
 				9BD1B78D1F6534D800B3A641 /* OpenSans-ExtraBold.ttf in Resources */,
@@ -843,9 +900,11 @@
 				9B5606071FE231FF00C0FD50 /* NotificationCenter.swift in Sources */,
 				9BF8B0C820141F3A00C73BD4 /* CustomTextField.swift in Sources */,
 				9BF9C13F1F655B020092DB80 /* OutlineButtonTableViewCell.swift in Sources */,
+				697244EC2104AAB30039F8C5 /* OpportunityContactCell.swift in Sources */,
 				9BA67446205D2F0600A31D10 /* SearchTableViewCell.swift in Sources */,
 				9BD0269B201B2903002BC8E7 /* TextFieldTableViewCell.swift in Sources */,
 				9BF9C1421F655F0E0092DB80 /* UIView+Extension.swift in Sources */,
+				697244F02104ABBD0039F8C5 /* OpportunityDatesCell.swift in Sources */,
 				69FC5A27205ACCFF00A92AAE /* MyOpportunityViewController.swift in Sources */,
 				9B367F5C200B2E710060C0A7 /* CustomSegmentedControl.swift in Sources */,
 				9BD1B7741F65346A00B3A641 /* EnumConstant.swift in Sources */,
@@ -855,6 +914,7 @@
 				9B8F5CE91F77A4F900D4DFE6 /* String+Extension.swift in Sources */,
 				1708AE6B2005D09F00CAFD36 /* PostResponse.swift in Sources */,
 				9BB0A3631F90BFA200F65CE0 /* APIManager.swift in Sources */,
+				697244DC2104A03D0039F8C5 /* OpportunitySectionCell.swift in Sources */,
 				9BC6019E201EDBED006DB20A /* EventDate.swift in Sources */,
 				9B56060B1FE2349500C0FD50 /* ErrorResponse.swift in Sources */,
 				9B367F60200B39A00060C0A7 /* VolunteerProfileViewController.swift in Sources */,
@@ -862,9 +922,11 @@
 				9B383AB31F6D517700C7FAA6 /* OpportunityBoardViewController.swift in Sources */,
 				9B383AB61F6D590A00C7FAA6 /* OpportunityBoardTableViewCell.swift in Sources */,
 				9BD02693201B001B002BC8E7 /* EditProfileViewController.swift in Sources */,
+				697244E62104A9AB0039F8C5 /* OpportunityRoleCell.swift in Sources */,
 				9BF8B0C52013C64A00C73BD4 /* UITextField+Extension.swift in Sources */,
 				9B5606041FE2308F00C0FD50 /* Utility.swift in Sources */,
 				9BD1B79B1F65360C00B3A641 /* DatabaseHandler.swift in Sources */,
+				697244D8210495320039F8C5 /* OpportunityHeaderViewCell.swift in Sources */,
 				9B56060D1FE241A100C0FD50 /* LoginToken.swift in Sources */,
 				9B8F5CF21F77D37F00D4DFE6 /* ProfileViewController.swift in Sources */,
 				9BD0269F201B2E38002BC8E7 /* EditDescriptionTableViewCell.swift in Sources */,
@@ -883,6 +945,7 @@
 				9B8F5CE71F77A4A000D4DFE6 /* UITableView+Extension.swift in Sources */,
 				9BF9C1351F6541180092DB80 /* TextWithIconTableViewCell.swift in Sources */,
 				9BF9C12F1F653F2E0092DB80 /* PaymentPlanViewController.swift in Sources */,
+				697244E22104A8700039F8C5 /* OpportunityDescCell.swift in Sources */,
 				9B367F64200B86B70060C0A7 /* Organization.swift in Sources */,
 				695A06B12051544900B3DC2B /* ALChatManager.swift in Sources */,
 				9B6DC6E41FE6910C008EFE57 /* Validation.swift in Sources */,
@@ -1033,14 +1096,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = EXU7UPZB8S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "99a17404-9b18-4800-bb78-83040a67d66c";
-				PROVISIONING_PROFILE_SPECIFIER = VomeDevProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/himanshulikhyani/SeptProject2017/Vome/Vome-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1051,15 +1115,16 @@
 			baseConfigurationReference = 7ED19A6D804F7A8EC9B63BE6 /* Pods-Vome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = EXU7UPZB8S;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Vome/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vome.vome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ea93ba52-389f-4d7b-979f-10d6588e328a";
-				PROVISIONING_PROFILE_SPECIFIER = VomeProdProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/himanshulikhyani/SeptProject2017/Vome/Vome-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
